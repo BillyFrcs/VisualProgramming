@@ -54,6 +54,7 @@ Partial Class Information
         Me.Controls.Add(Me.UsernameLabel)
         Me.Controls.Add(Me.BackButton)
         Me.Name = "Information"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Information"
         Me.ResumeLayout(False)
         Me.PerformLayout()

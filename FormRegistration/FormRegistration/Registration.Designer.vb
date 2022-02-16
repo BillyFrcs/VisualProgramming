@@ -149,6 +149,7 @@ Partial Class Registration
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Registration"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Student Registration"
         Me.ResumeLayout(False)
         Me.PerformLayout()
