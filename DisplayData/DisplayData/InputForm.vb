@@ -1,6 +1,7 @@
 ﻿Public Class InputForm
     Private _name As String
     Private _email As String
+
     Private Sub CloseButton_Click(sender As Object, e As EventArgs) Handles CloseButton.Click
         Me.Close()
     End Sub
