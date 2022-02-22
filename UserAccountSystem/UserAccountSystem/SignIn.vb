@@ -37,7 +37,6 @@ Public Class SignIn
         Dim empty As String = String.Empty
 
         If _Username IsNot empty And _Email IsNot empty And _Password IsNot empty Then
-
             If File.Exists(_Username + UserModule.Path) Then
                 ' Find user account in database
                 Dim findUserAccount = File.ReadAllLines(_Username + UserModule.Path)
@@ -53,8 +52,9 @@ Public Class SignIn
                 MessageBox.Show("Please SignUp first before SignIn your account!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Else
-            'MessageBox.Show("Please fill the SignIn form!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
             MsgBox("Please fill the SignIn form!", MsgBoxStyle.Critical, "Warning")
+
+            ' MessageBox.Show("Please fill the SignIn form!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 
@@ -62,7 +62,6 @@ Public Class SignIn
     ''' Initialize user data to SignIn
     ''' </summary>
     Private Sub InitializeUserData()
-        ' Initialize user data to Sign In
         _Username = UsernameTextBox.Text
         _Email = EmailTextBox.Text
         _Password = PasswordTextBox.Text
