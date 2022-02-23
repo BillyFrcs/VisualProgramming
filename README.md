@@ -4,4 +4,4 @@ Learning **Visual Programming** with [Visual Basic .NET](https://dotnet.microsof
 
 ## Usage
 
-To open the project just simply find the ``.sln`` file and open it in our beautiful Visual Studio IDE.
+To run the project just simply find the ``.sln`` file and open it up in our beautiful Visual Studio IDE.
