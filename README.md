@@ -1,6 +1,6 @@
 <h1 align="center">Visual Programming</h1>
 
-Learning **Visual Programming** with [Visual Basic .NET](https://dotnet.microsoft.com/en-us/) and create simple Windows Form Applications in [Visual Studio](https://visualstudio.microsoft.com/)
+Learning **Visual Programming** with [Visual Basic .NET](https://dotnet.microsoft.com/en-us/) and create simple Windows Form Applications using [Visual Studio](https://visualstudio.microsoft.com/) IDE.
 
 ## Usage
 
