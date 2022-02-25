@@ -73,7 +73,6 @@ Public Class SignIn
 
     Private Sub LoginButton_MouseLeave() Handles LoginButton.MouseLeave
         LoginButton.BackColor = Color.White
-
     End Sub
 
     Private Sub BackButton_MouseHover() Handles BackButton.MouseHover
