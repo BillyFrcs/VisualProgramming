@@ -1,13 +1,13 @@
 ﻿Public Class MenuItem
     ' Item price
-    Public FriedRicePrice As Long = 50000
-    Public ChipsBurgerPrice As Long = 45000
-    Public CheesePizzaPrice As Long = 70000
-    Public ChickenWingPrice As Long = 65000
-    Public WagyuPrice As Long = 100000
+    Public FriedRicePrice As Integer = 50000
+    Public ChipsBurgerPrice As Integer = 45000
+    Public CheesePizzaPrice As Integer = 70000
+    Public ChickenWingPrice As Integer = 65000
+    Public WagyuPrice As Integer = 100000
 
     ' Payment
-    Public TotalPayment As Long = 0
+    Public TotalPayment As Integer = 0
 
     ''' <summary>
     ''' Only for debugging purposes
