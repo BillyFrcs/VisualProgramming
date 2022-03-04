@@ -10,7 +10,7 @@
     Public TotalPayment As Integer = 0
 
     ''' <summary>
-    ''' Only for debugging purposes
+    ''' Display simple message PopUp
     ''' </summary>
     ''' <param name="message">String</param>
     ''' <param name="caption">String</param>

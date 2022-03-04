@@ -208,6 +208,8 @@
         InitMenuItem()
 
         If (_FriedRiceAmount > ZERO) Or (_ChipsBurgerAmount > ZERO) Or (_CheesePizzaAmount > ZERO) Or (_ChickenWingAmount > ZERO) Or (_WagyuAmount > ZERO) Then
+            OrderListBox.Sorted = True
+
             If FriedRiceCheckBox.Checked = True Then
                 ShowButtonMenu = False
 
