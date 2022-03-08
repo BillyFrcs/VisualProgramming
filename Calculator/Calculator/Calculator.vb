@@ -55,7 +55,7 @@
     End Sub
 
     ''' <summary>
-    ''' Input operator to calculate the value
+    ''' Operator button
     ''' </summary>
     ''' <param name="sender">Object</param>
     ''' <param name="e">EventArgs</param>
@@ -67,6 +67,11 @@
         DisplayResultLabel.Text = String.Empty
     End Sub
 
+    ''' <summary>
+    ''' Input operator to calculate the value
+    ''' </summary>
+    ''' <param name="sender">Object</param>
+    ''' <param name="e">EventArgs</param>
     Private Sub CalculateResultButton_Click(sender As Object, e As EventArgs) Handles CalculateResultButton.Click
         _secondNumber = Convert.ToDouble(DisplayResultLabel.Text)
 
@@ -89,6 +94,11 @@
         End Select
     End Sub
 
+    ''' <summary>
+    ''' Backspace button 
+    ''' </summary>
+    ''' <param name="sender">Object</param>
+    ''' <param name="e">EventArgs</param>
     Private Sub BackspaceButtonClick(sender As Object, e As EventArgs) Handles BackspaceButton.Click
         If DisplayResultLabel.Text.Length > 0 Then
             DisplayResultLabel.Text = DisplayResultLabel.Text.Remove(DisplayResultLabel.Text.Length - 1, 1)
