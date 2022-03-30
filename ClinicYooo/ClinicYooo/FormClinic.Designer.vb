@@ -22,6 +22,7 @@ Partial Class FormClinic
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormClinic))
         Me.NoRegisterLabel = New System.Windows.Forms.Label()
         Me.NameOfRegisterLabel = New System.Windows.Forms.Label()
         Me.GenderLabel = New System.Windows.Forms.Label()
@@ -37,7 +38,9 @@ Partial Class FormClinic
         Me.CloseButton = New System.Windows.Forms.Button()
         Me.DeleteButton = New System.Windows.Forms.Button()
         Me.ActionGroupBox = New System.Windows.Forms.GroupBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ActionGroupBox.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NoRegisterLabel
@@ -183,11 +186,21 @@ Partial Class FormClinic
         Me.ActionGroupBox.TabStop = False
         Me.ActionGroupBox.Text = "Action"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 61)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 105)
+        Me.PictureBox1.TabIndex = 17
+        Me.PictureBox1.TabStop = False
+        '
         'FormClinic
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(596, 480)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ActionGroupBox)
         Me.Controls.Add(Me.AgeLabel)
         Me.Controls.Add(Me.GenderComboBox)
@@ -204,6 +217,7 @@ Partial Class FormClinic
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Clinic Yooo"
         Me.ActionGroupBox.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -224,4 +238,5 @@ Partial Class FormClinic
     Friend WithEvents CloseButton As Button
     Friend WithEvents DeleteButton As Button
     Friend WithEvents ActionGroupBox As GroupBox
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
