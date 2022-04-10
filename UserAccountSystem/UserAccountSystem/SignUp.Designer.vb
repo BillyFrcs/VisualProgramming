@@ -45,8 +45,10 @@ Partial Class SignUp
         Me.UsernameTextBox = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ShowPasswordCheckBox = New System.Windows.Forms.CheckBox()
+        Me.PictureBoxSignUp = New System.Windows.Forms.PictureBox()
         Me.MenuStripAccount.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.PictureBoxSignUp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Title
@@ -260,12 +262,23 @@ Partial Class SignUp
         Me.ShowPasswordCheckBox.Text = "Show Password"
         Me.ShowPasswordCheckBox.UseVisualStyleBackColor = True
         '
+        'PictureBoxSignUp
+        '
+        Me.PictureBoxSignUp.Image = Global.UserAccountSystem.My.Resources.Resources.Tobias
+        Me.PictureBoxSignUp.Location = New System.Drawing.Point(12, 90)
+        Me.PictureBoxSignUp.Name = "PictureBoxSignUp"
+        Me.PictureBoxSignUp.Size = New System.Drawing.Size(239, 202)
+        Me.PictureBoxSignUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBoxSignUp.TabIndex = 36
+        Me.PictureBoxSignUp.TabStop = False
+        '
         'SignUp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.PictureBoxSignUp)
         Me.Controls.Add(Me.ShowPasswordCheckBox)
         Me.Controls.Add(Me.UsernameTextBox)
         Me.Controls.Add(Me.Label6)
@@ -291,6 +304,7 @@ Partial Class SignUp
         Me.MenuStripAccount.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.PictureBoxSignUp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -319,4 +333,5 @@ Partial Class SignUp
     Friend WithEvents UsernameTextBox As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents ShowPasswordCheckBox As CheckBox
+    Friend WithEvents PictureBoxSignUp As PictureBox
 End Class

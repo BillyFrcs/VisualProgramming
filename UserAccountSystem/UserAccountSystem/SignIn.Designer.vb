@@ -23,6 +23,7 @@ Partial Class SignIn
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SignIn))
         Me.UsernameTextBox = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.BackButton = New System.Windows.Forms.Button()
@@ -37,7 +38,9 @@ Partial Class SignIn
         Me.EmailToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.PasswordToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.ErrorProviderValidation = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.PictureBoxSignIn = New System.Windows.Forms.PictureBox()
         CType(Me.ErrorProviderValidation, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBoxSignIn, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UsernameTextBox
@@ -135,12 +138,23 @@ Partial Class SignIn
         '
         Me.ErrorProviderValidation.ContainerControl = Me
         '
+        'PictureBoxSignIn
+        '
+        Me.PictureBoxSignIn.Image = CType(resources.GetObject("PictureBoxSignIn.Image"), System.Drawing.Image)
+        Me.PictureBoxSignIn.Location = New System.Drawing.Point(43, 131)
+        Me.PictureBoxSignIn.Name = "PictureBoxSignIn"
+        Me.PictureBoxSignIn.Size = New System.Drawing.Size(161, 163)
+        Me.PictureBoxSignIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBoxSignIn.TabIndex = 35
+        Me.PictureBoxSignIn.TabStop = False
+        '
         'SignIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.PictureBoxSignIn)
         Me.Controls.Add(Me.ShowPasswordCheckBox)
         Me.Controls.Add(Me.UsernameTextBox)
         Me.Controls.Add(Me.Label6)
@@ -155,6 +169,7 @@ Partial Class SignIn
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sign In"
         CType(Me.ErrorProviderValidation, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBoxSignIn, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -174,4 +189,5 @@ Partial Class SignIn
     Friend WithEvents EmailToolTip As ToolTip
     Friend WithEvents PasswordToolTip As ToolTip
     Friend WithEvents ErrorProviderValidation As ErrorProvider
+    Friend WithEvents PictureBoxSignIn As PictureBox
 End Class

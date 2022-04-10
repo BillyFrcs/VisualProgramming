@@ -18,8 +18,6 @@ Public Class SignIn
     Private Sub LoadSignIn() Handles MyBase.Load
         ' SignUp.Hide()
 
-        UsernameTextBox.Focus()
-
         Me.PasswordTextBox.PasswordChar = "•"
     End Sub
 
@@ -40,9 +38,9 @@ Public Class SignIn
         Dim empty As String = String.Empty
 
         If _Username IsNot empty And _Email IsNot empty And _Password IsNot empty Then
-            If File.Exists(_Username + UserModule.Path) Then
+            If File.Exists(_Username + UserModule.FileName) Then
                 ' Find user account in database
-                Dim findUserAccount = File.ReadAllLines(_Username + UserModule.Path)
+                Dim findUserAccount = File.ReadAllLines(_Username + UserModule.FileName)
 
                 If findUserAccount.Contains(_Username) And findUserAccount.Contains(_Email) And findUserAccount.Contains(_Password) Then
                     Dashboard.ShowDialog()
@@ -87,15 +85,15 @@ Public Class SignIn
     End Sub
 
     Private Sub UserNameTextBoxMouseHover() Handles UsernameTextBox.MouseHover
-        UsernameToolTip.SetToolTip(UsernameTextBox, "Enter your Username")
+        UsernameToolTip.SetToolTip(UsernameTextBox, "Input your Username")
     End Sub
 
     Private Sub EmailTextBoxMouseHover() Handles EmailTextBox.MouseHover
-        EmailToolTip.SetToolTip(EmailTextBox, "Enter your Email")
+        EmailToolTip.SetToolTip(EmailTextBox, "Input your Email")
     End Sub
 
     Private Sub PasswordTextBoxMouseHover() Handles PasswordTextBox.MouseHover
-        PasswordToolTip.SetToolTip(PasswordTextBox, "Enter your Password")
+        PasswordToolTip.SetToolTip(PasswordTextBox, "Input your Password")
     End Sub
 
     Private Sub LoginButtonValidating(sender As Object, e As CancelEventArgs) Handles LoginButton.Validating

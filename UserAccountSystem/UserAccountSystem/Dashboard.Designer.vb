@@ -36,6 +36,8 @@ Partial Class Dashboard
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DeleteUsernameTextBox = New System.Windows.Forms.TextBox()
         Me.UsernameToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.PictureBoxDashboard = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBoxDashboard, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NameLabel
@@ -146,9 +148,9 @@ Partial Class Dashboard
         Me.Label2.ForeColor = System.Drawing.Color.IndianRed
         Me.Label2.Location = New System.Drawing.Point(12, 388)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(331, 17)
+        Me.Label2.Size = New System.Drawing.Size(289, 17)
         Me.Label2.TabIndex = 33
-        Me.Label2.Text = "Enter your username if you want to delete your account"
+        Me.Label2.Text = "Input your username first to delete your account"
         '
         'DeleteUsernameTextBox
         '
@@ -157,12 +159,23 @@ Partial Class Dashboard
         Me.DeleteUsernameTextBox.Size = New System.Drawing.Size(144, 23)
         Me.DeleteUsernameTextBox.TabIndex = 34
         '
+        'PictureBoxDashboard
+        '
+        Me.PictureBoxDashboard.Image = Global.UserAccountSystem.My.Resources.Resources.kisspng_gumball_watterson_anais_watterson_darwin_watterson_misto_quente_5b245a928e31d5_0756621815291091385824
+        Me.PictureBoxDashboard.Location = New System.Drawing.Point(67, 129)
+        Me.PictureBoxDashboard.Name = "PictureBoxDashboard"
+        Me.PictureBoxDashboard.Size = New System.Drawing.Size(194, 181)
+        Me.PictureBoxDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBoxDashboard.TabIndex = 35
+        Me.PictureBoxDashboard.TabStop = False
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.MenuBar
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.PictureBoxDashboard)
         Me.Controls.Add(Me.DeleteUsernameTextBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.UsernameLabelDelete)
@@ -178,6 +191,7 @@ Partial Class Dashboard
         Me.Name = "Dashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dashboard"
+        CType(Me.PictureBoxDashboard, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -195,4 +209,5 @@ Partial Class Dashboard
     Friend WithEvents Label2 As Label
     Friend WithEvents DeleteUsernameTextBox As TextBox
     Friend WithEvents UsernameToolTip As ToolTip
+    Friend WithEvents PictureBoxDashboard As PictureBox
 End Class

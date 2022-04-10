@@ -7,5 +7,5 @@
     Public Gender As String
 
     ' Create new file as user database
-    Public Const Path As String = "Database.data"
+    Public Const FileName As String = "Database.data"
 End Module

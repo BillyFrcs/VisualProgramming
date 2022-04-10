@@ -34,7 +34,7 @@ Public Class Dashboard
     Private Sub DisplayUserInformation(realName As String, username As String, email As String, password As String, language As String, gender As String)
         Dim Name() As String = realName.Split(" "c)
 
-        NameLabelTitle.Text = $"Hello, {Name(0).Replace("Name:", "Hello,") + "!"}"
+        NameLabelTitle.Text = $"Hello, {Name(0).Replace("Name", realName) + "!"}"
         NameLabel.Text = $"Name: {realName}"
         UsernameLabel.Text = $"Username: {username}"
         EmailLabel.Text = $"Email: {email}"
@@ -54,6 +54,8 @@ Public Class Dashboard
         PasswordLabel.Text = String.Empty
         LanguageLabel.Text = String.Empty
         GenderLabel.Text = String.Empty
+
+        PictureBoxDashboard.Image = Nothing
     End Sub
 
     Private Sub DeleteAccountButtonClick(sender As Object, e As EventArgs) Handles DeleteAccountButton.Click
@@ -64,7 +66,7 @@ Public Class Dashboard
         _Username = DeleteUsernameTextBox.Text
 
         If _Username IsNot String.Empty Then
-            If Not File.Exists(_Username & UserModule.Path) Then
+            If Not File.Exists(_Username & UserModule.FileName) Then
                 MessageBox.Show("Cannot found your account, or maybe you've been deleted your account!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
                 Dim confirmToDelete As MsgBoxResult = DialogModule.Debug.Instance.Log("Are you sure want to delete your account?", "Information", True)
@@ -74,7 +76,7 @@ Public Class Dashboard
                     ResetUserInformation()
 
                     ' Delete user account data
-                    My.Computer.FileSystem.DeleteFile(_Username & UserModule.Path)
+                    My.Computer.FileSystem.DeleteFile(_Username & UserModule.FileName)
 
                     FileClose()
 
@@ -82,7 +84,7 @@ Public Class Dashboard
                 End If
             End If
         Else
-                MsgBox("Please enter your username first!", MsgBoxStyle.Critical, "Warning")
+            MsgBox("Please input your username first!", MsgBoxStyle.Critical, "Warning")
         End If
     End Sub
 
@@ -103,6 +105,6 @@ Public Class Dashboard
     End Sub
 
     Private Sub DeleteUsernameTextBoxMouseHover() Handles DeleteUsernameTextBox.MouseHover
-        UsernameToolTip.SetToolTip(DeleteUsernameTextBox, "Enter your Username")
+        UsernameToolTip.SetToolTip(DeleteUsernameTextBox, "Input your Username")
     End Sub
 End Class

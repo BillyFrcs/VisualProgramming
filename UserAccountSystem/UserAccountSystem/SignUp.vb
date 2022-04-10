@@ -65,7 +65,7 @@ Public Class SignUp
             Debug.Instance.Log("Success to create new account!", "Information")
 
             ' Save data into a file
-            _WriteUserData = New StreamWriter(_Username + UserModule.Path, True)
+            _WriteUserData = New StreamWriter(_Username + UserModule.FileName, True)
 
             _WriteUserData.WriteLine(_Name)
             _WriteUserData.WriteLine(_Username)
@@ -106,8 +106,8 @@ Public Class SignUp
     ''' </summary>
     Public Sub ReadUserData(username As String)
         ' Check if the user's data is exists or not
-        If File.Exists(username + UserModule.Path) Then
-            _ReadData = New StreamReader(username + UserModule.Path, True)
+        If File.Exists(username + UserModule.FileName) Then
+            _ReadData = New StreamReader(username + UserModule.FileName, True)
 
             While Not _ReadData.EndOfStream
                 _Name = _ReadData.ReadLine & vbCrLf
@@ -158,8 +158,8 @@ Public Class SignUp
         ' collection.Add("French")
         ' collection.Add("Korean")
 
-        For Each col As String In collection
-            LanguageComboBox.Items.Add(col)
+        For Each languages As String In collection
+            LanguageComboBox.Items.Add(languages)
         Next
     End Sub
 End Class
