@@ -1,4 +1,5 @@
-﻿Imports System.IO
+﻿Imports System.ComponentModel
+Imports System.IO
 Imports System.Text.RegularExpressions
 
 Public Class SignIn
@@ -8,19 +9,21 @@ Public Class SignIn
 
     Private ReadOnly _UserData As SignUp = New SignUp
 
-    Private Sub BackButton_Click(sender As Object, e As EventArgs) Handles BackButton.Click
+    Private Sub BackButtonClick(sender As Object, e As EventArgs) Handles BackButton.Click
         Me.Hide()
 
         ' SignUp.ShowDialog()
     End Sub
 
-    Private Sub Load_SignIn() Handles MyBase.Load
+    Private Sub LoadSignIn() Handles MyBase.Load
         ' SignUp.Hide()
+
+        UsernameTextBox.Focus()
 
         Me.PasswordTextBox.PasswordChar = "•"
     End Sub
 
-    Private Sub ShowPasswordCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles ShowPasswordCheckBox.CheckedChanged
+    Private Sub ShowPasswordCheckBoxCheckedChanged(sender As Object, e As EventArgs) Handles ShowPasswordCheckBox.CheckedChanged
         If ShowPasswordCheckBox.Checked Then
             Me.PasswordTextBox.PasswordChar = String.Empty
         Else
@@ -28,7 +31,7 @@ Public Class SignIn
         End If
     End Sub
 
-    Private Sub LoginButton_Click(sender As Object, e As EventArgs) Handles LoginButton.Click
+    Private Sub LoginButtonClick(sender As Object, e As EventArgs) Handles LoginButton.Click
         InitializeUserData()
 
         ' Display user information
@@ -42,7 +45,7 @@ Public Class SignIn
                 Dim findUserAccount = File.ReadAllLines(_Username + UserModule.Path)
 
                 If findUserAccount.Contains(_Username) And findUserAccount.Contains(_Email) And findUserAccount.Contains(_Password) Then
-                    UserInformation.ShowDialog()
+                    Dashboard.ShowDialog()
 
                     FileClose()
                 Else
@@ -67,31 +70,55 @@ Public Class SignIn
         _Password = PasswordTextBox.Text
     End Sub
 
-    Private Sub LoginButton_MouseHover() Handles LoginButton.MouseHover
+    Private Sub LoginButtonMouseHover() Handles LoginButton.MouseHover
         LoginButton.BackColor = Color.CornflowerBlue
     End Sub
 
-    Private Sub LoginButton_MouseLeave() Handles LoginButton.MouseLeave
+    Private Sub LoginButtonMouseLeave() Handles LoginButton.MouseLeave
         LoginButton.BackColor = Color.White
     End Sub
 
-    Private Sub BackButton_MouseHover() Handles BackButton.MouseHover
+    Private Sub BackButtonMouseHover() Handles BackButton.MouseHover
         BackButton.BackColor = Color.IndianRed
     End Sub
 
-    Private Sub BackButton_MouseLeave() Handles BackButton.MouseLeave
+    Private Sub BackButtonMouseLeave() Handles BackButton.MouseLeave
         BackButton.BackColor = Color.White
     End Sub
 
-    Private Sub UserNameTextBox_MouseHover() Handles UsernameTextBox.MouseHover
+    Private Sub UserNameTextBoxMouseHover() Handles UsernameTextBox.MouseHover
         UsernameToolTip.SetToolTip(UsernameTextBox, "Enter your Username")
     End Sub
 
-    Private Sub EmailTextBox_MouseHover() Handles EmailTextBox.MouseHover
+    Private Sub EmailTextBoxMouseHover() Handles EmailTextBox.MouseHover
         EmailToolTip.SetToolTip(EmailTextBox, "Enter your Email")
     End Sub
 
-    Private Sub PasswordTextBox_MouseHover() Handles PasswordTextBox.MouseHover
+    Private Sub PasswordTextBoxMouseHover() Handles PasswordTextBox.MouseHover
         PasswordToolTip.SetToolTip(PasswordTextBox, "Enter your Password")
     End Sub
+
+    Private Sub LoginButtonValidating(sender As Object, e As CancelEventArgs) Handles LoginButton.Validating
+        If String.IsNullOrEmpty(UsernameTextBox.Text.Trim) Then
+            Debug.Instance.LogError(UsernameTextBox, "Username is required!")
+        Else
+            Debug.Instance.LogError(UsernameTextBox, String.Empty)
+        End If
+
+        If String.IsNullOrEmpty(EmailTextBox.Text.Trim) Then
+            Debug.Instance.LogError(EmailTextBox, "Email is required!")
+        Else
+            Debug.Instance.LogError(EmailTextBox, String.Empty)
+        End If
+
+        If String.IsNullOrEmpty(PasswordTextBox.Text.Trim) Then
+            Debug.Instance.LogError(PasswordTextBox, "Password is required!")
+        Else
+            Debug.Instance.LogError(PasswordTextBox, String.Empty)
+        End If
+    End Sub
+
+    Public Function GetErrorValidation()
+        Return ErrorProviderValidation
+    End Function
 End Class

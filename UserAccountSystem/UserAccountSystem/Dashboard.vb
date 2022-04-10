@@ -1,13 +1,17 @@
 ﻿Imports System.IO
 
-Public Class UserInformation
+Public Class Dashboard
     Private _Username As String
 
-    Private Sub CloseButton_Click(sender As Object, e As EventArgs) Handles CloseButton.Click
-        Me.Close()
+    Private Sub CloseButtonClick(sender As Object, e As EventArgs) Handles CloseButton.Click
+        Dim confirmToQuit As MsgBoxResult = DebugModule.Debug.Instance.Log("Are you sure want to quit?", "Information", True)
+
+        If (confirmToQuit = MsgBoxResult.Yes) Then
+            Close()
+        End If
     End Sub
 
-    Private Sub Load_UserInformation() Handles MyBase.Load
+    Private Sub LoadUserDashboard() Handles MyBase.Load
         SignUp.Hide()
         SignIn.Hide()
 
@@ -24,7 +28,9 @@ Public Class UserInformation
     ''' <param name="language">String</param>
     ''' <param name="gender">String</param>
     Private Sub DisplayUserInformation(realName As String, username As String, email As String, password As String, language As String, gender As String)
-        NameLabelTitle.Text = $"Hi, {realName.Replace("Name:", "Hi,")}"
+        Dim Name() As String = realName.Split(" "c)
+
+        NameLabelTitle.Text = $"Hello, {Name(0).Replace("Name:", "Hello,") + "!"}"
         NameLabel.Text = $"Name: {realName}"
         UsernameLabel.Text = $"Username: {username}"
         EmailLabel.Text = $"Email: {email}"
@@ -46,7 +52,7 @@ Public Class UserInformation
         GenderLabel.Text = String.Empty
     End Sub
 
-    Private Sub DeleteAccountButton_Click(sender As Object, e As EventArgs) Handles DeleteAccountButton.Click
+    Private Sub DeleteAccountButtonClick(sender As Object, e As EventArgs) Handles DeleteAccountButton.Click
         DeleteUserAccount()
     End Sub
 
@@ -57,7 +63,7 @@ Public Class UserInformation
             If Not File.Exists(_Username & UserModule.Path) Then
                 MessageBox.Show("Cannot found your account, or maybe you've been deleted your account!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
-                Dim confirmToDelete As MsgBoxResult = MessageBox.Show("Are you sure want to delete your account?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                Dim confirmToDelete As MsgBoxResult = DebugModule.Debug.Instance.Log("Are you sure want to delete your account?", "Information", True)
 
                 ' Confirm dialog to delete account
                 If confirmToDelete = MsgBoxResult.Yes Then
@@ -76,23 +82,23 @@ Public Class UserInformation
         End If
     End Sub
 
-    Private Sub DeleteAccountButton_MouseHover() Handles DeleteAccountButton.MouseHover
+    Private Sub DeleteAccountButtonMouseHover() Handles DeleteAccountButton.MouseHover
         DeleteAccountButton.BackColor = Color.Red
     End Sub
 
-    Private Sub DeleteAccountButton_MouseLeave() Handles DeleteAccountButton.MouseLeave
+    Private Sub DeleteAccountButtonMouseLeave() Handles DeleteAccountButton.MouseLeave
         DeleteAccountButton.BackColor = Color.White
     End Sub
 
-    Private Sub CloseButton_MouseHover() Handles CloseButton.MouseHover
+    Private Sub CloseButtonMouseHover() Handles CloseButton.MouseHover
         CloseButton.BackColor = Color.IndianRed
     End Sub
 
-    Private Sub CloseButton_MouseLeave() Handles CloseButton.MouseLeave
+    Private Sub CloseButtonMouseLeave() Handles CloseButton.MouseLeave
         CloseButton.BackColor = Color.White
     End Sub
 
-    Private Sub DeleteUsernameTextBox_MouseHover() Handles DeleteUsernameTextBox.MouseHover
+    Private Sub DeleteUsernameTextBoxMouseHover() Handles DeleteUsernameTextBox.MouseHover
         UsernameToolTip.SetToolTip(DeleteUsernameTextBox, "Enter your Username")
     End Sub
 End Class

@@ -11,15 +11,19 @@ Public Class SignUp
     Private _WriteUserdata As StreamWriter
     Private _ReadData As StreamReader
 
-    Private Sub SignInToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SignInToolStripMenuItem.Click
+    Private Sub SignInToolStripMenuItemClick(sender As Object, e As EventArgs) Handles SignInToolStripMenuItem.Click
         SignIn.ShowDialog()
     End Sub
 
-    Private Sub CloseButton_Click(sender As Object, e As EventArgs) Handles CloseButton.Click
-        Me.Close()
+    Private Sub CloseButtonClick(sender As Object, e As EventArgs) Handles CloseButton.Click
+        Dim confirmToQuit As MsgBoxResult = DebugModule.Debug.Instance.Log("Are you sure want to quit?", "Information", True)
+
+        If (confirmToQuit = MsgBoxResult.Yes) Then
+            Me.Close()
+        End If
     End Sub
 
-    Private Sub CreateAccountButton_Click(sender As Object, e As EventArgs) Handles CreateAccountButton.Click
+    Private Sub CreateAccountButtonClick(sender As Object, e As EventArgs) Handles CreateAccountButton.Click
         SaveNewAccount()
     End Sub
 
@@ -58,7 +62,7 @@ Public Class SignUp
         Dim empty As String = String.Empty
 
         If _Name IsNot empty And _Username IsNot empty And _Email IsNot empty And _Password IsNot empty And _Language IsNot empty And _Gender IsNot empty Then
-            MessageBox.Show("Success to create new account!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Debug.Instance.Log("Success to create new account!", "Information")
 
             ' Save data into a file
             _WriteUserdata = New StreamWriter(_Username + UserModule.Path, True)
@@ -75,25 +79,25 @@ Public Class SignUp
             ' Display user information
             ReadUserData(_Username)
 
-            UserInformation.ShowDialog()
+            Dashboard.ShowDialog()
         Else
             MsgBox("Please complete the form to Sign Up your account!", MsgBoxStyle.Critical, "Warning")
         End If
     End Sub
 
-    Private Sub CreateAccountButton_MouseHover() Handles CreateAccountButton.MouseHover
+    Private Sub CreateAccountButtonMouseHover() Handles CreateAccountButton.MouseHover
         CreateAccountButton.BackColor = Color.CornflowerBlue
     End Sub
 
-    Private Sub CreateAccountButton_MouseLeave() Handles CreateAccountButton.MouseLeave
+    Private Sub CreateAccountButtonMouseLeave() Handles CreateAccountButton.MouseLeave
         CreateAccountButton.BackColor = Color.White
     End Sub
 
-    Private Sub CloseButton_MouseHover() Handles CloseButton.MouseHover
+    Private Sub CloseButtonMouseHover() Handles CloseButton.MouseHover
         CloseButton.BackColor = Color.IndianRed
     End Sub
 
-    Private Sub CloseButton_MouseLeave() Handles CloseButton.MouseLeave
+    Private Sub CloseButtonMouseLeave() Handles CloseButton.MouseLeave
         CloseButton.BackColor = Color.White
     End Sub
 
@@ -124,19 +128,37 @@ Public Class SignUp
             _ReadData.Close()
 
             ' DEBUG
-            ' DebugLog($"{RealName}{Username}{Email}{Password}{Language}{Gender}", "Information")
+            ' Debug.Instance.Log($"{RealName}{username}{Email}{Password}{Language}{Gender}", "Information")
         End If
     End Sub
 
-    Private Sub Load_SignUp() Handles MyBase.Load
+    Private Sub LoadSignUp() Handles MyBase.Load
         Me.PasswordTextBox.PasswordChar = "•"
+
+        LanguageCollection()
     End Sub
 
-    Private Sub ShowPasswordCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles ShowPasswordCheckBox.CheckedChanged
+    Private Sub ShowPasswordCheckBoxCheckedChanged(sender As Object, e As EventArgs) Handles ShowPasswordCheckBox.CheckedChanged
         If ShowPasswordCheckBox.Checked = True Then
             Me.PasswordTextBox.PasswordChar = String.Empty
         Else
             Me.PasswordTextBox.PasswordChar = "•"
         End If
+    End Sub
+
+    Private Sub LanguageCollection()
+        Dim collection As New List(Of String)({"English", "Indonesian", "Spanish", "French", "Korean"})
+
+        ' Dim collection As New List(Of String)
+
+        ' collection.Add("English")
+        ' collection.Add("Indonesian")
+        ' collection.Add("Spanish")
+        ' collection.Add("French")
+        ' collection.Add("Korean")
+
+        For Each col As String In collection
+            LanguageComboBox.Items.Add(col)
+        Next
     End Sub
 End Class

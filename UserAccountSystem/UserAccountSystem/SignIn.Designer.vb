@@ -36,6 +36,8 @@ Partial Class SignIn
         Me.UsernameToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.EmailToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.PasswordToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ErrorProviderValidation = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.ErrorProviderValidation, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'UsernameTextBox
@@ -129,11 +131,15 @@ Partial Class SignIn
         Me.ShowPasswordCheckBox.Text = "Show Password"
         Me.ShowPasswordCheckBox.UseVisualStyleBackColor = True
         '
+        'ErrorProviderValidation
+        '
+        Me.ErrorProviderValidation.ContainerControl = Me
+        '
         'SignIn
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.ShowPasswordCheckBox)
         Me.Controls.Add(Me.UsernameTextBox)
@@ -148,6 +154,7 @@ Partial Class SignIn
         Me.Name = "SignIn"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Sign In"
+        CType(Me.ErrorProviderValidation, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -166,4 +173,5 @@ Partial Class SignIn
     Friend WithEvents UsernameToolTip As ToolTip
     Friend WithEvents EmailToolTip As ToolTip
     Friend WithEvents PasswordToolTip As ToolTip
+    Friend WithEvents ErrorProviderValidation As ErrorProvider
 End Class

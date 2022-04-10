@@ -145,7 +145,6 @@ Partial Class SignUp
         'LanguageComboBox
         '
         Me.LanguageComboBox.FormattingEnabled = True
-        Me.LanguageComboBox.Items.AddRange(New Object() {"English", "Indonesian ", "Spanish", "French"})
         Me.LanguageComboBox.Location = New System.Drawing.Point(337, 235)
         Me.LanguageComboBox.Name = "LanguageComboBox"
         Me.LanguageComboBox.Size = New System.Drawing.Size(107, 23)
@@ -265,7 +264,7 @@ Partial Class SignUp
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.ShowPasswordCheckBox)
         Me.Controls.Add(Me.UsernameTextBox)

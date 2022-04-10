@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class UserInformation
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class Dashboard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class UserInformation
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.NameLabel = New System.Windows.Forms.Label()
@@ -124,9 +124,9 @@ Partial Class UserInformation
         Me.NameLabelTitle.Font = New System.Drawing.Font("Tahoma", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.NameLabelTitle.Location = New System.Drawing.Point(25, 22)
         Me.NameLabelTitle.Name = "NameLabelTitle"
-        Me.NameLabelTitle.Size = New System.Drawing.Size(139, 33)
+        Me.NameLabelTitle.Size = New System.Drawing.Size(180, 33)
         Me.NameLabelTitle.TabIndex = 31
-        Me.NameLabelTitle.Text = "Hi, Name"
+        Me.NameLabelTitle.Text = "Hello, Name"
         '
         'UsernameLabelDelete
         '
@@ -157,7 +157,7 @@ Partial Class UserInformation
         Me.DeleteUsernameTextBox.Size = New System.Drawing.Size(144, 23)
         Me.DeleteUsernameTextBox.TabIndex = 34
         '
-        'UserInformation
+        'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -175,9 +175,9 @@ Partial Class UserInformation
         Me.Controls.Add(Me.EmailLabel)
         Me.Controls.Add(Me.UsernameLabel)
         Me.Controls.Add(Me.NameLabel)
-        Me.Name = "UserInformation"
+        Me.Name = "Dashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "User Information"
+        Me.Text = "Dashboard"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
