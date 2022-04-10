@@ -8,7 +8,7 @@ Public Class SignUp
     Private _Language As String
     Private _Gender As String
 
-    Private _WriteUserdata As StreamWriter
+    Private _WriteUserData As StreamWriter
     Private _ReadData As StreamReader
 
     Private Sub SignInToolStripMenuItemClick(sender As Object, e As EventArgs) Handles SignInToolStripMenuItem.Click
@@ -65,16 +65,16 @@ Public Class SignUp
             Debug.Instance.Log("Success to create new account!", "Information")
 
             ' Save data into a file
-            _WriteUserdata = New StreamWriter(_Username + UserModule.Path, True)
+            _WriteUserData = New StreamWriter(_Username + UserModule.Path, True)
 
-            _WriteUserdata.WriteLine(_Name)
-            _WriteUserdata.WriteLine(_Username)
-            _WriteUserdata.WriteLine(_Email)
-            _WriteUserdata.WriteLine(_Password)
-            _WriteUserdata.WriteLine(_Language)
-            _WriteUserdata.WriteLine(_Gender)
+            _WriteUserData.WriteLine(_Name)
+            _WriteUserData.WriteLine(_Username)
+            _WriteUserData.WriteLine(_Email)
+            _WriteUserData.WriteLine(_Password)
+            _WriteUserData.WriteLine(_Language)
+            _WriteUserData.WriteLine(_Gender)
 
-            _WriteUserdata.Close()
+            _WriteUserData.Close()
 
             ' Display user information
             ReadUserData(_Username)
@@ -105,6 +105,7 @@ Public Class SignUp
     ''' Read user data from Database file
     ''' </summary>
     Public Sub ReadUserData(username As String)
+        ' Check if the user's data is exists or not
         If File.Exists(username + UserModule.Path) Then
             _ReadData = New StreamReader(username + UserModule.Path, True)
 

@@ -15,6 +15,10 @@ Public Class Dashboard
         SignUp.Hide()
         SignIn.Hide()
 
+        Dim Name() As String = RealName.Split(" "c)
+
+        Text = $"{Name(0)}'s Dashboard"
+
         DisplayUserInformation(UserModule.RealName, UserModule.Username, UserModule.Email, UserModule.Password, UserModule.Language, UserModule.Gender)
     End Sub
 
