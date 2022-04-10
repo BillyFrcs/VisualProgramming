@@ -1,4 +1,4 @@
-﻿Module DebugModule
+﻿Module DialogModule
     Public Class Debug
         Public Shared Instance As Debug = New Debug
 

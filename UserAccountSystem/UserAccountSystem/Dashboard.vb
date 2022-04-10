@@ -4,7 +4,7 @@ Public Class Dashboard
     Private _Username As String
 
     Private Sub CloseButtonClick(sender As Object, e As EventArgs) Handles CloseButton.Click
-        Dim confirmToQuit As MsgBoxResult = DebugModule.Debug.Instance.Log("Are you sure want to quit?", "Information", True)
+        Dim confirmToQuit As MsgBoxResult = DialogModule.Debug.Instance.Log("Are you sure want to quit?", "Information", True)
 
         If (confirmToQuit = MsgBoxResult.Yes) Then
             Close()
@@ -67,7 +67,7 @@ Public Class Dashboard
             If Not File.Exists(_Username & UserModule.Path) Then
                 MessageBox.Show("Cannot found your account, or maybe you've been deleted your account!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
-                Dim confirmToDelete As MsgBoxResult = DebugModule.Debug.Instance.Log("Are you sure want to delete your account?", "Information", True)
+                Dim confirmToDelete As MsgBoxResult = DialogModule.Debug.Instance.Log("Are you sure want to delete your account?", "Information", True)
 
                 ' Confirm dialog to delete account
                 If confirmToDelete = MsgBoxResult.Yes Then

@@ -16,7 +16,7 @@ Public Class SignUp
     End Sub
 
     Private Sub CloseButtonClick(sender As Object, e As EventArgs) Handles CloseButton.Click
-        Dim confirmToQuit As MsgBoxResult = DebugModule.Debug.Instance.Log("Are you sure want to quit?", "Information", True)
+        Dim confirmToQuit As MsgBoxResult = DialogModule.Debug.Instance.Log("Are you sure want to quit?", "Information", True)
 
         If (confirmToQuit = MsgBoxResult.Yes) Then
             Me.Close()
