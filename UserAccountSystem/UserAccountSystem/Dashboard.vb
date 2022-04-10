@@ -3,6 +3,8 @@
 Public Class Dashboard
     Private _Username As String
 
+    Private ReadOnly _Name() As String = RealName.Split(" "c)
+
     Private Sub CloseButtonClick(sender As Object, e As EventArgs) Handles CloseButton.Click
         Dim confirmToQuit As MsgBoxResult = DialogModule.Debug.Instance.Log("Are you sure want to quit?", "Information", True)
 
@@ -15,9 +17,7 @@ Public Class Dashboard
         SignUp.Hide()
         SignIn.Hide()
 
-        Dim Name() As String = RealName.Split(" "c)
-
-        Text = $"{Name(0)}'s Dashboard"
+        Text = String.Concat($"{_Name(0)}'s Dashboard")
 
         DisplayUserInformation(UserModule.RealName, UserModule.Username, UserModule.Email, UserModule.Password, UserModule.Language, UserModule.Gender)
     End Sub
@@ -32,9 +32,7 @@ Public Class Dashboard
     ''' <param name="language">String</param>
     ''' <param name="gender">String</param>
     Private Sub DisplayUserInformation(realName As String, username As String, email As String, password As String, language As String, gender As String)
-        Dim Name() As String = realName.Split(" "c)
-
-        NameLabelTitle.Text = $"Hello, {Name(0).Replace("Name", realName) + "!"}"
+        NameLabelTitle.Text = $"Hello, {_Name(0).Replace("Name", realName) + String.Concat("!")}"
         NameLabel.Text = $"Name: {realName}"
         UsernameLabel.Text = $"Username: {username}"
         EmailLabel.Text = $"Email: {email}"
@@ -47,6 +45,8 @@ Public Class Dashboard
     ''' Reset user information after deleted user account
     ''' </summary>
     Private Sub ResetUserInformation()
+        Text = String.Concat("User's Dashboard")
+
         NameLabelTitle.Text = String.Empty
         NameLabel.Text = String.Empty
         UsernameLabel.Text = String.Empty

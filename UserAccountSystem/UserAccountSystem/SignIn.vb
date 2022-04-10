@@ -43,11 +43,13 @@ Public Class SignIn
                 Dim findUserAccount = File.ReadAllLines(_Username + UserModule.FileName)
 
                 If findUserAccount.Contains(_Username) And findUserAccount.Contains(_Email) And findUserAccount.Contains(_Password) Then
+                    Debug.LogMiniBox($"Welcome back {_Username}!", "Information")
+
                     Dashboard.ShowDialog()
 
                     FileClose()
                 Else
-                    MsgBox("Seems like we cannot found your account, please try again!", MsgBoxStyle.Critical, "Warning")
+                    Debug.LogMiniBox("Cannot found your account, please try again!", "Warning")
                 End If
             Else
                 MessageBox.Show("Please SignUp first before SignIn your account!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
