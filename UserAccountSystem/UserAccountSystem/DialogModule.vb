@@ -1,12 +1,6 @@
 ﻿Module DialogModule
     Public Class Debug
-        Public Shared Instance As Debug = New Debug
-
-        Public Sub Debug()
-            If Instance Is Nothing Then
-                Instance = Nothing
-            End If
-        End Sub
+        Public Shared ReadOnly Instance As Debug = New Debug
 
         ''' <summary>
         ''' Debug log for message box

@@ -148,9 +148,9 @@ Partial Class Dashboard
         Me.Label2.ForeColor = System.Drawing.Color.IndianRed
         Me.Label2.Location = New System.Drawing.Point(12, 388)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(289, 17)
+        Me.Label2.Size = New System.Drawing.Size(267, 17)
         Me.Label2.TabIndex = 33
-        Me.Label2.Text = "Input your username first to delete your account"
+        Me.Label2.Text = "Input your username to delete your account!"
         '
         'DeleteUsernameTextBox
         '

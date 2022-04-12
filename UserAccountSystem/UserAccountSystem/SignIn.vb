@@ -9,7 +9,7 @@ Public Class SignIn
 
     Private ReadOnly _UserData As SignUp = New SignUp
 
-    Private Sub BackButtonClick(sender As Object, e As EventArgs) Handles BackButton.Click
+    Private Sub CancelButtonClick(sender As Object, e As EventArgs) Handles CancelButton.Click
         Me.Hide()
 
         ' SignUp.ShowDialog()
@@ -78,12 +78,12 @@ Public Class SignIn
         LoginButton.BackColor = Color.White
     End Sub
 
-    Private Sub BackButtonMouseHover() Handles BackButton.MouseHover
-        BackButton.BackColor = Color.IndianRed
+    Private Sub BackButtonMouseHover() Handles CancelButton.MouseHover
+        CancelButton.BackColor = Color.IndianRed
     End Sub
 
-    Private Sub BackButtonMouseLeave() Handles BackButton.MouseLeave
-        BackButton.BackColor = Color.White
+    Private Sub BackButtonMouseLeave() Handles CancelButton.MouseLeave
+        CancelButton.BackColor = Color.White
     End Sub
 
     Private Sub UserNameTextBoxMouseHover() Handles UsernameTextBox.MouseHover

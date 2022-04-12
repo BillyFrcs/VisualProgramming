@@ -26,7 +26,7 @@ Partial Class SignIn
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SignIn))
         Me.UsernameTextBox = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.BackButton = New System.Windows.Forms.Button()
+        Me.CancelButton = New System.Windows.Forms.Button()
         Me.LoginButton = New System.Windows.Forms.Button()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
         Me.EmailTextBox = New System.Windows.Forms.TextBox()
@@ -60,15 +60,15 @@ Partial Class SignIn
         Me.Label6.TabIndex = 31
         Me.Label6.Text = "Username"
         '
-        'BackButton
+        'CancelButton
         '
-        Me.BackButton.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.BackButton.Location = New System.Drawing.Point(440, 260)
-        Me.BackButton.Name = "BackButton"
-        Me.BackButton.Size = New System.Drawing.Size(89, 34)
-        Me.BackButton.TabIndex = 28
-        Me.BackButton.Text = "Back"
-        Me.BackButton.UseVisualStyleBackColor = True
+        Me.CancelButton.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.CancelButton.Location = New System.Drawing.Point(440, 260)
+        Me.CancelButton.Name = "CancelButton"
+        Me.CancelButton.Size = New System.Drawing.Size(89, 34)
+        Me.CancelButton.TabIndex = 28
+        Me.CancelButton.Text = "Cancel"
+        Me.CancelButton.UseVisualStyleBackColor = True
         '
         'LoginButton
         '
@@ -158,7 +158,7 @@ Partial Class SignIn
         Me.Controls.Add(Me.ShowPasswordCheckBox)
         Me.Controls.Add(Me.UsernameTextBox)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.BackButton)
+        Me.Controls.Add(Me.CancelButton)
         Me.Controls.Add(Me.LoginButton)
         Me.Controls.Add(Me.PasswordTextBox)
         Me.Controls.Add(Me.EmailTextBox)
@@ -177,7 +177,7 @@ Partial Class SignIn
 
     Friend WithEvents UsernameTextBox As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents BackButton As Button
+    Friend WithEvents CancelButton As Button
     Friend WithEvents LoginButton As Button
     Friend WithEvents PasswordTextBox As TextBox
     Friend WithEvents EmailTextBox As TextBox

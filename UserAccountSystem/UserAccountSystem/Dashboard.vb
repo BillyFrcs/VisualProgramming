@@ -3,7 +3,7 @@
 Public Class Dashboard
     Private _Username As String
 
-    Private ReadOnly _Name() As String = RealName.Split(" "c)
+    Private ReadOnly _Name() As String = UserModule.RealName.Split(" "c)
 
     Private Sub CloseButtonClick(sender As Object, e As EventArgs) Handles CloseButton.Click
         Dim confirmToQuit As MsgBoxResult = DialogModule.Debug.Instance.Log("Are you sure want to quit?", "Information", True)
