@@ -52,7 +52,7 @@ Public Class SignIn
                     Debug.LogMiniBox("Cannot found your account, please try again!", "Warning")
                 End If
             Else
-                MessageBox.Show("Please SignUp first before SignIn your account!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Please create your account first!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Else
             MsgBox("Please fill the SignIn form!", MsgBoxStyle.Critical, "Warning")
