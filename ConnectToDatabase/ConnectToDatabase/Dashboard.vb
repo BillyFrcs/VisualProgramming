@@ -24,7 +24,7 @@ Public Class Dashboard
 
             _connect.Open()
 
-            Dim command As New SqlCommand("INSERT INTO UserDatabase.dbo.Input (FirstName, LastName, Phone, Email) VALUES ('" & firstName & "', '" & lastName & "', '" & phone & "', '" & email & "')", _connect)
+            Dim command As New SqlCommand("INSERT INTO UserDatabase.dbo.Information (FirstName, LastName, Phone, Email) VALUES ('" & firstName & "', '" & lastName & "', '" & phone & "', '" & email & "')", _connect)
 
             command.ExecuteNonQuery()
 
@@ -39,7 +39,7 @@ Public Class Dashboard
     End Sub
 
     Private Sub LoadDataInGridView()
-        Dim command As New SqlCommand("SELECT * FROM UserDatabase.dbo.Input", _connect)
+        Dim command As New SqlCommand("SELECT * FROM UserDatabase.dbo.Information", _connect)
         Dim dataAdapter As New SqlDataAdapter(command)
 
         Dim dataTable As New DataTable
@@ -61,7 +61,7 @@ Public Class Dashboard
 
                     Dim name As String = DeleteNameTextBox.Text
 
-                    Dim command As New SqlCommand("DELETE FROM UserDatabase.dbo.Input WHERE FirstName='" & name & "'", _connect)
+                    Dim command As New SqlCommand("DELETE FROM UserDatabase.dbo.Information WHERE FirstName='" & name & "'", _connect)
 
                     command.ExecuteNonQuery()
 
@@ -84,7 +84,7 @@ Public Class Dashboard
             If SearchNameTextBox.Text IsNot _empty Then
                 Dim name As String = SearchNameTextBox.Text
 
-                Dim command As New SqlCommand("SELECT * FROM UserDatabase.dbo.Input WHERE FirstName='" & name & "'", _connect)
+                Dim command As New SqlCommand("SELECT * FROM UserDatabase.dbo.Information WHERE FirstName='" & name & "'", _connect)
 
                 Dim dataAdapter As New SqlDataAdapter(command)
                 Dim dataTable As New DataTable
