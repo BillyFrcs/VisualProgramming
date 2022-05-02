@@ -22,7 +22,9 @@ Partial Class Dashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ClearButton = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.EmailTextBox = New System.Windows.Forms.TextBox()
         Me.PhoneTextBox = New System.Windows.Forms.TextBox()
@@ -43,16 +45,22 @@ Partial Class Dashboard
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.DeleteNameTextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PrintButton = New System.Windows.Forms.Button()
+        Me.PrintUserDocument = New System.Drawing.Printing.PrintDocument()
+        Me.PrintPreviewDialogUserData = New System.Windows.Forms.PrintPreviewDialog()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DashboardDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.GroupBox1.Controls.Add(Me.ClearButton)
         Me.GroupBox1.Controls.Add(Me.ExitButton)
         Me.GroupBox1.Controls.Add(Me.EmailTextBox)
         Me.GroupBox1.Controls.Add(Me.PhoneTextBox)
@@ -64,19 +72,31 @@ Partial Class Dashboard
         Me.GroupBox1.Controls.Add(Me.PhoneLabel)
         Me.GroupBox1.Controls.Add(Me.LastNameLabel)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(32, 28)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(320, 302)
+        Me.GroupBox1.Size = New System.Drawing.Size(341, 302)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Input Data"
+        '
+        'ClearButton
+        '
+        Me.ClearButton.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ClearButton.BackColor = System.Drawing.Color.BlueViolet
+        Me.ClearButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.ClearButton.Location = New System.Drawing.Point(143, 230)
+        Me.ClearButton.Name = "ClearButton"
+        Me.ClearButton.Size = New System.Drawing.Size(75, 39)
+        Me.ClearButton.TabIndex = 13
+        Me.ClearButton.Text = "Clear"
+        Me.ClearButton.UseVisualStyleBackColor = False
         '
         'ExitButton
         '
         Me.ExitButton.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ExitButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ExitButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.ExitButton.Location = New System.Drawing.Point(232, 230)
+        Me.ExitButton.Location = New System.Drawing.Point(242, 230)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(75, 39)
         Me.ExitButton.TabIndex = 12
@@ -86,7 +106,7 @@ Partial Class Dashboard
         'EmailTextBox
         '
         Me.EmailTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.EmailTextBox.Location = New System.Drawing.Point(108, 173)
+        Me.EmailTextBox.Location = New System.Drawing.Point(118, 173)
         Me.EmailTextBox.Name = "EmailTextBox"
         Me.EmailTextBox.Size = New System.Drawing.Size(199, 25)
         Me.EmailTextBox.TabIndex = 7
@@ -94,7 +114,7 @@ Partial Class Dashboard
         'PhoneTextBox
         '
         Me.PhoneTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PhoneTextBox.Location = New System.Drawing.Point(108, 134)
+        Me.PhoneTextBox.Location = New System.Drawing.Point(118, 134)
         Me.PhoneTextBox.Name = "PhoneTextBox"
         Me.PhoneTextBox.Size = New System.Drawing.Size(199, 25)
         Me.PhoneTextBox.TabIndex = 6
@@ -104,7 +124,7 @@ Partial Class Dashboard
         Me.SaveButton.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.SaveButton.BackColor = System.Drawing.Color.DodgerBlue
         Me.SaveButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.SaveButton.Location = New System.Drawing.Point(108, 230)
+        Me.SaveButton.Location = New System.Drawing.Point(41, 230)
         Me.SaveButton.Name = "SaveButton"
         Me.SaveButton.Size = New System.Drawing.Size(75, 39)
         Me.SaveButton.TabIndex = 10
@@ -114,7 +134,7 @@ Partial Class Dashboard
         'LastNameTextBox
         '
         Me.LastNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.LastNameTextBox.Location = New System.Drawing.Point(108, 90)
+        Me.LastNameTextBox.Location = New System.Drawing.Point(118, 90)
         Me.LastNameTextBox.Name = "LastNameTextBox"
         Me.LastNameTextBox.Size = New System.Drawing.Size(199, 25)
         Me.LastNameTextBox.TabIndex = 5
@@ -122,7 +142,7 @@ Partial Class Dashboard
         'FirstNameTextBox
         '
         Me.FirstNameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.FirstNameTextBox.Location = New System.Drawing.Point(108, 48)
+        Me.FirstNameTextBox.Location = New System.Drawing.Point(118, 48)
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
         Me.FirstNameTextBox.Size = New System.Drawing.Size(199, 25)
         Me.FirstNameTextBox.TabIndex = 4
@@ -132,7 +152,7 @@ Partial Class Dashboard
         Me.FirstNameLabel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.FirstNameLabel.AutoSize = True
         Me.FirstNameLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.FirstNameLabel.Location = New System.Drawing.Point(21, 48)
+        Me.FirstNameLabel.Location = New System.Drawing.Point(31, 48)
         Me.FirstNameLabel.Name = "FirstNameLabel"
         Me.FirstNameLabel.Size = New System.Drawing.Size(71, 17)
         Me.FirstNameLabel.TabIndex = 0
@@ -143,7 +163,7 @@ Partial Class Dashboard
         Me.EmailLabel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.EmailLabel.AutoSize = True
         Me.EmailLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.EmailLabel.Location = New System.Drawing.Point(21, 173)
+        Me.EmailLabel.Location = New System.Drawing.Point(31, 173)
         Me.EmailLabel.Name = "EmailLabel"
         Me.EmailLabel.Size = New System.Drawing.Size(39, 17)
         Me.EmailLabel.TabIndex = 3
@@ -154,7 +174,7 @@ Partial Class Dashboard
         Me.PhoneLabel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.PhoneLabel.AutoSize = True
         Me.PhoneLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.PhoneLabel.Location = New System.Drawing.Point(21, 134)
+        Me.PhoneLabel.Location = New System.Drawing.Point(31, 134)
         Me.PhoneLabel.Name = "PhoneLabel"
         Me.PhoneLabel.Size = New System.Drawing.Size(44, 17)
         Me.PhoneLabel.TabIndex = 2
@@ -165,7 +185,7 @@ Partial Class Dashboard
         Me.LastNameLabel.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.LastNameLabel.AutoSize = True
         Me.LastNameLabel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.LastNameLabel.Location = New System.Drawing.Point(21, 90)
+        Me.LastNameLabel.Location = New System.Drawing.Point(31, 90)
         Me.LastNameLabel.Name = "LastNameLabel"
         Me.LastNameLabel.Size = New System.Drawing.Size(70, 17)
         Me.LastNameLabel.TabIndex = 1
@@ -192,7 +212,7 @@ Partial Class Dashboard
         Me.DashboardDataGridView.Location = New System.Drawing.Point(17, 28)
         Me.DashboardDataGridView.Name = "DashboardDataGridView"
         Me.DashboardDataGridView.RowTemplate.Height = 25
-        Me.DashboardDataGridView.Size = New System.Drawing.Size(403, 257)
+        Me.DashboardDataGridView.Size = New System.Drawing.Size(445, 257)
         Me.DashboardDataGridView.TabIndex = 1
         '
         'GroupBox2
@@ -200,9 +220,9 @@ Partial Class Dashboard
         Me.GroupBox2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.GroupBox2.Controls.Add(Me.DashboardDataGridView)
         Me.GroupBox2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.GroupBox2.Location = New System.Drawing.Point(362, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(403, 28)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(426, 302)
+        Me.GroupBox2.Size = New System.Drawing.Size(468, 302)
         Me.GroupBox2.TabIndex = 13
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Data View"
@@ -230,9 +250,9 @@ Partial Class Dashboard
         Me.GroupBox3.Controls.Add(Me.SearchDataButton)
         Me.GroupBox3.Controls.Add(Me.SearchNameTextBox)
         Me.GroupBox3.Controls.Add(Me.SearchDataLabel)
-        Me.GroupBox3.Location = New System.Drawing.Point(15, 338)
+        Me.GroupBox3.Location = New System.Drawing.Point(35, 354)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(317, 100)
+        Me.GroupBox3.Size = New System.Drawing.Size(338, 100)
         Me.GroupBox3.TabIndex = 14
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Search Data"
@@ -242,7 +262,7 @@ Partial Class Dashboard
         Me.SearchDataButton.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.SearchDataButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.SearchDataButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.SearchDataButton.Location = New System.Drawing.Point(229, 55)
+        Me.SearchDataButton.Location = New System.Drawing.Point(240, 55)
         Me.SearchDataButton.Name = "SearchDataButton"
         Me.SearchDataButton.Size = New System.Drawing.Size(75, 39)
         Me.SearchDataButton.TabIndex = 15
@@ -255,9 +275,9 @@ Partial Class Dashboard
         Me.GroupBox4.Controls.Add(Me.DeleteNameTextBox)
         Me.GroupBox4.Controls.Add(Me.Label1)
         Me.GroupBox4.Controls.Add(Me.DeleteButton)
-        Me.GroupBox4.Location = New System.Drawing.Point(362, 338)
+        Me.GroupBox4.Location = New System.Drawing.Point(403, 354)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(317, 100)
+        Me.GroupBox4.Size = New System.Drawing.Size(327, 100)
         Me.GroupBox4.TabIndex = 15
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Delete Data"
@@ -279,11 +299,47 @@ Partial Class Dashboard
         Me.Label1.TabIndex = 13
         Me.Label1.Text = "Delete"
         '
+        'PrintButton
+        '
+        Me.PrintButton.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.PrintButton.BackColor = System.Drawing.Color.Magenta
+        Me.PrintButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.PrintButton.Location = New System.Drawing.Point(38, 51)
+        Me.PrintButton.Name = "PrintButton"
+        Me.PrintButton.Size = New System.Drawing.Size(75, 39)
+        Me.PrintButton.TabIndex = 16
+        Me.PrintButton.Text = "Print"
+        Me.PrintButton.UseVisualStyleBackColor = False
+        '
+        'PrintUserDocument
+        '
+        '
+        'PrintPreviewDialogUserData
+        '
+        Me.PrintPreviewDialogUserData.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialogUserData.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialogUserData.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialogUserData.Enabled = True
+        Me.PrintPreviewDialogUserData.Icon = CType(resources.GetObject("PrintPreviewDialogUserData.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialogUserData.Name = "PrintPreviewDialogUserData"
+        Me.PrintPreviewDialogUserData.Visible = False
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.PrintButton)
+        Me.GroupBox5.Location = New System.Drawing.Point(736, 338)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(138, 100)
+        Me.GroupBox5.TabIndex = 17
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Print"
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(883, 483)
+        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
@@ -299,6 +355,7 @@ Partial Class Dashboard
         Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -324,4 +381,9 @@ Partial Class Dashboard
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents DeleteNameTextBox As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents ClearButton As Button
+    Friend WithEvents PrintButton As Button
+    Friend WithEvents PrintUserDocument As Printing.PrintDocument
+    Friend WithEvents PrintPreviewDialogUserData As PrintPreviewDialog
+    Friend WithEvents GroupBox5 As GroupBox
 End Class
