@@ -327,7 +327,7 @@ Partial Class Dashboard
         'GroupBox5
         '
         Me.GroupBox5.Controls.Add(Me.PrintButton)
-        Me.GroupBox5.Location = New System.Drawing.Point(736, 338)
+        Me.GroupBox5.Location = New System.Drawing.Point(736, 354)
         Me.GroupBox5.Name = "GroupBox5"
         Me.GroupBox5.Size = New System.Drawing.Size(138, 100)
         Me.GroupBox5.TabIndex = 17
