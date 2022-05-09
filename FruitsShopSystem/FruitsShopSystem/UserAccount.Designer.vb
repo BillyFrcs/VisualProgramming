@@ -23,7 +23,7 @@ Partial Class UserAccount
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation2 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation1 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserAccount))
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.EmailLoginTextBox = New Guna.UI2.WinForms.Guna2TextBox()
@@ -41,6 +41,7 @@ Partial Class UserAccount
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.LoginGuna2ShadowPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.RegisterGuna2ShadowPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.LoginCursorLabel = New System.Windows.Forms.Label()
         Me.NameTextBox = New Guna.UI2.WinForms.Guna2TextBox()
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -52,7 +53,6 @@ Partial Class UserAccount
         Me.Guna2Transition1 = New Guna.UI2.WinForms.Guna2Transition()
         Me.ErrorMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.SuccessMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
-        Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CType(Me.BackgroundGuna2PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LoginGuna2ShadowPanel.SuspendLayout()
         Me.RegisterGuna2ShadowPanel.SuspendLayout()
@@ -255,6 +255,7 @@ Partial Class UserAccount
         'LoginGuna2ShadowPanel
         '
         Me.LoginGuna2ShadowPanel.BackColor = System.Drawing.Color.Transparent
+        Me.LoginGuna2ShadowPanel.Controls.Add(Me.RegisterGuna2ShadowPanel)
         Me.LoginGuna2ShadowPanel.Controls.Add(Me.Guna2HtmlLabel1)
         Me.LoginGuna2ShadowPanel.Controls.Add(Me.LoginGradientButton)
         Me.LoginGuna2ShadowPanel.Controls.Add(Me.EmailLoginTextBox)
@@ -287,7 +288,7 @@ Partial Class UserAccount
         Me.RegisterGuna2ShadowPanel.Controls.Add(Me.ShowPasswordRegisterToggleSwitch)
         Me.Guna2Transition1.SetDecoration(Me.RegisterGuna2ShadowPanel, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.RegisterGuna2ShadowPanel.FillColor = System.Drawing.Color.White
-        Me.RegisterGuna2ShadowPanel.Location = New System.Drawing.Point(327, 53)
+        Me.RegisterGuna2ShadowPanel.Location = New System.Drawing.Point(0, 0)
         Me.RegisterGuna2ShadowPanel.Name = "RegisterGuna2ShadowPanel"
         Me.RegisterGuna2ShadowPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.RegisterGuna2ShadowPanel.ShadowDepth = 80
@@ -295,6 +296,18 @@ Partial Class UserAccount
         Me.RegisterGuna2ShadowPanel.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal
         Me.RegisterGuna2ShadowPanel.Size = New System.Drawing.Size(316, 403)
         Me.RegisterGuna2ShadowPanel.TabIndex = 11
+        '
+        'Guna2HtmlLabel4
+        '
+        Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2Transition1.SetDecoration(Me.Guna2HtmlLabel4, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(100, Byte), Integer))
+        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(104, 359)
+        Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
+        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(138, 15)
+        Me.Guna2HtmlLabel4.TabIndex = 12
+        Me.Guna2HtmlLabel4.Text = "Already have an Account?"
         '
         'LoginCursorLabel
         '
@@ -448,22 +461,22 @@ Partial Class UserAccount
         'Guna2Transition1
         '
         Me.Guna2Transition1.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.Guna2Transition1.DefaultAnimation = Animation2
+        Animation1.AnimateOnlyDifferences = True
+        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
+        Animation1.LeafCoeff = 0!
+        Animation1.MaxTime = 1.0!
+        Animation1.MinTime = 0!
+        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
+        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
+        Animation1.MosaicSize = 0
+        Animation1.Padding = New System.Windows.Forms.Padding(0)
+        Animation1.RotateCoeff = 0!
+        Animation1.RotateLimit = 0!
+        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
+        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
+        Animation1.TimeCoeff = 0!
+        Animation1.TransparencyCoeff = 0!
+        Me.Guna2Transition1.DefaultAnimation = Animation1
         '
         'ErrorMessageDialog
         '
@@ -483,25 +496,12 @@ Partial Class UserAccount
         Me.SuccessMessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Light
         Me.SuccessMessageDialog.Text = Nothing
         '
-        'Guna2HtmlLabel4
-        '
-        Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2Transition1.SetDecoration(Me.Guna2HtmlLabel4, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(105, Byte), Integer), CType(CType(103, Byte), Integer), CType(CType(100, Byte), Integer))
-        Me.Guna2HtmlLabel4.Location = New System.Drawing.Point(104, 359)
-        Me.Guna2HtmlLabel4.Name = "Guna2HtmlLabel4"
-        Me.Guna2HtmlLabel4.Size = New System.Drawing.Size(138, 15)
-        Me.Guna2HtmlLabel4.TabIndex = 12
-        Me.Guna2HtmlLabel4.Text = "Already have an Account?"
-        '
         'UserAccount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 500)
-        Me.Controls.Add(Me.RegisterGuna2ShadowPanel)
         Me.Controls.Add(Me.LoginGuna2ShadowPanel)
         Me.Controls.Add(Me.Guna2ControlBox2)
         Me.Controls.Add(Me.Guna2ControlBox1)
