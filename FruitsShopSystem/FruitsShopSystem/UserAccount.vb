@@ -74,7 +74,7 @@ Public Class UserAccount
                     SuccessMessageDialog.Show($"Registration Successfully, Welcome {_Name(0).Replace(_NameRegister, _NameRegister)}{String.Concat("!")}", "Success")
                 End Using
             End If
-        Catch ex As SQLException
+        Catch ex As SqlException
             ErrorMessageDialog.Show(ex.Message())
         End Try
     End Sub
