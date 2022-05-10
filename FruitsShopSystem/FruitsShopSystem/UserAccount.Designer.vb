@@ -23,7 +23,7 @@ Partial Class UserAccount
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation2 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation6 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserAccount))
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.EmailLoginTextBox = New Guna.UI2.WinForms.Guna2TextBox()
@@ -51,8 +51,10 @@ Partial Class UserAccount
         Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.ShowPasswordRegisterToggleSwitch = New Guna.UI2.WinForms.Guna2ToggleSwitch()
         Me.TransitionUserAccountPage = New Guna.UI2.WinForms.Guna2Transition()
+        Me.ExitGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.ErrorMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.SuccessMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
+        Me.ConfirmMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
         CType(Me.BackgroundGuna2PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LoginShadowPanel.SuspendLayout()
         Me.RegisterShadowPanel.SuspendLayout()
@@ -458,22 +460,45 @@ Partial Class UserAccount
         'TransitionUserAccountPage
         '
         Me.TransitionUserAccountPage.Cursor = Nothing
-        Animation2.AnimateOnlyDifferences = True
-        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
-        Animation2.LeafCoeff = 0!
-        Animation2.MaxTime = 1.0!
-        Animation2.MinTime = 0!
-        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
-        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
-        Animation2.MosaicSize = 0
-        Animation2.Padding = New System.Windows.Forms.Padding(0)
-        Animation2.RotateCoeff = 0!
-        Animation2.RotateLimit = 0!
-        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
-        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
-        Animation2.TimeCoeff = 0!
-        Animation2.TransparencyCoeff = 0!
-        Me.TransitionUserAccountPage.DefaultAnimation = Animation2
+        Animation6.AnimateOnlyDifferences = True
+        Animation6.BlindCoeff = CType(resources.GetObject("Animation6.BlindCoeff"), System.Drawing.PointF)
+        Animation6.LeafCoeff = 0!
+        Animation6.MaxTime = 1.0!
+        Animation6.MinTime = 0!
+        Animation6.MosaicCoeff = CType(resources.GetObject("Animation6.MosaicCoeff"), System.Drawing.PointF)
+        Animation6.MosaicShift = CType(resources.GetObject("Animation6.MosaicShift"), System.Drawing.PointF)
+        Animation6.MosaicSize = 0
+        Animation6.Padding = New System.Windows.Forms.Padding(0)
+        Animation6.RotateCoeff = 0!
+        Animation6.RotateLimit = 0!
+        Animation6.ScaleCoeff = CType(resources.GetObject("Animation6.ScaleCoeff"), System.Drawing.PointF)
+        Animation6.SlideCoeff = CType(resources.GetObject("Animation6.SlideCoeff"), System.Drawing.PointF)
+        Animation6.TimeCoeff = 0!
+        Animation6.TransparencyCoeff = 0!
+        Me.TransitionUserAccountPage.DefaultAnimation = Animation6
+        '
+        'ExitGradientButton
+        '
+        Me.ExitGradientButton.Animated = True
+        Me.ExitGradientButton.BackColor = System.Drawing.Color.Transparent
+        Me.ExitGradientButton.BorderRadius = 8
+        Me.TransitionUserAccountPage.SetDecoration(Me.ExitGradientButton, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.ExitGradientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.ExitGradientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.ExitGradientButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.ExitGradientButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.ExitGradientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.ExitGradientButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.ExitGradientButton.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.ExitGradientButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.ExitGradientButton.ForeColor = System.Drawing.Color.White
+        Me.ExitGradientButton.IndicateFocus = True
+        Me.ExitGradientButton.Location = New System.Drawing.Point(603, 451)
+        Me.ExitGradientButton.Name = "ExitGradientButton"
+        Me.ExitGradientButton.Size = New System.Drawing.Size(85, 37)
+        Me.ExitGradientButton.TabIndex = 13
+        Me.ExitGradientButton.Text = "Exit"
+        Me.ExitGradientButton.UseTransparentBackground = True
         '
         'ErrorMessageDialog
         '
@@ -493,12 +518,22 @@ Partial Class UserAccount
         Me.SuccessMessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Light
         Me.SuccessMessageDialog.Text = Nothing
         '
+        'ConfirmMessageDialog
+        '
+        Me.ConfirmMessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo
+        Me.ConfirmMessageDialog.Caption = Nothing
+        Me.ConfirmMessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question
+        Me.ConfirmMessageDialog.Parent = Me
+        Me.ConfirmMessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Light
+        Me.ConfirmMessageDialog.Text = Nothing
+        '
         'UserAccount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 500)
+        Me.Controls.Add(Me.ExitGradientButton)
         Me.Controls.Add(Me.RegisterShadowPanel)
         Me.Controls.Add(Me.LoginShadowPanel)
         Me.Controls.Add(Me.Guna2ControlBox2)
@@ -547,4 +582,6 @@ Partial Class UserAccount
     Friend WithEvents ErrorMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents SuccessMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents ExitGradientButton As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents ConfirmMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
 End Class

@@ -11,11 +11,10 @@ Public Class UserAccount
     Private Property _PasswordLogin As String
 
     Private ReadOnly _empty As String = String.Empty
+    Private _Name() As String
 
     ' SQL Connection to the database
     Private ReadOnly _SQLConnection As New SqlConnection("Data Source=BILLY;Initial Catalog=FruitsShop;Integrated Security=True")
-
-    ' Private _SQLCommand As SqlCommand
 
     Private Sub LoginLoad(sender As Object, e As EventArgs) Handles MyBase.Load
         PasswordRegisterTextBox.UseSystemPasswordChar = True
@@ -68,32 +67,16 @@ Public Class UserAccount
                     SQLCommand.ExecuteNonQuery()
                     _SQLConnection.Close()
 
-                    SuccessMessageDialog.Show($"Registration Successfully, Welcome {_NameRegister}!", "Success")
+                    ClearRegisterTextBox()
+
+                    _Name = _NameRegister.Split(" "c)
+
+                    SuccessMessageDialog.Show($"Registration Successfully, Welcome {_Name(0).Replace(_NameRegister, _NameRegister)}{String.Concat("!")}", "Success")
                 End Using
             End If
         Catch ex As SQLException
             ErrorMessageDialog.Show(ex.Message())
         End Try
-
-#If COMMENT Then
-        Try
-            If _NameRegister = _empty Or _EmailRegister = _empty Or _PasswordRegister = _empty Then
-                ErrorMessageDialog.Show("Please fill the form!", "Error")
-            Else
-                _SQLConnection.Open()
-
-                _SQLCommand = New SqlCommand("INSERT INTO FruitsShop.dbo.UserAccount ([Name], [Email], [Password]) VALUES ('" & _NameRegister & "', '" & _EmailRegister & "', '" & _PasswordRegister & "')", _SQLConnection)
-
-                _SQLCommand.ExecuteNonQuery()
-
-                _SQLConnection.Close()
-
-                SuccessMessageDialog.Show("Registration Successfully!", "Success")
-            End If
-        Catch ex As SQLException
-            ErrorMessageDialog.Show($"{ex.Message()}")
-        End Try
-#End If
     End Sub
 
     Private Sub LoginGradientButtonClick(sender As Object, e As EventArgs) Handles LoginGradientButton.Click
@@ -135,6 +118,8 @@ Public Class UserAccount
                     If table.Rows.Count = 0 Then
                         ErrorMessageDialog.Show("Email or Password is incorrect!", "Error")
                     Else
+                        ClearLoginTextBox()
+
                         SuccessMessageDialog.Show($"Login Successfully!", "Success")
                     End If
                 End Using
@@ -161,6 +146,23 @@ Public Class UserAccount
         _PasswordLogin = PasswordLoginTextBox.Text.Trim()
     End Sub
 
+    ''' <summary>
+    ''' Clear the register text box
+    ''' </summary>
+    Private Sub ClearRegisterTextBox()
+        NameTextBox.Clear()
+        EmailRegisterTextBox.Clear()
+        PasswordRegisterTextBox.Clear()
+    End Sub
+
+    ''' <summary>
+    ''' Clear the login text box
+    ''' </summary>
+    Private Sub ClearLoginTextBox()
+        EmailLoginTextBox.Clear()
+        PasswordLoginTextBox.Clear()
+    End Sub
+
     Private Sub ShowPasswordToggleSwitchCheckedChanged(sender As Object, e As EventArgs) Handles ShowPasswordRegisterToggleSwitch.CheckedChanged, ShowPasswordLoginToggleSwitch.CheckedChanged
         ' Register password checked
         If ShowPasswordRegisterToggleSwitch.Checked = True Then
@@ -174,6 +176,14 @@ Public Class UserAccount
             PasswordLoginTextBox.UseSystemPasswordChar = False
         Else
             PasswordLoginTextBox.UseSystemPasswordChar = True
+        End If
+    End Sub
+
+    Private Sub ExitGradientButtonClick(sender As Object, e As EventArgs) Handles ExitGradientButton.Click
+        Dim confirmToQuit As MsgBoxResult = ConfirmMessageDialog.Show("Are you sure want to quit?", "Information")
+
+        If (confirmToQuit = MsgBoxResult.Yes) Then
+            Close()
         End If
     End Sub
 End Class
