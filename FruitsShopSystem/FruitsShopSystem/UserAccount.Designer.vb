@@ -23,7 +23,7 @@ Partial Class UserAccount
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation6 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation3 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserAccount))
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.EmailLoginTextBox = New Guna.UI2.WinForms.Guna2TextBox()
@@ -55,6 +55,9 @@ Partial Class UserAccount
         Me.ErrorMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.SuccessMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.ConfirmMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
+        Me.NameToolTip = New Guna.UI2.WinForms.Guna2HtmlToolTip()
+        Me.EmailToolTip = New Guna.UI2.WinForms.Guna2HtmlToolTip()
+        Me.PasswordToolTip = New Guna.UI2.WinForms.Guna2HtmlToolTip()
         CType(Me.BackgroundGuna2PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LoginShadowPanel.SuspendLayout()
         Me.RegisterShadowPanel.SuspendLayout()
@@ -269,8 +272,8 @@ Partial Class UserAccount
         Me.LoginShadowPanel.Location = New System.Drawing.Point(327, 42)
         Me.LoginShadowPanel.Name = "LoginShadowPanel"
         Me.LoginShadowPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(89, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(89, Byte), Integer))
-        Me.LoginShadowPanel.ShadowDepth = 8
-        Me.LoginShadowPanel.ShadowShift = 8
+        Me.LoginShadowPanel.ShadowDepth = 10
+        Me.LoginShadowPanel.ShadowShift = 10
         Me.LoginShadowPanel.Size = New System.Drawing.Size(316, 403)
         Me.LoginShadowPanel.TabIndex = 11
         '
@@ -291,8 +294,8 @@ Partial Class UserAccount
         Me.RegisterShadowPanel.Location = New System.Drawing.Point(327, 42)
         Me.RegisterShadowPanel.Name = "RegisterShadowPanel"
         Me.RegisterShadowPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(89, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(89, Byte), Integer))
-        Me.RegisterShadowPanel.ShadowDepth = 8
-        Me.RegisterShadowPanel.ShadowShift = 8
+        Me.RegisterShadowPanel.ShadowDepth = 10
+        Me.RegisterShadowPanel.ShadowShift = 10
         Me.RegisterShadowPanel.Size = New System.Drawing.Size(316, 403)
         Me.RegisterShadowPanel.TabIndex = 11
         '
@@ -460,28 +463,28 @@ Partial Class UserAccount
         'TransitionUserAccountPage
         '
         Me.TransitionUserAccountPage.Cursor = Nothing
-        Animation6.AnimateOnlyDifferences = True
-        Animation6.BlindCoeff = CType(resources.GetObject("Animation6.BlindCoeff"), System.Drawing.PointF)
-        Animation6.LeafCoeff = 0!
-        Animation6.MaxTime = 1.0!
-        Animation6.MinTime = 0!
-        Animation6.MosaicCoeff = CType(resources.GetObject("Animation6.MosaicCoeff"), System.Drawing.PointF)
-        Animation6.MosaicShift = CType(resources.GetObject("Animation6.MosaicShift"), System.Drawing.PointF)
-        Animation6.MosaicSize = 0
-        Animation6.Padding = New System.Windows.Forms.Padding(0)
-        Animation6.RotateCoeff = 0!
-        Animation6.RotateLimit = 0!
-        Animation6.ScaleCoeff = CType(resources.GetObject("Animation6.ScaleCoeff"), System.Drawing.PointF)
-        Animation6.SlideCoeff = CType(resources.GetObject("Animation6.SlideCoeff"), System.Drawing.PointF)
-        Animation6.TimeCoeff = 0!
-        Animation6.TransparencyCoeff = 0!
-        Me.TransitionUserAccountPage.DefaultAnimation = Animation6
+        Animation3.AnimateOnlyDifferences = True
+        Animation3.BlindCoeff = CType(resources.GetObject("Animation3.BlindCoeff"), System.Drawing.PointF)
+        Animation3.LeafCoeff = 0!
+        Animation3.MaxTime = 1.0!
+        Animation3.MinTime = 0!
+        Animation3.MosaicCoeff = CType(resources.GetObject("Animation3.MosaicCoeff"), System.Drawing.PointF)
+        Animation3.MosaicShift = CType(resources.GetObject("Animation3.MosaicShift"), System.Drawing.PointF)
+        Animation3.MosaicSize = 0
+        Animation3.Padding = New System.Windows.Forms.Padding(0)
+        Animation3.RotateCoeff = 0!
+        Animation3.RotateLimit = 0!
+        Animation3.ScaleCoeff = CType(resources.GetObject("Animation3.ScaleCoeff"), System.Drawing.PointF)
+        Animation3.SlideCoeff = CType(resources.GetObject("Animation3.SlideCoeff"), System.Drawing.PointF)
+        Animation3.TimeCoeff = 0!
+        Animation3.TransparencyCoeff = 0!
+        Me.TransitionUserAccountPage.DefaultAnimation = Animation3
         '
         'ExitGradientButton
         '
         Me.ExitGradientButton.Animated = True
         Me.ExitGradientButton.BackColor = System.Drawing.Color.Transparent
-        Me.ExitGradientButton.BorderRadius = 8
+        Me.ExitGradientButton.BorderRadius = 10
         Me.TransitionUserAccountPage.SetDecoration(Me.ExitGradientButton, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.ExitGradientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.ExitGradientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
@@ -526,6 +529,21 @@ Partial Class UserAccount
         Me.ConfirmMessageDialog.Parent = Me
         Me.ConfirmMessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Light
         Me.ConfirmMessageDialog.Text = Nothing
+        '
+        'NameToolTip
+        '
+        Me.NameToolTip.AllowLinksHandling = True
+        Me.NameToolTip.MaximumSize = New System.Drawing.Size(0, 0)
+        '
+        'EmailToolTip
+        '
+        Me.EmailToolTip.AllowLinksHandling = True
+        Me.EmailToolTip.MaximumSize = New System.Drawing.Size(0, 0)
+        '
+        'PasswordToolTip
+        '
+        Me.PasswordToolTip.AllowLinksHandling = True
+        Me.PasswordToolTip.MaximumSize = New System.Drawing.Size(0, 0)
         '
         'UserAccount
         '
@@ -584,4 +602,7 @@ Partial Class UserAccount
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents ExitGradientButton As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents ConfirmMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents NameToolTip As Guna.UI2.WinForms.Guna2HtmlToolTip
+    Friend WithEvents EmailToolTip As Guna.UI2.WinForms.Guna2HtmlToolTip
+    Friend WithEvents PasswordToolTip As Guna.UI2.WinForms.Guna2HtmlToolTip
 End Class

@@ -123,7 +123,7 @@ Public Class UserAccount
                         SuccessMessageDialog.Show($"Login Successfully!", "Success")
                     End If
                 End Using
-            Catch ex As SQLException
+            Catch ex As SqlException
                 ErrorMessageDialog.Show(ex.Message())
             End Try
         End If
@@ -180,10 +180,28 @@ Public Class UserAccount
     End Sub
 
     Private Sub ExitGradientButtonClick(sender As Object, e As EventArgs) Handles ExitGradientButton.Click
-        Dim confirmToQuit As MsgBoxResult = ConfirmMessageDialog.Show("Are you sure want to quit?", "Information")
+        Dim confirmToQuit As MsgBoxResult = ConfirmMessageDialog.Show("Are you sure want to quit?", "Confirmation")
 
-        If (confirmToQuit = MsgBoxResult.Yes) Then
+        If confirmToQuit = MsgBoxResult.Yes Then
             Close()
         End If
+    End Sub
+
+    Private Sub NameRegisterTextBoxMouseHover() Handles NameTextBox.MouseHover
+        NameToolTip.SetToolTip(NameTextBox, "Input your Name")
+    End Sub
+
+    Private Sub EmailRegisterTextBoxMouseHover() Handles EmailRegisterTextBox.MouseHover, EmailLoginTextBox.MouseHover
+        Const caption = "Input your Email"
+
+        EmailToolTip.SetToolTip(EmailRegisterTextBox, caption)
+        EmailToolTip.SetToolTip(EmailLoginTextBox, caption)
+    End Sub
+
+    Private Sub PasswordRegisterTextBoxMouseHover() Handles PasswordRegisterTextBox.MouseHover, PasswordLoginTextBox.MouseHover
+        Const caption = "Input your Password"
+
+        PasswordToolTip.SetToolTip(PasswordRegisterTextBox, caption)
+        PasswordToolTip.SetToolTip(PasswordLoginTextBox, caption)
     End Sub
 End Class
