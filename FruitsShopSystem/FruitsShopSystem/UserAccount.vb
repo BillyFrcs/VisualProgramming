@@ -1,4 +1,6 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
+Imports Guna.UI2.WinForms
 
 Public Class UserAccount
     ' Register properties
@@ -11,7 +13,9 @@ Public Class UserAccount
     Private Property _PasswordLogin As String
 
     Private ReadOnly _empty As String = String.Empty
-    Private _Name() As String
+
+    ' Email validation
+    Private ReadOnly _regex As New Regex("^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$")
 
     ' SQL Connection to the database
     Private ReadOnly _SQLConnection As New SqlConnection("Data Source=BILLY;Initial Catalog=FruitsShop;Integrated Security=True")
@@ -28,11 +32,15 @@ Public Class UserAccount
     Private Sub LoginLabelClick(sender As Object, e As EventArgs) Handles LoginCursorLabel.Click
         RegisterShadowPanel.Visible = False
         TransitionUserAccountPage.HideSync(RegisterShadowPanel)
+
+        ClearRegisterTextBox()
     End Sub
 
     Private Sub CreateAccountButtonClick(sender As Object, e As EventArgs) Handles CreateAccounButton.Click
         RegisterShadowPanel.Visible = True
         TransitionUserAccountPage.ShowSync(RegisterShadowPanel)
+
+        ClearLoginTextBox()
     End Sub
 
     Private Sub RegisterGradientButtonClick(sender As Object, e As EventArgs) Handles RegisterGradientButton.Click
@@ -49,30 +57,36 @@ Public Class UserAccount
             If _NameRegister = _empty Or _EmailRegister = _empty Or _PasswordRegister = _empty Then
                 ErrorMessageDialog.Show(New ArgumentNullException().Message(), "Error")
             Else
-                _SQLConnection.Open()
+                If Not _regex.IsMatch(_EmailRegister) Then
+                    ErrorMessageDialog.Show("Email is not valid", "Error")
 
-                Dim insertQuery As String = "INSERT INTO FruitsShop.dbo.UserAccount ([Name], [Email], [Password]) VALUES ('" & _NameRegister & "', '" & _EmailRegister & "', '" & _PasswordRegister & "')"
+                    EmailRegisterTextBox.Select()
+                Else
+                    _SQLConnection.Open()
 
-                Using SQLCommand As New SqlCommand
-                    With SQLCommand
-                        .Connection = _SQLConnection
-                        .CommandType = CommandType.Text
-                        .CommandText = insertQuery
+                    Dim insertQuery As String = "INSERT INTO FruitsShop.dbo.UserAccount ([Name], [Email], [Password]) VALUES ('" & _NameRegister & "', '" & _EmailRegister & "', '" & _PasswordRegister & "')"
 
-                        SQLCommand.Parameters.AddWithValue("@Name", _NameRegister)
-                        SQLCommand.Parameters.AddWithValue("@Email", _EmailRegister)
-                        SQLCommand.Parameters.AddWithValue("@Password", _PasswordRegister)
-                    End With
+                    Using SQLCommand As New SqlCommand
+                        With SQLCommand
+                            .Connection = _SQLConnection
+                            .CommandType = CommandType.Text
+                            .CommandText = insertQuery
 
-                    SQLCommand.ExecuteNonQuery()
-                    _SQLConnection.Close()
+                            SQLCommand.Parameters.AddWithValue("@Name", _NameRegister)
+                            SQLCommand.Parameters.AddWithValue("@Email", _EmailRegister)
+                            SQLCommand.Parameters.AddWithValue("@Password", _PasswordRegister)
+                        End With
 
-                    ClearRegisterTextBox()
+                        SQLCommand.ExecuteNonQuery()
+                        _SQLConnection.Close()
 
-                    _Name = _NameRegister.Split(" "c)
+                        ClearRegisterTextBox()
 
-                    SuccessMessageDialog.Show($"Registration Successfully, Welcome {_Name(0).Replace(_NameRegister, _NameRegister)}{String.Concat("!")}", "Success")
-                End Using
+                        Dim getName() As String = _NameRegister.Split(" "c)
+
+                        SuccessMessageDialog.Show($"Registration Successfully, Welcome {getName(0).Replace(_NameRegister, _NameRegister)}!", "Success")
+                    End Using
+                End If
             End If
         Catch ex As SqlException
             ErrorMessageDialog.Show(ex.Message())
@@ -89,44 +103,68 @@ Public Class UserAccount
     ''' Login user account
     ''' </summary>
     Private Sub LoginAccount()
-        If _EmailLogin = _empty Or _PasswordLogin = _empty Then
-            ErrorMessageDialog.Show(New ArgumentNullException().Message(), "Error")
-        Else
-            Try
-                _SQLConnection.Open()
+        Try
+            If _EmailLogin = _empty Or _PasswordLogin = _empty Then
+                ErrorMessageDialog.Show(New ArgumentNullException().Message(), "Error")
+            Else
+                If _regex.IsMatch(_EmailLogin) Then
+                    _SQLConnection.Open()
 
-                Dim selectQuery As String = "SELECT * FROM FruitsShop.dbo.UserAccount WHERE Email = '" & _EmailLogin & "' AND Password = '" & _PasswordLogin & "'"
+                    Dim selectQuery As String = "SELECT * FROM FruitsShop.dbo.UserAccount WHERE Email = '" & _EmailLogin & "' AND Password = '" & _PasswordLogin & "'"
 
-                Using SQLCommand As New SqlCommand
-                    With SQLCommand
-                        .Connection = _SQLConnection
-                        .CommandType = CommandType.Text
-                        .CommandText = selectQuery
+                    Using SQLCommand As New SqlCommand
+                        With SQLCommand
+                            .Connection = _SQLConnection
+                            .CommandType = CommandType.Text
+                            .CommandText = selectQuery
 
-                        SQLCommand.Parameters.AddWithValue("@Email", _EmailLogin)
-                        SQLCommand.Parameters.AddWithValue("@Password", _PasswordLogin)
-                    End With
+                            SQLCommand.Parameters.AddWithValue("@Email", _EmailLogin)
+                            SQLCommand.Parameters.AddWithValue("@Password", _PasswordLogin)
+                        End With
 
-                    Dim adapter As New SqlDataAdapter(SQLCommand)
-                    Dim table As New DataTable
+                        Dim adapter As New SqlDataAdapter(SQLCommand)
+                        Dim table As New DataTable
 
-                    adapter.Fill(table)
+                        adapter.Fill(table)
 
-                    SQLCommand.ExecuteNonQuery()
-                    _SQLConnection.Close()
+                        SQLCommand.ExecuteNonQuery()
+                        _SQLConnection.Close()
 
-                    If table.Rows.Count = 0 Then
-                        ErrorMessageDialog.Show("Email or Password is incorrect!", "Error")
-                    Else
-                        ClearLoginTextBox()
+                        If table.Rows.Count = 0 Then
+                            ErrorMessageDialog.Show("Email or Password is incorrect!", "Error")
+                        Else
+                            Try
+                                ClearLoginTextBox()
 
-                        SuccessMessageDialog.Show($"Login Successfully!", "Success")
-                    End If
-                End Using
-            Catch ex As SqlException
-                ErrorMessageDialog.Show(ex.Message())
-            End Try
-        End If
+                                _SQLConnection.Open()
+
+                                Dim nameQuery = "SELECT Name FROM FruitsShop.dbo.UserAccount WHERE Email = '" & _EmailLogin & "'"
+
+                                Dim NewSQLCommand As New SqlCommand(nameQuery, _SQLConnection)
+
+                                NewSQLCommand.Parameters.AddWithValue("@Email", _EmailLogin)
+
+                                Dim executeName As String = NewSQLCommand.ExecuteScalar()
+
+                                Dim getName() As String = executeName.Split(" "c)
+
+                                SuccessMessageDialog.Show($"Login Successfully, Welcome back {getName(0).Replace(executeName, executeName)}!", "Success")
+                            Catch ex As SqlException
+                                ErrorMessageDialog.Show(ex.Message())
+                            Finally
+                                _SQLConnection.Close()
+                            End Try
+                        End If
+                    End Using
+                Else
+                    ErrorMessageDialog.Show("Email is not valid", "Error")
+
+                    EmailLoginTextBox.Select()
+                End If
+            End If
+        Catch ex As SqlException
+            ErrorMessageDialog.Show(ex.Message())
+        End Try
     End Sub
 
     ''' <summary>
