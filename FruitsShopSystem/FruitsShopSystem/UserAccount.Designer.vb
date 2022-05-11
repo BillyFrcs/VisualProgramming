@@ -225,6 +225,7 @@ Partial Class UserAccount
         Me.BackgroundGuna2PictureBox.BackColor = System.Drawing.Color.Transparent
         Me.BackgroundGuna2PictureBox.BorderRadius = 5
         Me.TransitionUserAccountPage.SetDecoration(Me.BackgroundGuna2PictureBox, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.BackgroundGuna2PictureBox.Dock = System.Windows.Forms.DockStyle.Left
         Me.BackgroundGuna2PictureBox.Image = CType(resources.GetObject("BackgroundGuna2PictureBox.Image"), System.Drawing.Image)
         Me.BackgroundGuna2PictureBox.ImageRotate = 0!
         Me.BackgroundGuna2PictureBox.Location = New System.Drawing.Point(0, 0)
