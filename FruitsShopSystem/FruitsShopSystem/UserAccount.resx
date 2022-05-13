@@ -9404,9 +9404,9 @@
     <value>371, 39</value>
   </metadata>
   <metadata name="EmailToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>530, 37</value>
+    <value>497, 46</value>
   </metadata>
   <metadata name="PasswordToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>687, 39</value>
+    <value>648, 45</value>
   </metadata>
 </root>

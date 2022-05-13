@@ -366,7 +366,7 @@ Partial Class UserAccount
         Me.RegisterGradientButton.Animated = True
         Me.RegisterGradientButton.AutoRoundedCorners = True
         Me.RegisterGradientButton.BackColor = System.Drawing.Color.Transparent
-        Me.RegisterGradientButton.BorderRadius = 21
+        Me.RegisterGradientButton.BorderRadius = 20
         Me.TransitionUserAccountPage.SetDecoration(Me.RegisterGradientButton, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.RegisterGradientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.RegisterGradientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
@@ -380,6 +380,7 @@ Partial Class UserAccount
         Me.RegisterGradientButton.IndicateFocus = True
         Me.RegisterGradientButton.Location = New System.Drawing.Point(29, 300)
         Me.RegisterGradientButton.Name = "RegisterGradientButton"
+        Me.RegisterGradientButton.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(10)
         Me.RegisterGradientButton.Size = New System.Drawing.Size(262, 45)
         Me.RegisterGradientButton.TabIndex = 6
         Me.RegisterGradientButton.Text = "Register"
