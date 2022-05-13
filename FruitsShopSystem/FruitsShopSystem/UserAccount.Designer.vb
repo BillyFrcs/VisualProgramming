@@ -157,7 +157,7 @@ Partial Class UserAccount
         Me.LoginGradientButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.LoginGradientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.LoginGradientButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.LoginGradientButton.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.LoginGradientButton.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.LoginGradientButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
         Me.LoginGradientButton.ForeColor = System.Drawing.Color.White
         Me.LoginGradientButton.IndicateFocus = True
@@ -240,9 +240,11 @@ Partial Class UserAccount
         Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TransitionUserAccountPage.SetDecoration(Me.Guna2ControlBox1, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ControlBox1.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.DimGray
+        Me.Guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.Black
         Me.Guna2ControlBox1.Location = New System.Drawing.Point(662, 12)
         Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
+        Me.Guna2ControlBox1.PressedColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.Guna2ControlBox1.Size = New System.Drawing.Size(26, 24)
         Me.Guna2ControlBox1.TabIndex = 0
         '
@@ -252,7 +254,7 @@ Partial Class UserAccount
         Me.Guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
         Me.TransitionUserAccountPage.SetDecoration(Me.Guna2ControlBox2, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ControlBox2.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2ControlBox2.IconColor = System.Drawing.Color.DimGray
+        Me.Guna2ControlBox2.IconColor = System.Drawing.Color.Black
         Me.Guna2ControlBox2.Location = New System.Drawing.Point(630, 12)
         Me.Guna2ControlBox2.Name = "Guna2ControlBox2"
         Me.Guna2ControlBox2.Size = New System.Drawing.Size(26, 24)
@@ -262,6 +264,7 @@ Partial Class UserAccount
         '
         Me.LoginShadowPanel.BackColor = System.Drawing.Color.Transparent
         Me.LoginShadowPanel.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.LoginShadowPanel.Controls.Add(Me.RegisterShadowPanel)
         Me.LoginShadowPanel.Controls.Add(Me.LoginGradientButton)
         Me.LoginShadowPanel.Controls.Add(Me.EmailLoginTextBox)
         Me.LoginShadowPanel.Controls.Add(Me.CreateAccounButton)
@@ -292,7 +295,7 @@ Partial Class UserAccount
         Me.RegisterShadowPanel.Controls.Add(Me.ShowPasswordRegisterToggleSwitch)
         Me.TransitionUserAccountPage.SetDecoration(Me.RegisterShadowPanel, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.RegisterShadowPanel.FillColor = System.Drawing.Color.White
-        Me.RegisterShadowPanel.Location = New System.Drawing.Point(327, 42)
+        Me.RegisterShadowPanel.Location = New System.Drawing.Point(0, 0)
         Me.RegisterShadowPanel.Name = "RegisterShadowPanel"
         Me.RegisterShadowPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(89, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.RegisterShadowPanel.ShadowDepth = 10
@@ -366,7 +369,7 @@ Partial Class UserAccount
         Me.RegisterGradientButton.Animated = True
         Me.RegisterGradientButton.AutoRoundedCorners = True
         Me.RegisterGradientButton.BackColor = System.Drawing.Color.Transparent
-        Me.RegisterGradientButton.BorderRadius = 20
+        Me.RegisterGradientButton.BorderRadius = 21
         Me.TransitionUserAccountPage.SetDecoration(Me.RegisterGradientButton, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.RegisterGradientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.RegisterGradientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
@@ -374,7 +377,7 @@ Partial Class UserAccount
         Me.RegisterGradientButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.RegisterGradientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
         Me.RegisterGradientButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.RegisterGradientButton.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.RegisterGradientButton.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.RegisterGradientButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
         Me.RegisterGradientButton.ForeColor = System.Drawing.Color.White
         Me.RegisterGradientButton.IndicateFocus = True
@@ -554,7 +557,6 @@ Partial Class UserAccount
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 500)
         Me.Controls.Add(Me.ExitGradientButton)
-        Me.Controls.Add(Me.RegisterShadowPanel)
         Me.Controls.Add(Me.LoginShadowPanel)
         Me.Controls.Add(Me.Guna2ControlBox2)
         Me.Controls.Add(Me.Guna2ControlBox1)
