@@ -32,7 +32,6 @@ Partial Class UserAccount
         Me.ShowPasswordGuna2HtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.LoginGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.CreateAccounButton = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
@@ -192,21 +191,6 @@ Partial Class UserAccount
         Me.CreateAccounButton.Text = "Create an Account"
         Me.CreateAccounButton.UseTransparentBackground = True
         '
-        'Guna2HtmlLabel1
-        '
-        Me.Guna2HtmlLabel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.TransitionUserAccountPage.SetDecoration(Me.Guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None)
-        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black
-        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(59, 17)
-        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(193, 39)
-        Me.Guna2HtmlLabel1.TabIndex = 8
-        Me.Guna2HtmlLabel1.Text = "Login Account"
-        '
         'Guna2AnimateWindow1
         '
         Me.Guna2AnimateWindow1.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND
@@ -267,7 +251,6 @@ Partial Class UserAccount
         'LoginShadowPanel
         '
         Me.LoginShadowPanel.BackColor = System.Drawing.Color.Transparent
-        Me.LoginShadowPanel.Controls.Add(Me.Guna2HtmlLabel1)
         Me.LoginShadowPanel.Controls.Add(Me.RegisterShadowPanel)
         Me.LoginShadowPanel.Controls.Add(Me.LoginGradientButton)
         Me.LoginShadowPanel.Controls.Add(Me.EmailLoginTextBox)
@@ -615,7 +598,6 @@ Partial Class UserAccount
     Friend WithEvents ShowPasswordGuna2HtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LoginGradientButton As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents CreateAccounButton As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2AnimateWindow1 As Guna.UI2.WinForms.Guna2AnimateWindow
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl

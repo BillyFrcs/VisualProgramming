@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
 
-Public Class UserTransactions
+Public Class Home
     Private _apple As String
     Private _grapes As String
     Private _lemon As String
@@ -19,22 +19,6 @@ Public Class UserTransactions
     Private Const _databaseName = "FruitsShop"
 
     ' Private ReadOnly _SQLConnection As New SqlConnection($"Data Source={_serverName};Initial Catalog={_databaseName};Integrated Security=True")
-
-    Private Sub UserTransactionsLoad(sender As Object, e As EventArgs) Handles MyBase.Load
-        HomeGradientButton.Checked = True
-
-        If (HomeGradientButton.Checked) Then
-            HomePanel.Visible = True
-        End If
-    End Sub
-
-    Private Sub ExitGradientButtonClick(sender As Object, e As EventArgs) Handles ExitGradientButton.Click
-        Dim confirmToQuit As MsgBoxResult = ConfirmMessageDialog.Show("Are you sure want to quit?", "Confirmation")
-
-        If confirmToQuit = MsgBoxResult.Yes Then
-            Close()
-        End If
-    End Sub
 
     Private Sub FruitsTextBoxMouseHover() Handles AppleTextBox.MouseHover, GrapesTextBox.MouseHover, LemonTextBox.MouseHover, PearTextBox.MouseHover, PineappleTextBox.MouseHover, StrawberryTextBox.MouseHover
         FruitsHtmlToolTip.SetToolTip(AppleTextBox, "Number of Apple")
