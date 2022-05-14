@@ -22,6 +22,10 @@ Public Class UserTransactions
 
     Private Sub UserTransactionsLoad(sender As Object, e As EventArgs) Handles MyBase.Load
         HomeGradientButton.Checked = True
+
+        If (HomeGradientButton.Checked) Then
+            HomePanel.Visible = True
+        End If
     End Sub
 
     Private Sub ExitGradientButtonClick(sender As Object, e As EventArgs) Handles ExitGradientButton.Click

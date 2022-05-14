@@ -699,6 +699,7 @@ Partial Class UserTransactions
         Me.HomePanel.Name = "HomePanel"
         Me.HomePanel.Size = New System.Drawing.Size(779, 411)
         Me.HomePanel.TabIndex = 18
+        Me.HomePanel.Visible = False
         '
         'AddToCartGradientButton
         '
