@@ -194,6 +194,9 @@ Partial Class UserAccount
         '
         'Guna2HtmlLabel1
         '
+        Me.Guna2HtmlLabel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
         Me.TransitionUserAccountPage.SetDecoration(Me.Guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -254,6 +257,7 @@ Partial Class UserAccount
         Me.Guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
         Me.TransitionUserAccountPage.SetDecoration(Me.Guna2ControlBox2, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2ControlBox2.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2ControlBox2.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(75, Byte), Integer))
         Me.Guna2ControlBox2.IconColor = System.Drawing.Color.Black
         Me.Guna2ControlBox2.Location = New System.Drawing.Point(630, 12)
         Me.Guna2ControlBox2.Name = "Guna2ControlBox2"
@@ -283,6 +287,9 @@ Partial Class UserAccount
         '
         'RegisterShadowPanel
         '
+        Me.RegisterShadowPanel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RegisterShadowPanel.BackColor = System.Drawing.Color.Transparent
         Me.RegisterShadowPanel.Controls.Add(Me.Guna2HtmlLabel4)
         Me.RegisterShadowPanel.Controls.Add(Me.LoginCursorLabel)
@@ -305,6 +312,9 @@ Partial Class UserAccount
         '
         'Guna2HtmlLabel4
         '
+        Me.Guna2HtmlLabel4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent
         Me.TransitionUserAccountPage.SetDecoration(Me.Guna2HtmlLabel4, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -317,6 +327,9 @@ Partial Class UserAccount
         '
         'LoginCursorLabel
         '
+        Me.LoginCursorLabel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LoginCursorLabel.AutoSize = True
         Me.LoginCursorLabel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.TransitionUserAccountPage.SetDecoration(Me.LoginCursorLabel, Guna.UI2.AnimatorNS.DecorationType.None)
@@ -330,6 +343,9 @@ Partial Class UserAccount
         '
         'NameTextBox
         '
+        Me.NameTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.NameTextBox.Animated = True
         Me.NameTextBox.BorderRadius = 10
         Me.NameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -366,6 +382,9 @@ Partial Class UserAccount
         '
         'RegisterGradientButton
         '
+        Me.RegisterGradientButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.RegisterGradientButton.Animated = True
         Me.RegisterGradientButton.AutoRoundedCorners = True
         Me.RegisterGradientButton.BackColor = System.Drawing.Color.Transparent
@@ -391,6 +410,9 @@ Partial Class UserAccount
         '
         'EmailRegisterTextBox
         '
+        Me.EmailRegisterTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.EmailRegisterTextBox.Animated = True
         Me.EmailRegisterTextBox.BorderRadius = 10
         Me.EmailRegisterTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -415,6 +437,9 @@ Partial Class UserAccount
         '
         'PasswordRegisterTextBox
         '
+        Me.PasswordRegisterTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PasswordRegisterTextBox.Animated = True
         Me.PasswordRegisterTextBox.BorderRadius = 10
         Me.PasswordRegisterTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
@@ -439,6 +464,9 @@ Partial Class UserAccount
         '
         'Guna2HtmlLabel3
         '
+        Me.Guna2HtmlLabel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
         Me.TransitionUserAccountPage.SetDecoration(Me.Guna2HtmlLabel3, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -451,6 +479,9 @@ Partial Class UserAccount
         '
         'ShowPasswordRegisterToggleSwitch
         '
+        Me.ShowPasswordRegisterToggleSwitch.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ShowPasswordRegisterToggleSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(184, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.ShowPasswordRegisterToggleSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(25, Byte), Integer))
         Me.ShowPasswordRegisterToggleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.White
@@ -487,6 +518,7 @@ Partial Class UserAccount
         '
         'ExitGradientButton
         '
+        Me.ExitGradientButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ExitGradientButton.Animated = True
         Me.ExitGradientButton.BackColor = System.Drawing.Color.Transparent
         Me.ExitGradientButton.BorderRadius = 10

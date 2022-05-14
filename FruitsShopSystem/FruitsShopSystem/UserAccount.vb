@@ -18,7 +18,10 @@ Public Class UserAccount
     Private ReadOnly _regex As New Regex("^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$")
 
     ' SQL Connection to the database
-    Private ReadOnly _SQLConnection As New SqlConnection("Data Source=BILLY;Initial Catalog=FruitsShop;Integrated Security=True")
+    Private Const _serverName = "BILLY"
+    Private Const _databaseName = "FruitsShop"
+
+    Private ReadOnly _SQLConnection As New SqlConnection($"Data Source={_serverName};Initial Catalog={_databaseName};Integrated Security=True")
 
     Private Sub LoginLoad(sender As Object, e As EventArgs) Handles MyBase.Load
         PasswordRegisterTextBox.UseSystemPasswordChar = True
