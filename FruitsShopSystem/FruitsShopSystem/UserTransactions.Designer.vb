@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class UserTransactions
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,13 +20,13 @@ Partial Class UserTransactions
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserTransactions))
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
-        Me.Guna2CustomGradientPanel1 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Me.SidebarCustomGradientPanel = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.HomeGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2PictureBox2 = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -44,22 +44,26 @@ Partial Class UserTransactions
         Me.NameHtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
-        Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.HomeCustomGradientPanel = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
         Me.Guna2ControlBox3 = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.Guna2CustomGradientPanel2 = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
+        Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.WelcomeHtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.ExitGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.SuccessMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.ErrorMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.ConfirmMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
-        Me.Guna2CustomGradientPanel1.SuspendLayout()
+        Me.HomePanel = New Guna.UI2.WinForms.Guna2Panel()
+        Me.ProfileCircleButton = New Guna.UI2.WinForms.Guna2CircleButton()
+        Me.Guna2ResizeForm1 = New Guna.UI2.WinForms.Guna2ResizeForm(Me.components)
+        Me.SidebarCustomGradientPanel.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BalanceGradientPanel.SuspendLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Guna2CustomGradientPanel2.SuspendLayout()
+        Me.HomeCustomGradientPanel.SuspendLayout()
         CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.HomePanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'Guna2ShadowForm1
@@ -70,24 +74,24 @@ Partial Class UserTransactions
         '
         Me.Guna2AnimateWindow1.TargetForm = Me
         '
-        'Guna2CustomGradientPanel1
+        'SidebarCustomGradientPanel
         '
-        Me.Guna2CustomGradientPanel1.BorderRadius = 5
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.HomeGradientButton)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.Guna2HtmlLabel1)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.Guna2PictureBox2)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.LogoNameHtmlLabel)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.LogoutGradientButton)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.AccountGradientButton)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.HistoryGradientButton)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.TransactionsGradientButton)
-        Me.Guna2CustomGradientPanel1.Controls.Add(Me.BalanceGradientPanel)
-        Me.Guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left
-        Me.Guna2CustomGradientPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.Guna2CustomGradientPanel1.Name = "Guna2CustomGradientPanel1"
-        Me.Guna2CustomGradientPanel1.ShadowDecoration.BorderRadius = 5
-        Me.Guna2CustomGradientPanel1.Size = New System.Drawing.Size(221, 600)
-        Me.Guna2CustomGradientPanel1.TabIndex = 0
+        Me.SidebarCustomGradientPanel.BorderRadius = 5
+        Me.SidebarCustomGradientPanel.Controls.Add(Me.HomeGradientButton)
+        Me.SidebarCustomGradientPanel.Controls.Add(Me.Guna2HtmlLabel1)
+        Me.SidebarCustomGradientPanel.Controls.Add(Me.Guna2PictureBox2)
+        Me.SidebarCustomGradientPanel.Controls.Add(Me.LogoNameHtmlLabel)
+        Me.SidebarCustomGradientPanel.Controls.Add(Me.LogoutGradientButton)
+        Me.SidebarCustomGradientPanel.Controls.Add(Me.AccountGradientButton)
+        Me.SidebarCustomGradientPanel.Controls.Add(Me.HistoryGradientButton)
+        Me.SidebarCustomGradientPanel.Controls.Add(Me.TransactionsGradientButton)
+        Me.SidebarCustomGradientPanel.Controls.Add(Me.BalanceGradientPanel)
+        Me.SidebarCustomGradientPanel.Dock = System.Windows.Forms.DockStyle.Left
+        Me.SidebarCustomGradientPanel.Location = New System.Drawing.Point(0, 0)
+        Me.SidebarCustomGradientPanel.Name = "SidebarCustomGradientPanel"
+        Me.SidebarCustomGradientPanel.ShadowDecoration.BorderRadius = 5
+        Me.SidebarCustomGradientPanel.Size = New System.Drawing.Size(221, 600)
+        Me.SidebarCustomGradientPanel.TabIndex = 0
         '
         'HomeGradientButton
         '
@@ -165,7 +169,9 @@ Partial Class UserTransactions
         Me.LogoutGradientButton.Animated = True
         Me.LogoutGradientButton.BackColor = System.Drawing.Color.Transparent
         Me.LogoutGradientButton.BorderRadius = 12
-        Me.LogoutGradientButton.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton
+        Me.LogoutGradientButton.CheckedState.FillColor = System.Drawing.Color.White
+        Me.LogoutGradientButton.CheckedState.FillColor2 = System.Drawing.Color.White
+        Me.LogoutGradientButton.CheckedState.ForeColor = System.Drawing.Color.White
         Me.LogoutGradientButton.CustomImages.CheckedImage = CType(resources.GetObject("resource.CheckedImage1"), System.Drawing.Image)
         Me.LogoutGradientButton.CustomImages.HoveredImage = CType(resources.GetObject("resource.HoveredImage1"), System.Drawing.Image)
         Me.LogoutGradientButton.CustomImages.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
@@ -179,7 +185,7 @@ Partial Class UserTransactions
         Me.LogoutGradientButton.FillColor2 = System.Drawing.Color.White
         Me.LogoutGradientButton.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.LogoutGradientButton.ForeColor = System.Drawing.Color.DimGray
-        Me.LogoutGradientButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.LogoutGradientButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(3, Byte), Integer), CType(CType(103, Byte), Integer))
         Me.LogoutGradientButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(65, Byte), Integer))
         Me.LogoutGradientButton.HoverState.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LogoutGradientButton.HoverState.ForeColor = System.Drawing.Color.White
@@ -329,6 +335,7 @@ Partial Class UserTransactions
         '
         Me.PlusButton.Animated = True
         Me.PlusButton.BackColor = System.Drawing.Color.Transparent
+        Me.PlusButton.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PlusButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.PlusButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.PlusButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -348,6 +355,7 @@ Partial Class UserTransactions
         '
         Me.MinusButton.Animated = True
         Me.MinusButton.BackColor = System.Drawing.Color.Transparent
+        Me.MinusButton.Cursor = System.Windows.Forms.Cursors.Hand
         Me.MinusButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
         Me.MinusButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
         Me.MinusButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
@@ -390,7 +398,7 @@ Partial Class UserTransactions
         Me.NameHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.NameHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NameHtmlLabel.ForeColor = System.Drawing.Color.Black
-        Me.NameHtmlLabel.Location = New System.Drawing.Point(227, 157)
+        Me.NameHtmlLabel.Location = New System.Drawing.Point(18, 17)
         Me.NameHtmlLabel.Name = "NameHtmlLabel"
         Me.NameHtmlLabel.Size = New System.Drawing.Size(87, 23)
         Me.NameHtmlLabel.TabIndex = 1
@@ -405,34 +413,26 @@ Partial Class UserTransactions
         '
         Me.Guna2DragControl1.DockForm = True
         Me.Guna2DragControl1.DockIndicatorTransparencyValue = 0.6R
-        Me.Guna2DragControl1.TargetControl = Me
+        Me.Guna2DragControl1.TargetControl = Me.HomeCustomGradientPanel
         Me.Guna2DragControl1.UseTransparentDrag = True
         '
-        'Guna2ControlBox2
+        'HomeCustomGradientPanel
         '
-        Me.Guna2ControlBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ControlBox2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
-        Me.Guna2ControlBox2.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2ControlBox2.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(75, Byte), Integer))
-        Me.Guna2ControlBox2.IconColor = System.Drawing.Color.White
-        Me.Guna2ControlBox2.Location = New System.Drawing.Point(682, 11)
-        Me.Guna2ControlBox2.Name = "Guna2ControlBox2"
-        Me.Guna2ControlBox2.Size = New System.Drawing.Size(26, 24)
-        Me.Guna2ControlBox2.TabIndex = 12
-        '
-        'Guna2ControlBox1
-        '
-        Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2ControlBox1.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2ControlBox1.FillColor = System.Drawing.Color.Transparent
-        Me.Guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.White
-        Me.Guna2ControlBox1.Location = New System.Drawing.Point(744, 11)
-        Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
-        Me.Guna2ControlBox1.PressedColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.Guna2ControlBox1.Size = New System.Drawing.Size(26, 24)
-        Me.Guna2ControlBox1.TabIndex = 11
+        Me.HomeCustomGradientPanel.BorderRadius = 5
+        Me.HomeCustomGradientPanel.Controls.Add(Me.ProfileCircleButton)
+        Me.HomeCustomGradientPanel.Controls.Add(Me.Guna2ControlBox3)
+        Me.HomeCustomGradientPanel.Controls.Add(Me.Guna2ControlBox1)
+        Me.HomeCustomGradientPanel.Controls.Add(Me.Guna2ControlBox2)
+        Me.HomeCustomGradientPanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.HomeCustomGradientPanel.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.HomeCustomGradientPanel.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.HomeCustomGradientPanel.FillColor3 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.HomeCustomGradientPanel.FillColor4 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(25, Byte), Integer))
+        Me.HomeCustomGradientPanel.Location = New System.Drawing.Point(221, 0)
+        Me.HomeCustomGradientPanel.Name = "HomeCustomGradientPanel"
+        Me.HomeCustomGradientPanel.ShadowDecoration.BorderRadius = 5
+        Me.HomeCustomGradientPanel.Size = New System.Drawing.Size(779, 137)
+        Me.HomeCustomGradientPanel.TabIndex = 14
         '
         'Guna2ControlBox3
         '
@@ -447,29 +447,38 @@ Partial Class UserTransactions
         Me.Guna2ControlBox3.Size = New System.Drawing.Size(26, 24)
         Me.Guna2ControlBox3.TabIndex = 13
         '
-        'Guna2CustomGradientPanel2
+        'Guna2ControlBox1
         '
-        Me.Guna2CustomGradientPanel2.BorderRadius = 5
-        Me.Guna2CustomGradientPanel2.Controls.Add(Me.Guna2ControlBox3)
-        Me.Guna2CustomGradientPanel2.Controls.Add(Me.Guna2ControlBox1)
-        Me.Guna2CustomGradientPanel2.Controls.Add(Me.Guna2ControlBox2)
-        Me.Guna2CustomGradientPanel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(25, Byte), Integer))
-        Me.Guna2CustomGradientPanel2.Location = New System.Drawing.Point(221, 0)
-        Me.Guna2CustomGradientPanel2.Name = "Guna2CustomGradientPanel2"
-        Me.Guna2CustomGradientPanel2.ShadowDecoration.BorderRadius = 5
-        Me.Guna2CustomGradientPanel2.Size = New System.Drawing.Size(779, 137)
-        Me.Guna2CustomGradientPanel2.TabIndex = 14
+        Me.Guna2ControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2ControlBox1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ControlBox1.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Guna2ControlBox1.IconColor = System.Drawing.Color.White
+        Me.Guna2ControlBox1.Location = New System.Drawing.Point(744, 11)
+        Me.Guna2ControlBox1.Name = "Guna2ControlBox1"
+        Me.Guna2ControlBox1.PressedColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.Guna2ControlBox1.Size = New System.Drawing.Size(26, 24)
+        Me.Guna2ControlBox1.TabIndex = 11
+        '
+        'Guna2ControlBox2
+        '
+        Me.Guna2ControlBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2ControlBox2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
+        Me.Guna2ControlBox2.FillColor = System.Drawing.Color.Transparent
+        Me.Guna2ControlBox2.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(237, Byte), Integer), CType(CType(75, Byte), Integer))
+        Me.Guna2ControlBox2.IconColor = System.Drawing.Color.White
+        Me.Guna2ControlBox2.Location = New System.Drawing.Point(682, 11)
+        Me.Guna2ControlBox2.Name = "Guna2ControlBox2"
+        Me.Guna2ControlBox2.Size = New System.Drawing.Size(26, 24)
+        Me.Guna2ControlBox2.TabIndex = 12
         '
         'WelcomeHtmlLabel
         '
         Me.WelcomeHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.WelcomeHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.WelcomeHtmlLabel.ForeColor = System.Drawing.Color.Black
-        Me.WelcomeHtmlLabel.Location = New System.Drawing.Point(227, 186)
+        Me.WelcomeHtmlLabel.Location = New System.Drawing.Point(18, 46)
         Me.WelcomeHtmlLabel.Name = "WelcomeHtmlLabel"
         Me.WelcomeHtmlLabel.Size = New System.Drawing.Size(142, 30)
         Me.WelcomeHtmlLabel.TabIndex = 15
@@ -481,7 +490,7 @@ Partial Class UserTransactions
         Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox3.Image = CType(resources.GetObject("Guna2PictureBox3.Image"), System.Drawing.Image)
         Me.Guna2PictureBox3.ImageRotate = 0!
-        Me.Guna2PictureBox3.Location = New System.Drawing.Point(375, 182)
+        Me.Guna2PictureBox3.Location = New System.Drawing.Point(166, 42)
         Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
         Me.Guna2PictureBox3.Size = New System.Drawing.Size(35, 35)
         Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -539,6 +548,42 @@ Partial Class UserTransactions
         Me.ConfirmMessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Light
         Me.ConfirmMessageDialog.Text = Nothing
         '
+        'HomePanel
+        '
+        Me.HomePanel.Controls.Add(Me.NameHtmlLabel)
+        Me.HomePanel.Controls.Add(Me.WelcomeHtmlLabel)
+        Me.HomePanel.Controls.Add(Me.Guna2PictureBox3)
+        Me.HomePanel.Location = New System.Drawing.Point(245, 157)
+        Me.HomePanel.Name = "HomePanel"
+        Me.HomePanel.Size = New System.Drawing.Size(729, 388)
+        Me.HomePanel.TabIndex = 18
+        '
+        'ProfileCircleButton
+        '
+        Me.ProfileCircleButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ProfileCircleButton.Animated = True
+        Me.ProfileCircleButton.BackColor = System.Drawing.Color.Transparent
+        Me.ProfileCircleButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ProfileCircleButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.ProfileCircleButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.ProfileCircleButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.ProfileCircleButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.ProfileCircleButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.ProfileCircleButton.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        Me.ProfileCircleButton.ForeColor = System.Drawing.Color.White
+        Me.ProfileCircleButton.IndicateFocus = True
+        Me.ProfileCircleButton.Location = New System.Drawing.Point(703, 60)
+        Me.ProfileCircleButton.Name = "ProfileCircleButton"
+        Me.ProfileCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
+        Me.ProfileCircleButton.Size = New System.Drawing.Size(50, 50)
+        Me.ProfileCircleButton.TabIndex = 14
+        Me.ProfileCircleButton.Text = "N"
+        Me.ProfileCircleButton.UseTransparentBackground = True
+        '
+        'Guna2ResizeForm1
+        '
+        Me.Guna2ResizeForm1.TargetForm = Me
+        '
         'UserTransactions
         '
         Me.AllowDrop = True
@@ -547,33 +592,32 @@ Partial Class UserTransactions
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1000, 600)
+        Me.Controls.Add(Me.HomePanel)
         Me.Controls.Add(Me.ExitGradientButton)
-        Me.Controls.Add(Me.Guna2PictureBox3)
-        Me.Controls.Add(Me.WelcomeHtmlLabel)
-        Me.Controls.Add(Me.Guna2CustomGradientPanel2)
-        Me.Controls.Add(Me.Guna2CustomGradientPanel1)
-        Me.Controls.Add(Me.NameHtmlLabel)
+        Me.Controls.Add(Me.HomeCustomGradientPanel)
+        Me.Controls.Add(Me.SidebarCustomGradientPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "UserTransactions"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Transactions"
-        Me.Guna2CustomGradientPanel1.ResumeLayout(False)
-        Me.Guna2CustomGradientPanel1.PerformLayout()
+        Me.SidebarCustomGradientPanel.ResumeLayout(False)
+        Me.SidebarCustomGradientPanel.PerformLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BalanceGradientPanel.ResumeLayout(False)
         Me.BalanceGradientPanel.PerformLayout()
         CType(Me.Guna2PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Guna2CustomGradientPanel2.ResumeLayout(False)
+        Me.HomeCustomGradientPanel.ResumeLayout(False)
         CType(Me.Guna2PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.HomePanel.ResumeLayout(False)
+        Me.HomePanel.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Guna2ShadowForm1 As Guna.UI2.WinForms.Guna2ShadowForm
     Friend WithEvents Guna2AnimateWindow1 As Guna.UI2.WinForms.Guna2AnimateWindow
-    Friend WithEvents Guna2CustomGradientPanel1 As Guna.UI2.WinForms.Guna2CustomGradientPanel
+    Friend WithEvents SidebarCustomGradientPanel As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents NameHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents BalanceGradientPanel As Guna.UI2.WinForms.Guna2GradientPanel
@@ -590,7 +634,7 @@ Partial Class UserTransactions
     Friend WithEvents LogoNameHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
-    Friend WithEvents Guna2CustomGradientPanel2 As Guna.UI2.WinForms.Guna2CustomGradientPanel
+    Friend WithEvents HomeCustomGradientPanel As Guna.UI2.WinForms.Guna2CustomGradientPanel
     Friend WithEvents Guna2ControlBox3 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2ControlBox1 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
@@ -601,4 +645,7 @@ Partial Class UserTransactions
     Friend WithEvents SuccessMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents ErrorMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents ConfirmMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents HomePanel As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents ProfileCircleButton As Guna.UI2.WinForms.Guna2CircleButton
+    Friend WithEvents Guna2ResizeForm1 As Guna.UI2.WinForms.Guna2ResizeForm
 End Class

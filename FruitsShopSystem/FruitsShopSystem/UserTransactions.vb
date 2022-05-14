@@ -1,6 +1,6 @@
 ﻿Public Class UserTransactions
     Private Sub UserTransactionsLoad(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        HomeGradientButton.Checked = True
     End Sub
 
     Private Sub ExitGradientButton_Click(sender As Object, e As EventArgs) Handles ExitGradientButton.Click
