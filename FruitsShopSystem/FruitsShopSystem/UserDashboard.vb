@@ -70,6 +70,18 @@ Public Class UserDashboard
         SwitchPanel(Account)
     End Sub
 
+    Private Sub TransactionsGradientButtonClick(sender As Object, e As EventArgs) Handles TransactionsGradientButton.Click
+        TransactionsGradientButton.Checked = True
+
+        SwitchPanel(Transaction)
+    End Sub
+
+    Private Sub HistoryGradientButtonClick(sender As Object, e As EventArgs) Handles HistoryGradientButton.Click
+        HistoryGradientButton.Checked = True
+
+        SwitchPanel(History)
+    End Sub
+
     Private Sub LogoutGradientButtonClick(sender As Object, e As EventArgs) Handles LogoutGradientButton.Click
         UserAccount.Show()
 
