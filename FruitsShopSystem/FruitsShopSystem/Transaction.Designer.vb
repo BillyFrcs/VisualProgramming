@@ -81,7 +81,7 @@ Partial Class Transaction
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(779, 411)
+        Me.ClientSize = New System.Drawing.Size(779, 466)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Transaction"
         Me.Text = "Transaction"

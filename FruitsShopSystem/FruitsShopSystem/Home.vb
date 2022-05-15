@@ -61,4 +61,8 @@ Public Class Home
         PineappleTextBox.Clear()
         StrawberryTextBox.Clear()
     End Sub
+
+    Private Sub ClearGradientButtonClick(sender As Object, e As EventArgs) Handles ClearGradientButton.Click
+        ClearFruits()
+    End Sub
 End Class

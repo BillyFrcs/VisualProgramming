@@ -21,17 +21,17 @@ Public Class UserDashboard
         Try
             _SQLConnection.Open()
 
-            StatusHtmlLabel.Text = "Online"
+            StatusHtmlLabel.Text = String.Concat("Online")
             StatusHtmlLabel.ForeColor = Color.Lime
         Catch ex As SqlException
-            StatusHtmlLabel.Text = "Offline"
+            StatusHtmlLabel.Text = String.Concat("Offline")
             StatusHtmlLabel.ForeColor = Color.Red
         Finally
             _SQLConnection.Close()
         End Try
     End Sub
 
-    Private Sub ExitGradientButtonClick(sender As Object, e As EventArgs) Handles ExitGradientButton.Click
+    Private Sub ExitGradientButtonClick(sender As Object, e As EventArgs)
         Dim confirmToQuit As MsgBoxResult = ConfirmMessageDialog.Show("Are you sure want to quit?", "Confirmation")
 
         If confirmToQuit = MsgBoxResult.Yes Then

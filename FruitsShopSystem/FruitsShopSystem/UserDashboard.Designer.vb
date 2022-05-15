@@ -54,7 +54,6 @@ Partial Class UserDashboard
         Me.Guna2ControlBox3 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2ControlBox1 = New Guna.UI2.WinForms.Guna2ControlBox()
         Me.Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
-        Me.ExitGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.HomePanel = New Guna.UI2.WinForms.Guna2Panel()
         Me.Guna2ResizeForm1 = New Guna.UI2.WinForms.Guna2ResizeForm(Me.components)
         Me.FruitsHtmlToolTip = New Guna.UI2.WinForms.Guna2HtmlToolTip()
@@ -572,36 +571,12 @@ Partial Class UserDashboard
         Me.Guna2ControlBox2.Size = New System.Drawing.Size(26, 24)
         Me.Guna2ControlBox2.TabIndex = 12
         '
-        'ExitGradientButton
-        '
-        Me.ExitGradientButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ExitGradientButton.Animated = True
-        Me.ExitGradientButton.BackColor = System.Drawing.Color.Transparent
-        Me.ExitGradientButton.BorderRadius = 10
-        Me.ExitGradientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.ExitGradientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.ExitGradientButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.ExitGradientButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.ExitGradientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.ExitGradientButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.ExitGradientButton.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.ExitGradientButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.ExitGradientButton.ForeColor = System.Drawing.Color.White
-        Me.ExitGradientButton.Image = CType(resources.GetObject("ExitGradientButton.Image"), System.Drawing.Image)
-        Me.ExitGradientButton.IndicateFocus = True
-        Me.ExitGradientButton.Location = New System.Drawing.Point(906, 551)
-        Me.ExitGradientButton.Name = "ExitGradientButton"
-        Me.ExitGradientButton.Size = New System.Drawing.Size(85, 37)
-        Me.ExitGradientButton.TabIndex = 17
-        Me.ExitGradientButton.Text = "Exit"
-        Me.ExitGradientButton.UseTransparentBackground = True
-        '
         'HomePanel
         '
         Me.HomePanel.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.HomePanel.Location = New System.Drawing.Point(221, 134)
         Me.HomePanel.Name = "HomePanel"
-        Me.HomePanel.Size = New System.Drawing.Size(779, 411)
+        Me.HomePanel.Size = New System.Drawing.Size(779, 466)
         Me.HomePanel.TabIndex = 18
         '
         'Guna2ResizeForm1
@@ -649,7 +624,6 @@ Partial Class UserDashboard
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1000, 600)
         Me.Controls.Add(Me.HomePanel)
-        Me.Controls.Add(Me.ExitGradientButton)
         Me.Controls.Add(Me.HomeCustomGradientPanel)
         Me.Controls.Add(Me.SidebarCustomGradientPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -696,7 +670,6 @@ Partial Class UserDashboard
     Friend WithEvents HomeGradientButton As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Guna2PictureBox3 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents WelcomeHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents ExitGradientButton As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents HomePanel As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents ProfileCircleButton As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents Guna2ResizeForm1 As Guna.UI2.WinForms.Guna2ResizeForm

@@ -18,35 +18,9 @@ Public Class Account
     Private ReadOnly _SQLConnection As New SqlConnection($"Data Source={_serverName};Initial Catalog={_databaseName};Integrated Security=True")
 
     Private Sub AccountLoad(sender As Object, e As EventArgs) Handles MyBase.Load
+        InitializeAccount()
+
         PasswordTextBox.UseSystemPasswordChar = True
-
-        Try
-            _SQLConnection.Open()
-
-            ' Dim selectQuery = "SELECT Name, Email, Password FROM FruitsShop.dbo.UserAccount WHERE Email = '" & UserAccount.Instance().GetLoginEmail() & "'"
-            Dim selectQuery = "SELECT Name, Email, Password FROM FruitsShop.dbo.UserAccount WHERE ID = 3"
-
-            Using SQLCommand As New SqlCommand(selectQuery)
-                With SQLCommand
-                    .CommandType = CommandType.Text
-                    .Connection = _SQLConnection
-
-                    ' .Parameters.AddWithValue("@Email", UserAccount.Instance().GetLoginEmail())
-
-                    Using sqlReader As SqlDataReader = SQLCommand.ExecuteReader()
-                        While sqlReader.Read()
-                            NameTextBox.Text = sqlReader("Name").ToString()
-                            EmailTextBox.Text = sqlReader("Email").ToString()
-                            PasswordTextBox.Text = sqlReader("Password").ToString()
-                        End While
-                    End Using
-                End With
-            End Using
-        Catch ex As SqlException
-            ErrorMessageDialog.Show(ex.Message(), "Error")
-        Finally
-            _SQLConnection.Close()
-        End Try
     End Sub
 
     Private Sub InitializeAccount()
@@ -86,5 +60,65 @@ Public Class Account
         Else
             PasswordTextBox.UseSystemPasswordChar = True
         End If
+    End Sub
+
+    Private Sub EmailSearchGradientButtonClick(sender As Object, e As EventArgs) Handles EmailSearchGradientButton.Click
+        InitializeAccount()
+
+        Try
+            If _Email IsNot _empty Then
+                If _regex.IsMatch(_Email) Then
+                    _SQLConnection.Open()
+
+                    Dim selectQuery = "SELECT Name, Email, Password FROM FruitsShop.dbo.UserAccount WHERE Email = '" & _Email & "'"
+
+                    Using SQLCommand As New SqlCommand(selectQuery)
+                        With SQLCommand
+                            .CommandType = CommandType.Text
+                            .Connection = _SQLConnection
+
+                            .Parameters.AddWithValue("@Email", _Email)
+
+                            Dim adapter As New SqlDataAdapter(SQLCommand)
+                            Dim dataTable As New DataTable()
+
+                            adapter.Fill(dataTable)
+
+                            SQLCommand.ExecuteNonQuery()
+
+                            If dataTable.Rows.Count > 0 Then
+                                Using sqlReader As SqlDataReader = SQLCommand.ExecuteReader()
+                                    While sqlReader.Read() = True
+                                        NameTextBox.Text = sqlReader("Name").ToString()
+                                        EmailTextBox.Text = sqlReader("Email").ToString()
+                                        PasswordTextBox.Text = sqlReader("Password").ToString()
+                                    End While
+
+                                    SuccessMessageDialog.Show("Found your data!", "Success")
+                                End Using
+                            Else
+                                ClearAccount()
+
+                                ErrorMessageDialog.Show("Email address not found!", "Error")
+                            End If
+                        End With
+                    End Using
+                Else
+                    ErrorMessageDialog.Show("Invalid email address!", "Error")
+                End If
+            Else
+                ErrorMessageDialog.Show("Please fill the email address!", "Error")
+            End If
+        Catch ex As SqlException
+            ErrorMessageDialog.Show(ex.Message(), "Error")
+        Finally
+            _SQLConnection.Close()
+        End Try
+    End Sub
+
+    Private Sub ClearAccount()
+        NameTextBox.Clear()
+        EmailTextBox.Clear()
+        PasswordTextBox.Clear()
     End Sub
 End Class

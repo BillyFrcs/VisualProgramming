@@ -25,13 +25,6 @@ Partial Class Account
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Account))
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
-        Me.NameTextBox = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.UpdateGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
-        Me.EmailTextBox = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.PasswordTextBox = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.ShowPasswordToggleSwitch = New Guna.UI2.WinForms.Guna2ToggleSwitch()
         Me.ConfirmMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.ErrorMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.SuccessMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
@@ -40,163 +33,19 @@ Partial Class Account
         Me.NameToolTip = New Guna.UI2.WinForms.Guna2HtmlToolTip()
         Me.EmailToolTip = New Guna.UI2.WinForms.Guna2HtmlToolTip()
         Me.PasswordToolTip = New Guna.UI2.WinForms.Guna2HtmlToolTip()
+        Me.NameTextBox = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.UpdateGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.EmailTextBox = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.PasswordTextBox = New Guna.UI2.WinForms.Guna2TextBox()
+        Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.ShowPasswordToggleSwitch = New Guna.UI2.WinForms.Guna2ToggleSwitch()
+        Me.EmailSearchGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
         '
         Me.Guna2Elipse1.TargetControl = Me
-        '
-        'NameTextBox
-        '
-        Me.NameTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.NameTextBox.Animated = True
-        Me.NameTextBox.BorderRadius = 10
-        Me.NameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.NameTextBox.DefaultText = ""
-        Me.NameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.NameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.NameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.NameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.NameTextBox.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.NameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.NameTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.NameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.NameTextBox.IconLeft = CType(resources.GetObject("NameTextBox.IconLeft"), System.Drawing.Image)
-        Me.NameTextBox.Location = New System.Drawing.Point(251, 94)
-        Me.NameTextBox.Name = "NameTextBox"
-        Me.NameTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.NameTextBox.PlaceholderText = "Name"
-        Me.NameTextBox.SelectedText = ""
-        Me.NameTextBox.Size = New System.Drawing.Size(294, 36)
-        Me.NameTextBox.TabIndex = 31
-        '
-        'Guna2HtmlLabel2
-        '
-        Me.Guna2HtmlLabel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(82, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(304, 25)
-        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(183, 39)
-        Me.Guna2HtmlLabel2.TabIndex = 30
-        Me.Guna2HtmlLabel2.Text = "Your Account"
-        '
-        'UpdateGradientButton
-        '
-        Me.UpdateGradientButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.UpdateGradientButton.Animated = True
-        Me.UpdateGradientButton.AutoRoundedCorners = True
-        Me.UpdateGradientButton.BackColor = System.Drawing.Color.Transparent
-        Me.UpdateGradientButton.BorderRadius = 21
-        Me.UpdateGradientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.UpdateGradientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.UpdateGradientButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.UpdateGradientButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.UpdateGradientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.UpdateGradientButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.UpdateGradientButton.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.UpdateGradientButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.UpdateGradientButton.ForeColor = System.Drawing.Color.White
-        Me.UpdateGradientButton.Image = CType(resources.GetObject("UpdateGradientButton.Image"), System.Drawing.Image)
-        Me.UpdateGradientButton.IndicateFocus = True
-        Me.UpdateGradientButton.Location = New System.Drawing.Point(251, 303)
-        Me.UpdateGradientButton.Name = "UpdateGradientButton"
-        Me.UpdateGradientButton.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(10)
-        Me.UpdateGradientButton.Size = New System.Drawing.Size(294, 45)
-        Me.UpdateGradientButton.TabIndex = 29
-        Me.UpdateGradientButton.Text = "Update"
-        Me.UpdateGradientButton.UseTransparentBackground = True
-        '
-        'EmailTextBox
-        '
-        Me.EmailTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.EmailTextBox.Animated = True
-        Me.EmailTextBox.BorderRadius = 10
-        Me.EmailTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.EmailTextBox.DefaultText = ""
-        Me.EmailTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.EmailTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.EmailTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.EmailTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.EmailTextBox.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.EmailTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.EmailTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.EmailTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.EmailTextBox.IconLeft = CType(resources.GetObject("EmailTextBox.IconLeft"), System.Drawing.Image)
-        Me.EmailTextBox.Location = New System.Drawing.Point(251, 155)
-        Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.EmailTextBox.PlaceholderText = "Email"
-        Me.EmailTextBox.SelectedText = ""
-        Me.EmailTextBox.Size = New System.Drawing.Size(294, 36)
-        Me.EmailTextBox.TabIndex = 25
-        '
-        'PasswordTextBox
-        '
-        Me.PasswordTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PasswordTextBox.Animated = True
-        Me.PasswordTextBox.BorderRadius = 10
-        Me.PasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.PasswordTextBox.DefaultText = ""
-        Me.PasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.PasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.PasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.PasswordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.PasswordTextBox.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.PasswordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.PasswordTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.PasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.PasswordTextBox.IconLeft = CType(resources.GetObject("PasswordTextBox.IconLeft"), System.Drawing.Image)
-        Me.PasswordTextBox.Location = New System.Drawing.Point(251, 215)
-        Me.PasswordTextBox.Name = "PasswordTextBox"
-        Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.PasswordTextBox.PlaceholderText = "Password"
-        Me.PasswordTextBox.SelectedText = ""
-        Me.PasswordTextBox.Size = New System.Drawing.Size(294, 36)
-        Me.PasswordTextBox.TabIndex = 26
-        '
-        'Guna2HtmlLabel3
-        '
-        Me.Guna2HtmlLabel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(294, 257)
-        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(98, 19)
-        Me.Guna2HtmlLabel3.TabIndex = 28
-        Me.Guna2HtmlLabel3.Text = "Show Password"
-        '
-        'ShowPasswordToggleSwitch
-        '
-        Me.ShowPasswordToggleSwitch.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ShowPasswordToggleSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ShowPasswordToggleSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ShowPasswordToggleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.White
-        Me.ShowPasswordToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.White
-        Me.ShowPasswordToggleSwitch.Location = New System.Drawing.Point(253, 257)
-        Me.ShowPasswordToggleSwitch.Name = "ShowPasswordToggleSwitch"
-        Me.ShowPasswordToggleSwitch.Size = New System.Drawing.Size(35, 20)
-        Me.ShowPasswordToggleSwitch.TabIndex = 27
-        Me.ShowPasswordToggleSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.ShowPasswordToggleSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
-        Me.ShowPasswordToggleSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.White
-        Me.ShowPasswordToggleSwitch.UncheckedState.InnerColor = System.Drawing.Color.White
         '
         'ConfirmMessageDialog
         '
@@ -248,12 +97,193 @@ Partial Class Account
         Me.PasswordToolTip.AllowLinksHandling = True
         Me.PasswordToolTip.MaximumSize = New System.Drawing.Size(0, 0)
         '
+        'NameTextBox
+        '
+        Me.NameTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.NameTextBox.Animated = True
+        Me.NameTextBox.BorderRadius = 10
+        Me.NameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.NameTextBox.DefaultText = ""
+        Me.NameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.NameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.NameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.NameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.NameTextBox.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.NameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.NameTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.NameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.NameTextBox.IconLeft = CType(resources.GetObject("NameTextBox.IconLeft"), System.Drawing.Image)
+        Me.NameTextBox.Location = New System.Drawing.Point(242, 116)
+        Me.NameTextBox.Name = "NameTextBox"
+        Me.NameTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.NameTextBox.PlaceholderText = "Name"
+        Me.NameTextBox.SelectedText = ""
+        Me.NameTextBox.Size = New System.Drawing.Size(294, 36)
+        Me.NameTextBox.TabIndex = 40
+        '
+        'Guna2HtmlLabel2
+        '
+        Me.Guna2HtmlLabel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(82, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(295, 47)
+        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(183, 39)
+        Me.Guna2HtmlLabel2.TabIndex = 39
+        Me.Guna2HtmlLabel2.Text = "Your Account"
+        '
+        'UpdateGradientButton
+        '
+        Me.UpdateGradientButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.UpdateGradientButton.Animated = True
+        Me.UpdateGradientButton.AutoRoundedCorners = True
+        Me.UpdateGradientButton.BackColor = System.Drawing.Color.Transparent
+        Me.UpdateGradientButton.BorderRadius = 21
+        Me.UpdateGradientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.UpdateGradientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.UpdateGradientButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.UpdateGradientButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.UpdateGradientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.UpdateGradientButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.UpdateGradientButton.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.UpdateGradientButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.UpdateGradientButton.ForeColor = System.Drawing.Color.White
+        Me.UpdateGradientButton.Image = CType(resources.GetObject("UpdateGradientButton.Image"), System.Drawing.Image)
+        Me.UpdateGradientButton.IndicateFocus = True
+        Me.UpdateGradientButton.Location = New System.Drawing.Point(242, 325)
+        Me.UpdateGradientButton.Name = "UpdateGradientButton"
+        Me.UpdateGradientButton.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(10)
+        Me.UpdateGradientButton.Size = New System.Drawing.Size(141, 45)
+        Me.UpdateGradientButton.TabIndex = 38
+        Me.UpdateGradientButton.Text = "Update"
+        Me.UpdateGradientButton.UseTransparentBackground = True
+        '
+        'EmailTextBox
+        '
+        Me.EmailTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.EmailTextBox.Animated = True
+        Me.EmailTextBox.BorderRadius = 10
+        Me.EmailTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.EmailTextBox.DefaultText = ""
+        Me.EmailTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.EmailTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.EmailTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.EmailTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.EmailTextBox.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.EmailTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.EmailTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.EmailTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.EmailTextBox.IconLeft = CType(resources.GetObject("EmailTextBox.IconLeft"), System.Drawing.Image)
+        Me.EmailTextBox.Location = New System.Drawing.Point(242, 177)
+        Me.EmailTextBox.Name = "EmailTextBox"
+        Me.EmailTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.EmailTextBox.PlaceholderText = "Email"
+        Me.EmailTextBox.SelectedText = ""
+        Me.EmailTextBox.Size = New System.Drawing.Size(294, 36)
+        Me.EmailTextBox.TabIndex = 34
+        '
+        'PasswordTextBox
+        '
+        Me.PasswordTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PasswordTextBox.Animated = True
+        Me.PasswordTextBox.BorderRadius = 10
+        Me.PasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.PasswordTextBox.DefaultText = ""
+        Me.PasswordTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
+        Me.PasswordTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.PasswordTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.PasswordTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
+        Me.PasswordTextBox.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.PasswordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.PasswordTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.PasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.PasswordTextBox.IconLeft = CType(resources.GetObject("PasswordTextBox.IconLeft"), System.Drawing.Image)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(242, 237)
+        Me.PasswordTextBox.Name = "PasswordTextBox"
+        Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
+        Me.PasswordTextBox.PlaceholderText = "Password"
+        Me.PasswordTextBox.SelectedText = ""
+        Me.PasswordTextBox.Size = New System.Drawing.Size(294, 36)
+        Me.PasswordTextBox.TabIndex = 35
+        '
+        'Guna2HtmlLabel3
+        '
+        Me.Guna2HtmlLabel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(285, 279)
+        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
+        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(98, 19)
+        Me.Guna2HtmlLabel3.TabIndex = 37
+        Me.Guna2HtmlLabel3.Text = "Show Password"
+        '
+        'ShowPasswordToggleSwitch
+        '
+        Me.ShowPasswordToggleSwitch.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ShowPasswordToggleSwitch.CheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ShowPasswordToggleSwitch.CheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ShowPasswordToggleSwitch.CheckedState.InnerBorderColor = System.Drawing.Color.White
+        Me.ShowPasswordToggleSwitch.CheckedState.InnerColor = System.Drawing.Color.White
+        Me.ShowPasswordToggleSwitch.Location = New System.Drawing.Point(244, 279)
+        Me.ShowPasswordToggleSwitch.Name = "ShowPasswordToggleSwitch"
+        Me.ShowPasswordToggleSwitch.Size = New System.Drawing.Size(35, 20)
+        Me.ShowPasswordToggleSwitch.TabIndex = 36
+        Me.ShowPasswordToggleSwitch.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.ShowPasswordToggleSwitch.UncheckedState.FillColor = System.Drawing.Color.FromArgb(CType(CType(125, Byte), Integer), CType(CType(137, Byte), Integer), CType(CType(149, Byte), Integer))
+        Me.ShowPasswordToggleSwitch.UncheckedState.InnerBorderColor = System.Drawing.Color.White
+        Me.ShowPasswordToggleSwitch.UncheckedState.InnerColor = System.Drawing.Color.White
+        '
+        'EmailSearchGradientButton
+        '
+        Me.EmailSearchGradientButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.EmailSearchGradientButton.Animated = True
+        Me.EmailSearchGradientButton.AutoRoundedCorners = True
+        Me.EmailSearchGradientButton.BackColor = System.Drawing.Color.Transparent
+        Me.EmailSearchGradientButton.BorderRadius = 21
+        Me.EmailSearchGradientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.EmailSearchGradientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.EmailSearchGradientButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.EmailSearchGradientButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.EmailSearchGradientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.EmailSearchGradientButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(17, Byte), Integer))
+        Me.EmailSearchGradientButton.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(41, Byte), Integer))
+        Me.EmailSearchGradientButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.EmailSearchGradientButton.ForeColor = System.Drawing.Color.White
+        Me.EmailSearchGradientButton.Image = CType(resources.GetObject("EmailSearchGradientButton.Image"), System.Drawing.Image)
+        Me.EmailSearchGradientButton.IndicateFocus = True
+        Me.EmailSearchGradientButton.Location = New System.Drawing.Point(395, 325)
+        Me.EmailSearchGradientButton.Name = "EmailSearchGradientButton"
+        Me.EmailSearchGradientButton.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(10)
+        Me.EmailSearchGradientButton.Size = New System.Drawing.Size(141, 45)
+        Me.EmailSearchGradientButton.TabIndex = 43
+        Me.EmailSearchGradientButton.Text = "Search"
+        Me.EmailSearchGradientButton.UseTransparentBackground = True
+        '
         'Account
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(779, 411)
+        Me.ClientSize = New System.Drawing.Size(779, 466)
+        Me.Controls.Add(Me.EmailSearchGradientButton)
         Me.Controls.Add(Me.NameTextBox)
         Me.Controls.Add(Me.Guna2HtmlLabel2)
         Me.Controls.Add(Me.UpdateGradientButton)
@@ -270,13 +300,6 @@ Partial Class Account
     End Sub
 
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents NameTextBox As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents UpdateGradientButton As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents EmailTextBox As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents PasswordTextBox As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents ShowPasswordToggleSwitch As Guna.UI2.WinForms.Guna2ToggleSwitch
     Friend WithEvents ConfirmMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents ErrorMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents SuccessMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
@@ -285,4 +308,12 @@ Partial Class Account
     Friend WithEvents NameToolTip As Guna.UI2.WinForms.Guna2HtmlToolTip
     Friend WithEvents EmailToolTip As Guna.UI2.WinForms.Guna2HtmlToolTip
     Friend WithEvents PasswordToolTip As Guna.UI2.WinForms.Guna2HtmlToolTip
+    Friend WithEvents NameTextBox As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents UpdateGradientButton As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents EmailTextBox As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents PasswordTextBox As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents ShowPasswordToggleSwitch As Guna.UI2.WinForms.Guna2ToggleSwitch
+    Friend WithEvents EmailSearchGradientButton As Guna.UI2.WinForms.Guna2GradientButton
 End Class
