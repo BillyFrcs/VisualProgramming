@@ -92,9 +92,10 @@ Public Class UserAccount
                             SQLCommand.Parameters.AddWithValue("@Name", _NameRegister)
                             SQLCommand.Parameters.AddWithValue("@Email", _EmailRegister)
                             SQLCommand.Parameters.AddWithValue("@Password", _PasswordRegister)
+
+                            .ExecuteNonQuery()
                         End With
 
-                        SQLCommand.ExecuteNonQuery()
                         _SQLConnection.Close()
 
                         ClearRegisterTextBox()

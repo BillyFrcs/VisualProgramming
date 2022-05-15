@@ -36,10 +36,11 @@ Partial Class UserDashboard
         Me.HistoryGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.TransactionsGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.BalanceGradientPanel = New Guna.UI2.WinForms.Guna2GradientPanel()
+        Me.Guna2HtmlLabel5 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.PlusButton = New Guna.UI2.WinForms.Guna2Button()
         Me.MinusButton = New Guna.UI2.WinForms.Guna2Button()
-        Me.Guna2HtmlLabel3 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.UserBalanceHtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2HtmlLabel4 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.NameHtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
@@ -187,8 +188,8 @@ Partial Class UserDashboard
         Me.LogoutGradientButton.FillColor2 = System.Drawing.Color.White
         Me.LogoutGradientButton.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
         Me.LogoutGradientButton.ForeColor = System.Drawing.Color.DimGray
-        Me.LogoutGradientButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(3, Byte), Integer), CType(CType(103, Byte), Integer))
-        Me.LogoutGradientButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.LogoutGradientButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.LogoutGradientButton.HoverState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(3, Byte), Integer), CType(CType(103, Byte), Integer))
         Me.LogoutGradientButton.HoverState.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LogoutGradientButton.HoverState.ForeColor = System.Drawing.Color.White
         Me.LogoutGradientButton.IndicateFocus = True
@@ -307,10 +308,11 @@ Partial Class UserDashboard
         'BalanceGradientPanel
         '
         Me.BalanceGradientPanel.BorderRadius = 12
+        Me.BalanceGradientPanel.Controls.Add(Me.Guna2HtmlLabel5)
         Me.BalanceGradientPanel.Controls.Add(Me.Guna2PictureBox1)
         Me.BalanceGradientPanel.Controls.Add(Me.PlusButton)
         Me.BalanceGradientPanel.Controls.Add(Me.MinusButton)
-        Me.BalanceGradientPanel.Controls.Add(Me.Guna2HtmlLabel3)
+        Me.BalanceGradientPanel.Controls.Add(Me.UserBalanceHtmlLabel)
         Me.BalanceGradientPanel.Controls.Add(Me.Guna2HtmlLabel4)
         Me.BalanceGradientPanel.FillColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(98, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.BalanceGradientPanel.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(25, Byte), Integer))
@@ -318,6 +320,17 @@ Partial Class UserDashboard
         Me.BalanceGradientPanel.Name = "BalanceGradientPanel"
         Me.BalanceGradientPanel.Size = New System.Drawing.Size(200, 100)
         Me.BalanceGradientPanel.TabIndex = 14
+        '
+        'Guna2HtmlLabel5
+        '
+        Me.Guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel5.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel5.ForeColor = System.Drawing.Color.White
+        Me.Guna2HtmlLabel5.Location = New System.Drawing.Point(21, 48)
+        Me.Guna2HtmlLabel5.Name = "Guna2HtmlLabel5"
+        Me.Guna2HtmlLabel5.Size = New System.Drawing.Size(27, 23)
+        Me.Guna2HtmlLabel5.TabIndex = 15
+        Me.Guna2HtmlLabel5.Text = "Rp."
         '
         'Guna2PictureBox1
         '
@@ -373,16 +386,16 @@ Partial Class UserDashboard
         Me.MinusButton.TabIndex = 2
         Me.MinusButton.UseTransparentBackground = True
         '
-        'Guna2HtmlLabel3
+        'UserBalanceHtmlLabel
         '
-        Me.Guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel3.ForeColor = System.Drawing.Color.White
-        Me.Guna2HtmlLabel3.Location = New System.Drawing.Point(21, 48)
-        Me.Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
-        Me.Guna2HtmlLabel3.Size = New System.Drawing.Size(76, 23)
-        Me.Guna2HtmlLabel3.TabIndex = 1
-        Me.Guna2HtmlLabel3.Text = "Rp. 15000"
+        Me.UserBalanceHtmlLabel.BackColor = System.Drawing.Color.Transparent
+        Me.UserBalanceHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.UserBalanceHtmlLabel.ForeColor = System.Drawing.Color.White
+        Me.UserBalanceHtmlLabel.Location = New System.Drawing.Point(47, 48)
+        Me.UserBalanceHtmlLabel.Name = "UserBalanceHtmlLabel"
+        Me.UserBalanceHtmlLabel.Size = New System.Drawing.Size(48, 23)
+        Me.UserBalanceHtmlLabel.TabIndex = 1
+        Me.UserBalanceHtmlLabel.Text = "10000"
         '
         'Guna2HtmlLabel4
         '
@@ -652,7 +665,7 @@ Partial Class UserDashboard
     Friend WithEvents BalanceGradientPanel As Guna.UI2.WinForms.Guna2GradientPanel
     Friend WithEvents PlusButton As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents MinusButton As Guna.UI2.WinForms.Guna2Button
-    Friend WithEvents Guna2HtmlLabel3 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents UserBalanceHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel4 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents LogoutGradientButton As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents AccountGradientButton As Guna.UI2.WinForms.Guna2GradientButton
@@ -680,4 +693,5 @@ Partial Class UserDashboard
     Friend WithEvents ErrorMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents StatusHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

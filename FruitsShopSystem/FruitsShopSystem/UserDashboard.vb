@@ -7,6 +7,8 @@ Public Class UserDashboard
 
     Private ReadOnly _SQLConnection As New SqlConnection($"Data Source={_serverName};Initial Catalog={_databaseName};Integrated Security=True")
 
+    Private _number As Integer
+
     Private Sub UserDashboardLoad(sender As Object, e As EventArgs) Handles MyBase.Load
         UserStatus()
 
@@ -86,5 +88,17 @@ Public Class UserDashboard
         UserAccount.Show()
 
         Me.Close()
+    End Sub
+
+    Private Sub PlusButtonClick(sender As Object, e As EventArgs) Handles PlusButton.Click
+        _number += 10000
+        UserBalanceHtmlLabel.Text = Val(_number.ToString)
+    End Sub
+
+    Private Sub MinusButtonClick(sender As Object, e As EventArgs) Handles MinusButton.Click
+        If Val(UserBalanceHtmlLabel.Text) > 0 Then
+            _number -= 10000
+            UserBalanceHtmlLabel.Text = Val(_number.ToString)
+        End If
     End Sub
 End Class

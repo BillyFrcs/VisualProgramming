@@ -36,12 +36,29 @@ Public Class Account
     End Sub
 
     Private Sub UpdateGradientButtonClick(sender As Object, e As EventArgs) Handles UpdateGradientButton.Click
-        InitializeAccount()
+        Call InitializeAccount()
 
         Try
             If _Name IsNot _empty And _Email IsNot _empty And _Password IsNot _empty Then
                 If _regex.IsMatch(_Email) Then
-                    SuccessMessageDialog.Show("Update Successfully!", "Success")
+                    _SQLConnection.Open()
+
+                    Dim updateQuery = "UPDATE FruitsShop.dbo.UserAccount SET Name = '" & _Name & "' , Email = '" & _Email & "' , Password = '" & _Password & "' WHERE Email = '" & _Email & "'"
+
+                    Using SQLCommand As New SqlCommand(updateQuery)
+                        With SQLCommand
+                            .Connection = _SQLConnection
+                            .CommandType = CommandType.Text
+
+                            .Parameters.AddWithValue("@Name", _Name)
+                            .Parameters.AddWithValue("@Email", _Email)
+                            .Parameters.AddWithValue("@Password", _Password)
+
+                            .ExecuteNonQuery()
+                        End With
+
+                        SuccessMessageDialog.Show("Your account has been updated", "Success")
+                    End Using
                 Else
                     ErrorMessageDialog.Show("Invalid email address!", "Error")
                 End If
@@ -50,6 +67,8 @@ Public Class Account
             End If
         Catch ex As SqlException
             ErrorMessageDialog.Show(ex.Message(), "Error")
+        Finally
+            _SQLConnection.Close()
         End Try
     End Sub
 
@@ -63,7 +82,7 @@ Public Class Account
     End Sub
 
     Private Sub EmailSearchGradientButtonClick(sender As Object, e As EventArgs) Handles EmailSearchGradientButton.Click
-        InitializeAccount()
+        Call InitializeAccount()
 
         Try
             If _Email IsNot _empty Then
@@ -97,7 +116,7 @@ Public Class Account
                                     SuccessMessageDialog.Show("Found your data!", "Success")
                                 End Using
                             Else
-                                ClearAccount()
+                                Call ClearAccount()
 
                                 ErrorMessageDialog.Show("Email address not found!", "Error")
                             End If
