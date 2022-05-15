@@ -1,5 +1,15 @@
-﻿Public Class UserDashboard
-    Private Sub UserTransactionsLoad(sender As Object, e As EventArgs) Handles MyBase.Load
+﻿Imports System.Data.SqlClient
+
+Public Class UserDashboard
+    ' SQL Connection to the database
+    Private Const _serverName = "BILLY"
+    Private Const _databaseName = "FruitsShop"
+
+    Private ReadOnly _SQLConnection As New SqlConnection($"Data Source={_serverName};Initial Catalog={_databaseName};Integrated Security=True")
+
+    Private Sub UserDashboardLoad(sender As Object, e As EventArgs) Handles MyBase.Load
+        UserStatus()
+
         HomeGradientButton.Checked = True
 
         If HomeGradientButton.Checked = True Then
@@ -7,11 +17,27 @@
         End If
     End Sub
 
+    Private Sub UserStatus()
+        Try
+            _SQLConnection.Open()
+
+            StatusHtmlLabel.Text = "Online"
+            StatusHtmlLabel.ForeColor = Color.Lime
+        Catch ex As SqlException
+            StatusHtmlLabel.Text = "Offline"
+            StatusHtmlLabel.ForeColor = Color.Red
+        Finally
+            _SQLConnection.Close()
+        End Try
+    End Sub
+
     Private Sub ExitGradientButtonClick(sender As Object, e As EventArgs) Handles ExitGradientButton.Click
         Dim confirmToQuit As MsgBoxResult = ConfirmMessageDialog.Show("Are you sure want to quit?", "Confirmation")
 
         If confirmToQuit = MsgBoxResult.Yes Then
             Close()
+
+            UserAccount.Close()
         End If
     End Sub
 
@@ -42,5 +68,11 @@
         AccountGradientButton.Checked = True
 
         SwitchPanel(Account)
+    End Sub
+
+    Private Sub LogoutGradientButtonClick(sender As Object, e As EventArgs) Handles LogoutGradientButton.Click
+        UserAccount.Show()
+
+        Me.Close()
     End Sub
 End Class

@@ -23,6 +23,8 @@ Public Class UserAccount
 
     Private ReadOnly _SQLConnection As New SqlConnection($"Data Source={_serverName};Initial Catalog={_databaseName};Integrated Security=True")
 
+    Private Shared _Instance As UserAccount
+
     Private Sub LoginLoad(sender As Object, e As EventArgs) Handles MyBase.Load
         PasswordRegisterTextBox.UseSystemPasswordChar = True
         PasswordLoginTextBox.UseSystemPasswordChar = True
@@ -31,6 +33,18 @@ Public Class UserAccount
         NameTextBox.Focus()
         EmailLoginTextBox.Focus()
     End Sub
+
+    ''' <summary>
+    ''' Singleton pattern of UserAccount class
+    ''' </summary>
+    ''' <returns>UserAccount (Object)</returns>
+    Public Shared Function Instance() As UserAccount
+        If _Instance Is Nothing Then
+            _Instance = New UserAccount()
+        End If
+
+        Return _Instance
+    End Function
 
     Private Sub LoginLabelClick(sender As Object, e As EventArgs) Handles LoginCursorLabel.Click
         RegisterShadowPanel.Visible = False
@@ -58,7 +72,7 @@ Public Class UserAccount
     Private Sub RegisterAccount()
         Try
             If _NameRegister = _empty Or _EmailRegister = _empty Or _PasswordRegister = _empty Then
-                ErrorMessageDialog.Show(New ArgumentNullException().Message(), "Error")
+                ErrorMessageDialog.Show("Yoo the form is still empty!", "Error")
             Else
                 If Not _regex.IsMatch(_EmailRegister) Then
                     ErrorMessageDialog.Show("Email is not valid", "Error")
@@ -108,7 +122,7 @@ Public Class UserAccount
     Private Sub LoginAccount()
         Try
             If _EmailLogin = _empty Or _PasswordLogin = _empty Then
-                ErrorMessageDialog.Show(New ArgumentNullException().Message(), "Error")
+                ErrorMessageDialog.Show("Yoo the form is still empty!", "Error")
             Else
                 If _regex.IsMatch(_EmailLogin) Then
                     _SQLConnection.Open()
@@ -152,6 +166,10 @@ Public Class UserAccount
                                 Dim getName() As String = executeName.Split(" "c)
 
                                 SuccessMessageDialog.Show($"Login Successfully, Welcome back {getName(0).Replace(executeName, executeName)}!", "Success")
+
+                                UserDashboard.Show()
+
+                                Me.Hide()
                             Catch ex As SqlException
                                 ErrorMessageDialog.Show(ex.Message())
                             Finally

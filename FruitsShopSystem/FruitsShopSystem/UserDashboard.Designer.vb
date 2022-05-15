@@ -45,6 +45,8 @@ Partial Class UserDashboard
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.HomeCustomGradientPanel = New Guna.UI2.WinForms.Guna2CustomGradientPanel()
+        Me.StatusHtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.WelcomeHtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.NotificationImageButton = New Guna.UI2.WinForms.Guna2ImageButton()
         Me.Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -57,6 +59,8 @@ Partial Class UserDashboard
         Me.Guna2ResizeForm1 = New Guna.UI2.WinForms.Guna2ResizeForm(Me.components)
         Me.FruitsHtmlToolTip = New Guna.UI2.WinForms.Guna2HtmlToolTip()
         Me.ConfirmMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
+        Me.SuccessMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
+        Me.ErrorMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.SidebarCustomGradientPanel.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BalanceGradientPanel.SuspendLayout()
@@ -397,11 +401,11 @@ Partial Class UserDashboard
         Me.NameHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.NameHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NameHtmlLabel.ForeColor = System.Drawing.Color.White
-        Me.NameHtmlLabel.Location = New System.Drawing.Point(36, 36)
+        Me.NameHtmlLabel.Location = New System.Drawing.Point(36, 18)
         Me.NameHtmlLabel.Name = "NameHtmlLabel"
-        Me.NameHtmlLabel.Size = New System.Drawing.Size(87, 23)
+        Me.NameHtmlLabel.Size = New System.Drawing.Size(100, 23)
         Me.NameHtmlLabel.TabIndex = 1
-        Me.NameHtmlLabel.Text = "Yoo, Name"
+        Me.NameHtmlLabel.Text = "Hello, There!"
         '
         'Guna2Elipse1
         '
@@ -418,6 +422,8 @@ Partial Class UserDashboard
         'HomeCustomGradientPanel
         '
         Me.HomeCustomGradientPanel.BorderRadius = 5
+        Me.HomeCustomGradientPanel.Controls.Add(Me.StatusHtmlLabel)
+        Me.HomeCustomGradientPanel.Controls.Add(Me.Guna2HtmlLabel2)
         Me.HomeCustomGradientPanel.Controls.Add(Me.NameHtmlLabel)
         Me.HomeCustomGradientPanel.Controls.Add(Me.WelcomeHtmlLabel)
         Me.HomeCustomGradientPanel.Controls.Add(Me.NotificationImageButton)
@@ -437,12 +443,34 @@ Partial Class UserDashboard
         Me.HomeCustomGradientPanel.Size = New System.Drawing.Size(779, 128)
         Me.HomeCustomGradientPanel.TabIndex = 14
         '
+        'StatusHtmlLabel
+        '
+        Me.StatusHtmlLabel.BackColor = System.Drawing.Color.Transparent
+        Me.StatusHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.StatusHtmlLabel.ForeColor = System.Drawing.Color.White
+        Me.StatusHtmlLabel.Location = New System.Drawing.Point(96, 83)
+        Me.StatusHtmlLabel.Name = "StatusHtmlLabel"
+        Me.StatusHtmlLabel.Size = New System.Drawing.Size(54, 23)
+        Me.StatusHtmlLabel.TabIndex = 28
+        Me.StatusHtmlLabel.Text = "Online"
+        '
+        'Guna2HtmlLabel2
+        '
+        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel2.ForeColor = System.Drawing.Color.White
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(36, 83)
+        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(54, 23)
+        Me.Guna2HtmlLabel2.TabIndex = 27
+        Me.Guna2HtmlLabel2.Text = "Status:"
+        '
         'WelcomeHtmlLabel
         '
         Me.WelcomeHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.WelcomeHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.WelcomeHtmlLabel.ForeColor = System.Drawing.Color.White
-        Me.WelcomeHtmlLabel.Location = New System.Drawing.Point(36, 65)
+        Me.WelcomeHtmlLabel.Location = New System.Drawing.Point(36, 47)
         Me.WelcomeHtmlLabel.Name = "WelcomeHtmlLabel"
         Me.WelcomeHtmlLabel.Size = New System.Drawing.Size(142, 30)
         Me.WelcomeHtmlLabel.TabIndex = 15
@@ -475,7 +503,7 @@ Partial Class UserDashboard
         Me.Guna2PictureBox3.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox3.Image = CType(resources.GetObject("Guna2PictureBox3.Image"), System.Drawing.Image)
         Me.Guna2PictureBox3.ImageRotate = 0!
-        Me.Guna2PictureBox3.Location = New System.Drawing.Point(184, 61)
+        Me.Guna2PictureBox3.Location = New System.Drawing.Point(184, 43)
         Me.Guna2PictureBox3.Name = "Guna2PictureBox3"
         Me.Guna2PictureBox3.Size = New System.Drawing.Size(35, 35)
         Me.Guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -502,7 +530,7 @@ Partial Class UserDashboard
         Me.ProfileCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
         Me.ProfileCircleButton.Size = New System.Drawing.Size(50, 50)
         Me.ProfileCircleButton.TabIndex = 14
-        Me.ProfileCircleButton.Text = "N"
+        Me.ProfileCircleButton.Text = "A"
         Me.ProfileCircleButton.UseTransparentBackground = True
         '
         'Guna2ControlBox3
@@ -594,6 +622,24 @@ Partial Class UserDashboard
         Me.ConfirmMessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Light
         Me.ConfirmMessageDialog.Text = Nothing
         '
+        'SuccessMessageDialog
+        '
+        Me.SuccessMessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        Me.SuccessMessageDialog.Caption = Nothing
+        Me.SuccessMessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information
+        Me.SuccessMessageDialog.Parent = Nothing
+        Me.SuccessMessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Light
+        Me.SuccessMessageDialog.Text = Nothing
+        '
+        'ErrorMessageDialog
+        '
+        Me.ErrorMessageDialog.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK
+        Me.ErrorMessageDialog.Caption = ""
+        Me.ErrorMessageDialog.Icon = Guna.UI2.WinForms.MessageDialogIcon.[Error]
+        Me.ErrorMessageDialog.Parent = Nothing
+        Me.ErrorMessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Light
+        Me.ErrorMessageDialog.Text = ""
+        '
         'UserDashboard
         '
         Me.AllowDrop = True
@@ -657,4 +703,8 @@ Partial Class UserDashboard
     Friend WithEvents NotificationImageButton As Guna.UI2.WinForms.Guna2ImageButton
     Friend WithEvents FruitsHtmlToolTip As Guna.UI2.WinForms.Guna2HtmlToolTip
     Friend WithEvents ConfirmMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents SuccessMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents ErrorMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
+    Friend WithEvents StatusHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

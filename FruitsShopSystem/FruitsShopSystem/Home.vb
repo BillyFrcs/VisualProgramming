@@ -11,9 +11,6 @@ Public Class Home
 
     Private ReadOnly _empty As String = String.Empty
 
-    ' Email validation
-    Private ReadOnly _regex As New Regex("^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$")
-
     ' SQL Connection to the database
     Private Const _serverName = "BILLY"
     Private Const _databaseName = "FruitsShop"
@@ -37,7 +34,7 @@ Public Class Home
 
             SuccessMessageDialog.Show("Successfully added to cart!", "Success")
         Else
-            ErrorMessageDialog.Show("Please order something :)", "Ups...")
+            ErrorMessageDialog.Show("Please order something :)", "Oops...")
         End If
     End Sub
 

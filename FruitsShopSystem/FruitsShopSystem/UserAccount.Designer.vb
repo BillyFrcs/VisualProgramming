@@ -23,7 +23,7 @@ Partial Class UserAccount
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim Animation1 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
+        Dim Animation2 As Guna.UI2.AnimatorNS.Animation = New Guna.UI2.AnimatorNS.Animation()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(UserAccount))
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.EmailLoginTextBox = New Guna.UI2.WinForms.Guna2TextBox()
@@ -57,6 +57,7 @@ Partial Class UserAccount
         Me.NameToolTip = New Guna.UI2.WinForms.Guna2HtmlToolTip()
         Me.EmailToolTip = New Guna.UI2.WinForms.Guna2HtmlToolTip()
         Me.PasswordToolTip = New Guna.UI2.WinForms.Guna2HtmlToolTip()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CType(Me.BackgroundGuna2PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LoginShadowPanel.SuspendLayout()
         Me.RegisterShadowPanel.SuspendLayout()
@@ -251,7 +252,7 @@ Partial Class UserAccount
         'LoginShadowPanel
         '
         Me.LoginShadowPanel.BackColor = System.Drawing.Color.Transparent
-        Me.LoginShadowPanel.Controls.Add(Me.RegisterShadowPanel)
+        Me.LoginShadowPanel.Controls.Add(Me.Guna2HtmlLabel1)
         Me.LoginShadowPanel.Controls.Add(Me.LoginGradientButton)
         Me.LoginShadowPanel.Controls.Add(Me.EmailLoginTextBox)
         Me.LoginShadowPanel.Controls.Add(Me.CreateAccounButton)
@@ -285,7 +286,7 @@ Partial Class UserAccount
         Me.RegisterShadowPanel.Controls.Add(Me.ShowPasswordRegisterToggleSwitch)
         Me.TransitionUserAccountPage.SetDecoration(Me.RegisterShadowPanel, Guna.UI2.AnimatorNS.DecorationType.None)
         Me.RegisterShadowPanel.FillColor = System.Drawing.Color.White
-        Me.RegisterShadowPanel.Location = New System.Drawing.Point(0, 0)
+        Me.RegisterShadowPanel.Location = New System.Drawing.Point(327, 42)
         Me.RegisterShadowPanel.Name = "RegisterShadowPanel"
         Me.RegisterShadowPanel.ShadowColor = System.Drawing.Color.FromArgb(CType(CType(89, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(89, Byte), Integer))
         Me.RegisterShadowPanel.ShadowDepth = 10
@@ -482,22 +483,22 @@ Partial Class UserAccount
         'TransitionUserAccountPage
         '
         Me.TransitionUserAccountPage.Cursor = Nothing
-        Animation1.AnimateOnlyDifferences = True
-        Animation1.BlindCoeff = CType(resources.GetObject("Animation1.BlindCoeff"), System.Drawing.PointF)
-        Animation1.LeafCoeff = 0!
-        Animation1.MaxTime = 1.0!
-        Animation1.MinTime = 0!
-        Animation1.MosaicCoeff = CType(resources.GetObject("Animation1.MosaicCoeff"), System.Drawing.PointF)
-        Animation1.MosaicShift = CType(resources.GetObject("Animation1.MosaicShift"), System.Drawing.PointF)
-        Animation1.MosaicSize = 0
-        Animation1.Padding = New System.Windows.Forms.Padding(0)
-        Animation1.RotateCoeff = 0!
-        Animation1.RotateLimit = 0!
-        Animation1.ScaleCoeff = CType(resources.GetObject("Animation1.ScaleCoeff"), System.Drawing.PointF)
-        Animation1.SlideCoeff = CType(resources.GetObject("Animation1.SlideCoeff"), System.Drawing.PointF)
-        Animation1.TimeCoeff = 0!
-        Animation1.TransparencyCoeff = 0!
-        Me.TransitionUserAccountPage.DefaultAnimation = Animation1
+        Animation2.AnimateOnlyDifferences = True
+        Animation2.BlindCoeff = CType(resources.GetObject("Animation2.BlindCoeff"), System.Drawing.PointF)
+        Animation2.LeafCoeff = 0!
+        Animation2.MaxTime = 1.0!
+        Animation2.MinTime = 0!
+        Animation2.MosaicCoeff = CType(resources.GetObject("Animation2.MosaicCoeff"), System.Drawing.PointF)
+        Animation2.MosaicShift = CType(resources.GetObject("Animation2.MosaicShift"), System.Drawing.PointF)
+        Animation2.MosaicSize = 0
+        Animation2.Padding = New System.Windows.Forms.Padding(0)
+        Animation2.RotateCoeff = 0!
+        Animation2.RotateLimit = 0!
+        Animation2.ScaleCoeff = CType(resources.GetObject("Animation2.ScaleCoeff"), System.Drawing.PointF)
+        Animation2.SlideCoeff = CType(resources.GetObject("Animation2.SlideCoeff"), System.Drawing.PointF)
+        Animation2.TimeCoeff = 0!
+        Animation2.TransparencyCoeff = 0!
+        Me.TransitionUserAccountPage.DefaultAnimation = Animation2
         '
         'ExitGradientButton
         '
@@ -565,12 +566,25 @@ Partial Class UserAccount
         Me.PasswordToolTip.AllowLinksHandling = True
         Me.PasswordToolTip.MaximumSize = New System.Drawing.Size(0, 0)
         '
+        'Guna2HtmlLabel1
+        '
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.TransitionUserAccountPage.SetDecoration(Me.Guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None)
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(56, 17)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(193, 39)
+        Me.Guna2HtmlLabel1.TabIndex = 9
+        Me.Guna2HtmlLabel1.Text = "Login Account"
+        '
         'UserAccount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 500)
+        Me.Controls.Add(Me.RegisterShadowPanel)
         Me.Controls.Add(Me.ExitGradientButton)
         Me.Controls.Add(Me.LoginShadowPanel)
         Me.Controls.Add(Me.Guna2ControlBox2)
@@ -623,4 +637,5 @@ Partial Class UserAccount
     Friend WithEvents NameToolTip As Guna.UI2.WinForms.Guna2HtmlToolTip
     Friend WithEvents EmailToolTip As Guna.UI2.WinForms.Guna2HtmlToolTip
     Friend WithEvents PasswordToolTip As Guna.UI2.WinForms.Guna2HtmlToolTip
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class
