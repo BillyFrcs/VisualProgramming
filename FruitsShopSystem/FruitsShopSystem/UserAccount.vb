@@ -81,7 +81,7 @@ Public Class UserAccount
                 Else
                     _SQLConnection.Open()
 
-                    Dim insertQuery As String = "INSERT INTO FruitsShop.dbo.UserAccount ([Name], [Email], [Password]) VALUES ('" & _NameRegister & "', '" & _EmailRegister & "', '" & _PasswordRegister & "')"
+                    Dim insertQuery As String = $"INSERT INTO {_databaseName}.dbo.UserAccount ([Name], [Email], [Password]) VALUES ('" & _NameRegister & "', '" & _EmailRegister & "', '" & _PasswordRegister & "')"
 
                     Using SQLCommand As New SqlCommand
                         With SQLCommand
@@ -128,7 +128,7 @@ Public Class UserAccount
                 If _regex.IsMatch(_EmailLogin) Then
                     _SQLConnection.Open()
 
-                    Dim selectQuery As String = "SELECT * FROM FruitsShop.dbo.UserAccount WHERE Email = '" & _EmailLogin & "' AND Password = '" & _PasswordLogin & "'"
+                    Dim selectQuery As String = $"SELECT * FROM {_databaseName}.dbo.UserAccount WHERE Email = '" & _EmailLogin & "' AND Password = '" & _PasswordLogin & "'"
 
                     Using SQLCommand As New SqlCommand
                         With SQLCommand
@@ -156,7 +156,7 @@ Public Class UserAccount
 
                                 _SQLConnection.Open()
 
-                                Dim nameQuery = "SELECT Name FROM FruitsShop.dbo.UserAccount WHERE Email = '" & _EmailLogin & "'"
+                                Dim nameQuery = $"SELECT Name FROM {_databaseName}.dbo.UserAccount WHERE Email = '" & _EmailLogin & "'"
 
                                 Dim NewSQLCommand As New SqlCommand(nameQuery, _SQLConnection)
 

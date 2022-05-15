@@ -23,6 +23,9 @@ Public Class Account
         PasswordTextBox.UseSystemPasswordChar = True
     End Sub
 
+    ''' <summary>
+    ''' Initialize the user account form
+    ''' </summary>
     Private Sub InitializeAccount()
         _Name = NameTextBox.Text
         _Email = EmailTextBox.Text
@@ -43,7 +46,7 @@ Public Class Account
                 If _regex.IsMatch(_Email) Then
                     _SQLConnection.Open()
 
-                    Dim updateQuery = "UPDATE FruitsShop.dbo.UserAccount SET Name = '" & _Name & "' , Email = '" & _Email & "' , Password = '" & _Password & "' WHERE Email = '" & _Email & "'"
+                    Dim updateQuery = $"UPDATE {_databaseName}.dbo.UserAccount SET Name = '" & _Name & "' , Email = '" & _Email & "' , Password = '" & _Password & "' WHERE Email = '" & _Email & "'"
 
                     Using SQLCommand As New SqlCommand(updateQuery)
                         With SQLCommand
@@ -89,7 +92,7 @@ Public Class Account
                 If _regex.IsMatch(_Email) Then
                     _SQLConnection.Open()
 
-                    Dim selectQuery = "SELECT Name, Email, Password FROM FruitsShop.dbo.UserAccount WHERE Email = '" & _Email & "'"
+                    Dim selectQuery = $"SELECT Name, Email, Password FROM {_databaseName}.dbo.UserAccount WHERE Email = '" & _Email & "'"
 
                     Using SQLCommand As New SqlCommand(selectQuery)
                         With SQLCommand
@@ -135,6 +138,9 @@ Public Class Account
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Clear account text box
+    ''' </summary>
     Private Sub ClearAccount()
         NameTextBox.Clear()
         EmailTextBox.Clear()

@@ -30,6 +30,7 @@ Partial Class Transaction
         Me.ConfirmMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
+        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.SuspendLayout()
         '
         'Guna2Elipse1
@@ -76,16 +77,31 @@ Partial Class Transaction
         '
         Me.Guna2AnimateWindow1.TargetForm = Me
         '
+        'Guna2HtmlLabel2
+        '
+        Me.Guna2HtmlLabel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(82, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(12, 12)
+        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(158, 39)
+        Me.Guna2HtmlLabel2.TabIndex = 47
+        Me.Guna2HtmlLabel2.Text = "Transaction"
+        '
         'Transaction
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(779, 466)
+        Me.Controls.Add(Me.Guna2HtmlLabel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Transaction"
         Me.Text = "Transaction"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -96,4 +112,5 @@ Partial Class Transaction
     Friend WithEvents ConfirmMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents Guna2ShadowForm1 As Guna.UI2.WinForms.Guna2ShadowForm
     Friend WithEvents Guna2AnimateWindow1 As Guna.UI2.WinForms.Guna2AnimateWindow
+    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

@@ -74,8 +74,8 @@ Partial Class Home
         Me.Guna2PictureBox6 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.ClearGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CType(Me.Guna2PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -164,7 +164,7 @@ Partial Class Home
         Me.StawberryStockHtmlLabel.Name = "StawberryStockHtmlLabel"
         Me.StawberryStockHtmlLabel.Size = New System.Drawing.Size(24, 19)
         Me.StawberryStockHtmlLabel.TabIndex = 146
-        Me.StawberryStockHtmlLabel.Text = "100"
+        Me.StawberryStockHtmlLabel.Text = "340"
         '
         'PineappleStockHtmlLabel
         '
@@ -178,7 +178,7 @@ Partial Class Home
         Me.PineappleStockHtmlLabel.Name = "PineappleStockHtmlLabel"
         Me.PineappleStockHtmlLabel.Size = New System.Drawing.Size(24, 19)
         Me.PineappleStockHtmlLabel.TabIndex = 145
-        Me.PineappleStockHtmlLabel.Text = "100"
+        Me.PineappleStockHtmlLabel.Text = "410"
         '
         'PearStockHtmlLabel
         '
@@ -192,7 +192,7 @@ Partial Class Home
         Me.PearStockHtmlLabel.Name = "PearStockHtmlLabel"
         Me.PearStockHtmlLabel.Size = New System.Drawing.Size(24, 19)
         Me.PearStockHtmlLabel.TabIndex = 144
-        Me.PearStockHtmlLabel.Text = "100"
+        Me.PearStockHtmlLabel.Text = "250"
         '
         'LemonStockHtmlLabel
         '
@@ -206,7 +206,7 @@ Partial Class Home
         Me.LemonStockHtmlLabel.Name = "LemonStockHtmlLabel"
         Me.LemonStockHtmlLabel.Size = New System.Drawing.Size(24, 19)
         Me.LemonStockHtmlLabel.TabIndex = 143
-        Me.LemonStockHtmlLabel.Text = "100"
+        Me.LemonStockHtmlLabel.Text = "500"
         '
         'GrapesStockHtmlLabel
         '
@@ -220,7 +220,7 @@ Partial Class Home
         Me.GrapesStockHtmlLabel.Name = "GrapesStockHtmlLabel"
         Me.GrapesStockHtmlLabel.Size = New System.Drawing.Size(24, 19)
         Me.GrapesStockHtmlLabel.TabIndex = 142
-        Me.GrapesStockHtmlLabel.Text = "100"
+        Me.GrapesStockHtmlLabel.Text = "200"
         '
         'AppleStockHtmlLabel
         '
@@ -812,17 +812,6 @@ Partial Class Home
         Me.Guna2PictureBox4.TabIndex = 104
         Me.Guna2PictureBox4.TabStop = False
         '
-        'Guna2HtmlLabel2
-        '
-        Me.Guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent
-        Me.Guna2HtmlLabel2.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(82, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Guna2HtmlLabel2.Location = New System.Drawing.Point(12, 12)
-        Me.Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
-        Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(112, 30)
-        Me.Guna2HtmlLabel2.TabIndex = 103
-        Me.Guna2HtmlLabel2.Text = "Fresh Fruits"
-        '
         'ClearGradientButton
         '
         Me.ClearGradientButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -847,12 +836,26 @@ Partial Class Home
         Me.ClearGradientButton.Text = "Clear"
         Me.ClearGradientButton.UseTransparentBackground = True
         '
+        'Guna2HtmlLabel1
+        '
+        Me.Guna2HtmlLabel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.Guna2HtmlLabel1.Font = New System.Drawing.Font("Segoe UI Black", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(82, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Guna2HtmlLabel1.Location = New System.Drawing.Point(12, 12)
+        Me.Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Me.Guna2HtmlLabel1.Size = New System.Drawing.Size(159, 39)
+        Me.Guna2HtmlLabel1.TabIndex = 148
+        Me.Guna2HtmlLabel1.Text = "Fresh Fruits"
+        '
         'Home
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(779, 466)
+        Me.Controls.Add(Me.Guna2HtmlLabel1)
         Me.Controls.Add(Me.ClearGradientButton)
         Me.Controls.Add(Me.AddToCartGradientButton)
         Me.Controls.Add(Me.StawberryStockHtmlLabel)
@@ -897,7 +900,6 @@ Partial Class Home
         Me.Controls.Add(Me.Guna2PictureBox6)
         Me.Controls.Add(Me.Guna2PictureBox5)
         Me.Controls.Add(Me.Guna2PictureBox4)
-        Me.Controls.Add(Me.Guna2HtmlLabel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Home"
         Me.Text = "Home"
@@ -962,6 +964,6 @@ Partial Class Home
     Friend WithEvents Guna2PictureBox6 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox5 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox4 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents ClearGradientButton As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class
