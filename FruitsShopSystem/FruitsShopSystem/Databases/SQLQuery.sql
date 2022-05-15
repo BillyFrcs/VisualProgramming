@@ -15,6 +15,8 @@ PRIMARY KEY(ID)
 SELECT * FROM [UserAccount];
 SELECT * FROM [Transactions];
 
+SELECT Name, Email, Password FROM [UserAccount] WHERE ID = 3;
+
 -- Delete
 DROP TABLE [UserAccount];
 DROP DATABASE [FruitsShop];
