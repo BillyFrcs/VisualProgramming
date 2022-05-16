@@ -12,12 +12,12 @@ PRIMARY KEY(ID)
 );
 
 CREATE TABLE [Transaction](
-Transaction_ID VARCHAR(5) NOT NULL,
+Transaction_ID VARCHAR(50) NOT NULL,
 Fruit_Name VARCHAR(50) NOT NULL,
 Total_Fruits INT NOT NULL,
 Total_Price DECIMAL NOT NULL,
-Time_Transaction TIME NOT NULL,
-Date_Transaction DATE NOT NULL,
+Time_Transaction VARCHAR(50) NOT NULL,
+Date_Transaction VARCHAR(50) NOT NULL,
 
 PRIMARY KEY(Transaction_ID)
 );

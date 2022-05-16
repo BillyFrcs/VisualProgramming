@@ -1,10 +1,10 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Security.Cryptography
+Imports System.Text
 Imports System.Text.RegularExpressions
 Imports FruitsShopSystem.Shop
 
 Public Class Transaction
-    Private _email As String
-
     Private _fruitsList As String
     Private _totalTransactionFruits As Integer
     Private _totalFruits As Integer
@@ -12,6 +12,11 @@ Public Class Transaction
     Private _resultPayment As Decimal
 
     Private ReadOnly _empty As String = String.Empty
+
+    Private _fruitName As String
+    Private _transactionID As String
+    Private _timeTransaction As String
+    Private _dateTransaction As String
 
     ' Email validation
     Private ReadOnly _regex As New Regex("^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$")
@@ -23,8 +28,6 @@ Public Class Transaction
     Private ReadOnly _SQLConnection As New SqlConnection($"Data Source={_serverName};Initial Catalog={_databaseName};Integrated Security=True")
 
     Private Sub TransactionLoad(sender As Object, e As EventArgs) Handles MyBase.Load
-        PromoCodeTextBox.Enabled = False
-
         FruitsComboBox.Enabled = False
         TotalFruitsTextBox.Enabled = False
 
@@ -36,32 +39,14 @@ Public Class Transaction
         Next
     End Sub
 
-    Private Sub SearchEmailCircleButtonClick(sender As Object, e As EventArgs) Handles SearchEmailCircleButton.Click
-        InitializeData()
-
-        If _email IsNot _empty Then
-            ClearEmail()
-        Else
-            ErrorMessageDialog.Show("Yoo the search box is still empty!", "Error")
-        End If
-    End Sub
-
     ''' <summary>
     ''' Initializes the data.
     ''' </summary>
     Private Sub InitializeData()
-        _email = EmailTextBox.Text
-
         _fruitsList = FruitsListComboBox.Text
         _totalTransactionFruits = Val(TotalTransactionFruitsTextBox.Text)
         _totalFruits = Val(TotalFruitsTextBox.Text)
-    End Sub
-
-    ''' <summary>
-    ''' Clear the email text box
-    ''' </summary>
-    Private Sub ClearEmail()
-        EmailTextBox.Clear()
+        _fruitName = FruitsComboBox.Text
     End Sub
 
     ''' <summary>
@@ -70,20 +55,9 @@ Public Class Transaction
     Private Sub ClearData()
         FruitsListComboBox.SelectedIndex = -1
         TotalTransactionFruitsTextBox.Clear()
-        PromoCodeTextBox.Clear()
     End Sub
 
-    Private Sub EmailTextBoxMouseHover() Handles EmailTextBox.MouseHover
-        EmailHtmlToolTip.SetToolTip(EmailTextBox, "Your Email Address")
-    End Sub
-
-    Private Sub ShowToggleSwitchCheckedChanged(sender As Object, e As EventArgs) Handles ShowPromoCodeToggleSwitch.CheckedChanged, ShowUpdateTransactionToggleSwitch.CheckedChanged
-        If ShowPromoCodeToggleSwitch.Checked = True Then
-            PromoCodeTextBox.Enabled = True
-        Else
-            PromoCodeTextBox.Enabled = False
-        End If
-
+    Private Sub ShowToggleSwitchCheckedChanged(sender As Object, e As EventArgs) Handles ShowUpdateTransactionToggleSwitch.CheckedChanged
         If ShowUpdateTransactionToggleSwitch.Checked = True Then
             FruitsComboBox.Enabled = True
             TotalFruitsTextBox.Enabled = True
@@ -130,59 +104,127 @@ Public Class Transaction
     End Sub
 
     ''' <summary>
-    ''' Calculate the fruits                               
+    ''' Calculate the total fruits                               
     ''' </summary>
     Private Sub CalculateFruits()
         Dim totalFruits As Integer = Val(TotalFruitsTextBox.Text)
 
-        If FruitsComboBox.SelectedItem = "Apple" Then
-            _resultPayment = Fruits.Apple * totalFruits
+        Const style = "STANDARD"
 
-            TotalPaymentTextBox.Text = _resultPayment.ToString()
-            ResultTotalPaymentHtmlLabel.Text = _resultPayment.ToString()
-        ElseIf FruitsComboBox.SelectedItem = "Grapes" Then
-            _resultPayment = Fruits.Grapes * totalFruits
+        Select Case FruitsComboBox.Text
+            Case "Apple"
+                _resultPayment = Fruits.Apple * totalFruits
 
-            TotalPaymentTextBox.Text = _resultPayment
-            ResultTotalPaymentHtmlLabel.Text = _resultPayment.ToString()
-        ElseIf FruitsComboBox.SelectedItem = "Lemon" Then
-            _resultPayment = Fruits.Lemon * totalFruits
+                TotalPaymentTextBox.Text = Format(_resultPayment.ToString(), style)
+                ResultTotalPaymentHtmlLabel.Text = Format(_resultPayment.ToString(), style)
 
-            TotalPaymentTextBox.Text = _resultPayment
-            ResultTotalPaymentHtmlLabel.Text = _resultPayment.ToString()
-        ElseIf FruitsComboBox.SelectedItem = "Pear" Then
-            _resultPayment = Fruits.Pear * totalFruits
+            Case "Grapes"
+                _resultPayment = Fruits.Grapes * totalFruits
 
-            TotalPaymentTextBox.Text = _resultPayment
-            ResultTotalPaymentHtmlLabel.Text = _resultPayment.ToString()
-        ElseIf FruitsComboBox.SelectedItem = "Pineapple" Then
-            _resultPayment = Fruits.Pineapple * totalFruits
+                TotalPaymentTextBox.Text = Format(_resultPayment.ToString(), style)
+                ResultTotalPaymentHtmlLabel.Text = Format(_resultPayment.ToString(), style)
 
-            TotalPaymentTextBox.Text = _resultPayment
-            ResultTotalPaymentHtmlLabel.Text = _resultPayment.ToString()
-        ElseIf FruitsComboBox.SelectedItem = "Strawberry" Then
-            _resultPayment = Fruits.Strawberry * totalFruits
+            Case "Lemon"
+                _resultPayment = Fruits.Lemon * totalFruits
 
-            TotalPaymentTextBox.Text = _resultPayment
-            ResultTotalPaymentHtmlLabel.Text = _resultPayment.ToString()
-        End If
+                TotalPaymentTextBox.Text = Format(_resultPayment.ToString(), style)
+                ResultTotalPaymentHtmlLabel.Text = Format(_resultPayment.ToString(), style)
+
+            Case "Pear"
+                _resultPayment = Fruits.Pear * totalFruits
+
+                TotalPaymentTextBox.Text = Format(_resultPayment.ToString(), style)
+                ResultTotalPaymentHtmlLabel.Text = Format(_resultPayment.ToString(), style)
+
+            Case "Pineapple"
+                _resultPayment = Fruits.Pineapple * totalFruits
+
+                TotalPaymentTextBox.Text = Format(_resultPayment.ToString(), style)
+                ResultTotalPaymentHtmlLabel.Text = Format(_resultPayment.ToString(), style)
+
+            Case "Strawberry"
+                _resultPayment = Fruits.Strawberry * totalFruits
+
+                TotalPaymentTextBox.Text = Format(_resultPayment.ToString(), style)
+                ResultTotalPaymentHtmlLabel.Text = Format(_resultPayment.ToString(), style)
+        End Select
     End Sub
 
     Private Sub PayGradientButtonClick(sender As Object, e As EventArgs) Handles PayGradientButton.Click
-        InitializeData()
+        Call InitializeData()
 
         If FruitsComboBox.SelectedItem Is Nothing And _totalFruits <= 0 Then
-            ErrorMessageDialog.Show("you haven't order anything yet :)", "Error")
+            ErrorMessageDialog.Show("You haven't order anything yet :)", "Error")
         Else
-            If _email IsNot _empty Then
-                If _regex.IsMatch(_email) Then
-                    SuccessMessageDialog.Show("Payment Successfully!", "Success")
-                Else
-                    ErrorMessageDialog.Show("Invalid Email Address!", "Error")
-                End If
-            Else
-                ErrorMessageDialog.Show("Please enter your email address!", "Error")
-            End If
+            SaveUserTransaction()
+
+            Dim historyTransaction As New History()
+
+            historyTransaction.UpdateDataTransaction()
+
+            UserDashboard.Dashboard.GetBalance(_resultPayment)
+
+            SuccessMessageDialog.Show("Thanks for Paying :D", "Success")
         End If
     End Sub
+
+    Private Sub InitializeToServer()
+        _transactionID = GetUniqueID(5)
+        _timeTransaction = TimeOfDay.ToString("h:mm:ss tt")
+        _dateTransaction = String.Format("{0:dd/MM/yyyy}", Date.Now)
+    End Sub
+
+    Private Sub SaveUserTransaction()
+        Call InitializeData()
+        Call InitializeToServer()
+
+        Try
+            _SQLConnection.Open()
+
+            Dim updateQuery = $"INSERT INTO {_databaseName}.dbo.[Transaction] ([Transaction_ID], [Fruit_Name], [Total_Fruits], [Time_Transaction], [Date_Transaction], [Total_Price]) VALUES ('" & _transactionID & "', '" & _fruitName & "', '" & _totalFruits & "', '" & _timeTransaction & "', '" & _dateTransaction & "', '" & _resultPayment & "')"
+
+            Using SQLCommand As New SqlCommand()
+                With SQLCommand
+                    .Connection = _SQLConnection
+                    .CommandType = CommandType.Text
+                    .CommandText = updateQuery
+
+                    .Parameters.AddWithValue("@Transaction_ID", _transactionID)
+                    .Parameters.AddWithValue("@Fruit_Name", _fruitName)
+                    .Parameters.AddWithValue("@Total_Fruits", _totalFruits)
+                    .Parameters.AddWithValue("@Time_Transaction", _timeTransaction)
+                    .Parameters.AddWithValue("@Date_Transaction", _dateTransaction)
+                    .Parameters.AddWithValue("@Total_Price", _resultPayment)
+
+                    .ExecuteNonQuery()
+                End With
+
+                _SQLConnection.Close()
+            End Using
+        Catch ex As SqlException
+            ErrorMessageDialog.Show(ex.Message(), "Error")
+        End Try
+    End Sub
+
+    Private Function GetUniqueID(ByVal maxSize As Integer) As String
+        Dim chars As Char() = New Char(61) {}
+
+        chars = "123456789".ToCharArray()
+
+        Dim data As Byte() = New Byte(0) {}
+
+        Dim crypto As New RNGCryptoServiceProvider()
+        crypto.GetNonZeroBytes(data)
+
+        data = New Byte(maxSize - 1) {}
+        crypto.GetNonZeroBytes(data)
+
+        Dim result As New StringBuilder(maxSize)
+
+        For Each value As Byte In data
+            result.Append(chars(value Mod (chars.Length)))
+        Next
+
+        Return result.ToString()
+    End Function
 End Class

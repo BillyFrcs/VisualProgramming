@@ -9,6 +9,8 @@ Public Class UserDashboard
 
     Private _number As Integer
 
+    Public Shared ReadOnly Dashboard As New UserDashboard()
+
     Private Sub UserDashboardLoad(sender As Object, e As EventArgs) Handles MyBase.Load
         UserStatus()
 
@@ -100,5 +102,13 @@ Public Class UserDashboard
             _number -= 10000
             UserBalanceHtmlLabel.Text = Val(_number.ToString)
         End If
+    End Sub
+
+    Public Sub GetBalance(newBalance As Decimal)
+        Dim currentBalance As Decimal = Val(UserBalanceHtmlLabel.Text)
+
+        currentBalance -= newBalance
+
+        UserBalanceHtmlLabel.Text = currentBalance
     End Sub
 End Class

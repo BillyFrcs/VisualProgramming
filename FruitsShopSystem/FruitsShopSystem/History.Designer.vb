@@ -23,9 +23,9 @@ Partial Class History
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(History))
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
@@ -36,14 +36,17 @@ Partial Class History
         Me.Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(Me.components)
         Me.HistoryTransactionDataGridView = New Guna.UI2.WinForms.Guna2DataGridView()
         Me.Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.EmailTextBox = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.SearchEmailCircleButton = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.SearchHistoryTransactionCircleButton = New Guna.UI2.WinForms.Guna2CircleButton()
         Me.SearchHistoryTransactionTextBox = New Guna.UI2.WinForms.Guna2TextBox()
         Me.HistoryHtmlToolTip = New Guna.UI2.WinForms.Guna2HtmlToolTip()
         Me.PrintHistoryTransactionGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Guna2NotificationPaint1 = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
+        Me.HistoryBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PrintHistoryTransactionDocument = New System.Drawing.Printing.PrintDocument()
+        Me.PrintPreviewDialogUserTransaction = New System.Windows.Forms.PrintPreviewDialog()
+        Me.DeleteGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
         CType(Me.HistoryTransactionDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HistoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Guna2AnimateWindow1
@@ -92,34 +95,38 @@ Partial Class History
         '
         'HistoryTransactionDataGridView
         '
-        DataGridViewCellStyle7.BackColor = System.Drawing.Color.White
-        Me.HistoryTransactionDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.White
+        Me.HistoryTransactionDataGridView.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.HistoryTransactionDataGridView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.HistoryTransactionDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.HistoryTransactionDataGridView.BackgroundColor = System.Drawing.Color.White
         Me.HistoryTransactionDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.HistoryTransactionDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.HistoryTransactionDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle8.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle8.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.HistoryTransactionDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.HistoryTransactionDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.HistoryTransactionDataGridView.ColumnHeadersHeight = 4
-        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
-        DataGridViewCellStyle9.Font = New System.Drawing.Font("Segoe UI", 10.5!)
-        DataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
-        DataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
-        DataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.HistoryTransactionDataGridView.DefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 10.5!)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(71, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(94, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.HistoryTransactionDataGridView.DefaultCellStyle = DataGridViewCellStyle3
         Me.HistoryTransactionDataGridView.EnableHeadersVisualStyles = False
         Me.HistoryTransactionDataGridView.GridColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.HistoryTransactionDataGridView.Location = New System.Drawing.Point(26, 90)
         Me.HistoryTransactionDataGridView.Name = "HistoryTransactionDataGridView"
+        Me.HistoryTransactionDataGridView.ReadOnly = True
         Me.HistoryTransactionDataGridView.RowHeadersVisible = False
         Me.HistoryTransactionDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.HistoryTransactionDataGridView.Size = New System.Drawing.Size(727, 334)
@@ -137,7 +144,7 @@ Partial Class History
         Me.HistoryTransactionDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White
         Me.HistoryTransactionDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         Me.HistoryTransactionDataGridView.ThemeStyle.HeaderStyle.Height = 4
-        Me.HistoryTransactionDataGridView.ThemeStyle.ReadOnly = False
+        Me.HistoryTransactionDataGridView.ThemeStyle.ReadOnly = True
         Me.HistoryTransactionDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White
         Me.HistoryTransactionDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal
         Me.HistoryTransactionDataGridView.ThemeStyle.RowsStyle.Font = New System.Drawing.Font("Segoe UI", 10.5!)
@@ -156,55 +163,6 @@ Partial Class History
         Me.Guna2HtmlLabel2.Size = New System.Drawing.Size(102, 39)
         Me.Guna2HtmlLabel2.TabIndex = 46
         Me.Guna2HtmlLabel2.Text = "History"
-        '
-        'EmailTextBox
-        '
-        Me.EmailTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.EmailTextBox.Animated = True
-        Me.EmailTextBox.AutoRoundedCorners = True
-        Me.EmailTextBox.BorderRadius = 23
-        Me.EmailTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.EmailTextBox.DefaultText = ""
-        Me.EmailTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.EmailTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.EmailTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.EmailTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.EmailTextBox.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.EmailTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.EmailTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.EmailTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.EmailTextBox.Location = New System.Drawing.Point(346, 22)
-        Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.EmailTextBox.PlaceholderText = "Email"
-        Me.EmailTextBox.SelectedText = ""
-        Me.EmailTextBox.Size = New System.Drawing.Size(193, 48)
-        Me.EmailTextBox.TabIndex = 47
-        Me.EmailTextBox.TextOffset = New System.Drawing.Point(36, 0)
-        '
-        'SearchEmailCircleButton
-        '
-        Me.SearchEmailCircleButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.SearchEmailCircleButton.Animated = True
-        Me.SearchEmailCircleButton.BackColor = System.Drawing.Color.Transparent
-        Me.SearchEmailCircleButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.SearchEmailCircleButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.SearchEmailCircleButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.SearchEmailCircleButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.SearchEmailCircleButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
-        Me.SearchEmailCircleButton.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.SearchEmailCircleButton.ForeColor = System.Drawing.Color.White
-        Me.SearchEmailCircleButton.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(119, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.SearchEmailCircleButton.HoverState.Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
-        Me.SearchEmailCircleButton.Image = CType(resources.GetObject("SearchEmailCircleButton.Image"), System.Drawing.Image)
-        Me.SearchEmailCircleButton.ImageSize = New System.Drawing.Size(15, 15)
-        Me.SearchEmailCircleButton.IndicateFocus = True
-        Me.SearchEmailCircleButton.Location = New System.Drawing.Point(360, 30)
-        Me.SearchEmailCircleButton.Name = "SearchEmailCircleButton"
-        Me.SearchEmailCircleButton.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle
-        Me.SearchEmailCircleButton.Size = New System.Drawing.Size(30, 30)
-        Me.SearchEmailCircleButton.TabIndex = 49
-        Me.SearchEmailCircleButton.UseTransparentBackground = True
         '
         'SearchHistoryTransactionCircleButton
         '
@@ -278,12 +236,54 @@ Partial Class History
         Me.PrintHistoryTransactionGradientButton.ForeColor = System.Drawing.Color.White
         Me.PrintHistoryTransactionGradientButton.Image = CType(resources.GetObject("PrintHistoryTransactionGradientButton.Image"), System.Drawing.Image)
         Me.PrintHistoryTransactionGradientButton.IndicateFocus = True
-        Me.PrintHistoryTransactionGradientButton.Location = New System.Drawing.Point(219, 30)
+        Me.PrintHistoryTransactionGradientButton.Location = New System.Drawing.Point(440, 30)
         Me.PrintHistoryTransactionGradientButton.Name = "PrintHistoryTransactionGradientButton"
         Me.PrintHistoryTransactionGradientButton.Size = New System.Drawing.Size(100, 37)
         Me.PrintHistoryTransactionGradientButton.TabIndex = 159
         Me.PrintHistoryTransactionGradientButton.Text = "Print"
         Me.PrintHistoryTransactionGradientButton.UseTransparentBackground = True
+        '
+        'HistoryBindingSource
+        '
+        Me.HistoryBindingSource.DataSource = GetType(FruitsShopSystem.History)
+        '
+        'PrintHistoryTransactionDocument
+        '
+        '
+        'PrintPreviewDialogUserTransaction
+        '
+        Me.PrintPreviewDialogUserTransaction.AutoScrollMargin = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialogUserTransaction.AutoScrollMinSize = New System.Drawing.Size(0, 0)
+        Me.PrintPreviewDialogUserTransaction.ClientSize = New System.Drawing.Size(400, 300)
+        Me.PrintPreviewDialogUserTransaction.Enabled = True
+        Me.PrintPreviewDialogUserTransaction.Icon = CType(resources.GetObject("PrintPreviewDialogUserTransaction.Icon"), System.Drawing.Icon)
+        Me.PrintPreviewDialogUserTransaction.Name = "PrintPreviewDialogUserTransaction"
+        Me.PrintPreviewDialogUserTransaction.Visible = False
+        '
+        'DeleteGradientButton
+        '
+        Me.DeleteGradientButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DeleteGradientButton.Animated = True
+        Me.DeleteGradientButton.AutoRoundedCorners = True
+        Me.DeleteGradientButton.BackColor = System.Drawing.Color.Transparent
+        Me.DeleteGradientButton.BorderRadius = 17
+        Me.DeleteGradientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.DeleteGradientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.DeleteGradientButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.DeleteGradientButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.DeleteGradientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.DeleteGradientButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.DeleteGradientButton.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.DeleteGradientButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.DeleteGradientButton.ForeColor = System.Drawing.Color.White
+        Me.DeleteGradientButton.Image = CType(resources.GetObject("DeleteGradientButton.Image"), System.Drawing.Image)
+        Me.DeleteGradientButton.IndicateFocus = True
+        Me.DeleteGradientButton.Location = New System.Drawing.Point(334, 30)
+        Me.DeleteGradientButton.Name = "DeleteGradientButton"
+        Me.DeleteGradientButton.Size = New System.Drawing.Size(100, 37)
+        Me.DeleteGradientButton.TabIndex = 160
+        Me.DeleteGradientButton.Text = "Delete"
+        Me.DeleteGradientButton.UseTransparentBackground = True
         '
         'History
         '
@@ -291,17 +291,17 @@ Partial Class History
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(779, 466)
+        Me.Controls.Add(Me.DeleteGradientButton)
         Me.Controls.Add(Me.PrintHistoryTransactionGradientButton)
         Me.Controls.Add(Me.SearchHistoryTransactionCircleButton)
         Me.Controls.Add(Me.SearchHistoryTransactionTextBox)
-        Me.Controls.Add(Me.SearchEmailCircleButton)
-        Me.Controls.Add(Me.EmailTextBox)
         Me.Controls.Add(Me.Guna2HtmlLabel2)
         Me.Controls.Add(Me.HistoryTransactionDataGridView)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "History"
         Me.Text = "History"
         CType(Me.HistoryTransactionDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HistoryBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -316,11 +316,13 @@ Partial Class History
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
     Friend WithEvents HistoryTransactionDataGridView As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents EmailTextBox As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents SearchEmailCircleButton As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents SearchHistoryTransactionCircleButton As Guna.UI2.WinForms.Guna2CircleButton
     Friend WithEvents SearchHistoryTransactionTextBox As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents HistoryHtmlToolTip As Guna.UI2.WinForms.Guna2HtmlToolTip
     Friend WithEvents PrintHistoryTransactionGradientButton As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Guna2NotificationPaint1 As Guna.UI2.WinForms.Guna2NotificationPaint
+    Friend WithEvents HistoryBindingSource As BindingSource
+    Friend WithEvents PrintHistoryTransactionDocument As Printing.PrintDocument
+    Friend WithEvents PrintPreviewDialogUserTransaction As PrintPreviewDialog
+    Friend WithEvents DeleteGradientButton As Guna.UI2.WinForms.Guna2GradientButton
 End Class
