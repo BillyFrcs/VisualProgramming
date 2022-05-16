@@ -103,6 +103,10 @@ Public Class UserAccount
                         Dim getName() As String = _NameRegister.Split(" "c)
 
                         SuccessMessageDialog.Show($"Registration Successfully, Welcome {getName(0).Replace(_NameRegister, _NameRegister)}!", "Success")
+
+                        UserDashboard.Show()
+
+                        Me.Hide()
                     End Using
                 End If
             End If

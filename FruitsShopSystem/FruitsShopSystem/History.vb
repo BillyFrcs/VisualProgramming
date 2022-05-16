@@ -18,7 +18,7 @@
     ''' Initializes the data.
     ''' </summary>
     Private Sub InitializeData()
-        _searchEmail = SearchEmailTextBox.Text
+        _searchEmail = EmailTextBox.Text
         _searchData = SearchHistoryTransactionTextBox.Text
     End Sub
 
@@ -26,7 +26,7 @@
     ''' Clear the text box
     ''' </summary>
     Private Sub ClearData()
-        SearchEmailTextBox.Clear()
+        EmailTextBox.Clear()
         SearchHistoryTransactionTextBox.Clear()
     End Sub
 
@@ -36,7 +36,12 @@
         If _searchEmail IsNot _empty Then
             ClearData()
         Else
-            ErrorMessageDialog.Show("Yoo the search box is still empty!", "Error")
+            ErrorMessageDialog.Show("Yoo the email is still empty!", "Error")
         End If
+    End Sub
+
+    Private Sub HistoryTextBoxMouseHover() Handles EmailTextBox.MouseHover, SearchHistoryTransactionTextBox.MouseHover
+        HistoryHtmlToolTip.SetToolTip(EmailTextBox, "Your Email Address")
+        HistoryHtmlToolTip.SetToolTip(SearchHistoryTransactionTextBox, "Your Transaction")
     End Sub
 End Class

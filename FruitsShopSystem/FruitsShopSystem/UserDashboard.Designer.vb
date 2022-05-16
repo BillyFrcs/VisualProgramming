@@ -61,6 +61,7 @@ Partial Class UserDashboard
         Me.ConfirmMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.SuccessMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.ErrorMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
+        Me.Guna2NotificationPaint1 = New Guna.UI2.WinForms.Guna2NotificationPaint(Me.components)
         Me.SidebarCustomGradientPanel.SuspendLayout()
         CType(Me.Guna2PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BalanceGradientPanel.SuspendLayout()
@@ -628,6 +629,10 @@ Partial Class UserDashboard
         Me.ErrorMessageDialog.Style = Guna.UI2.WinForms.MessageDialogStyle.Light
         Me.ErrorMessageDialog.Text = ""
         '
+        'Guna2NotificationPaint1
+        '
+        Me.Guna2NotificationPaint1.TargetControl = Me.NotificationImageButton
+        '
         'UserDashboard
         '
         Me.AllowDrop = True
@@ -694,4 +699,5 @@ Partial Class UserDashboard
     Friend WithEvents StatusHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2HtmlLabel5 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2NotificationPaint1 As Guna.UI2.WinForms.Guna2NotificationPaint
 End Class

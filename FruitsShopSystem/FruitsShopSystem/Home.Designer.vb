@@ -31,7 +31,6 @@ Partial Class Home
         Me.ConfirmMessageDialog = New Guna.UI2.WinForms.Guna2MessageDialog()
         Me.Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(Me.components)
         Me.Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(Me.components)
-        Me.AddToCartGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.StawberryStockHtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.PineappleStockHtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.PearStockHtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -50,12 +49,6 @@ Partial Class Home
         Me.LemonPriceNameHtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.GrapesPriceNameHtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.ApplePriceNameHtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Me.StrawberryTextBox = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.LemonTextBox = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.PineappleTextBox = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.GrapesTextBox = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.PearTextBox = New Guna.UI2.WinForms.Guna2TextBox()
-        Me.AppleTextBox = New Guna.UI2.WinForms.Guna2TextBox()
         Me.StrawberryNameStockHtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.StrawberryHtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Me.PineappleNameStockHtmlLabel = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -74,7 +67,6 @@ Partial Class Home
         Me.Guna2PictureBox6 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox5 = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.Guna2PictureBox4 = New Guna.UI2.WinForms.Guna2PictureBox()
-        Me.ClearGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
         Me.Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CType(Me.Guna2PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Guna2PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -128,30 +120,6 @@ Partial Class Home
         '
         Me.Guna2AnimateWindow1.TargetForm = Me
         '
-        'AddToCartGradientButton
-        '
-        Me.AddToCartGradientButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.AddToCartGradientButton.Animated = True
-        Me.AddToCartGradientButton.BackColor = System.Drawing.Color.Transparent
-        Me.AddToCartGradientButton.BorderRadius = 10
-        Me.AddToCartGradientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.AddToCartGradientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.AddToCartGradientButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.AddToCartGradientButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.AddToCartGradientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.AddToCartGradientButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(98, Byte), Integer))
-        Me.AddToCartGradientButton.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(132, Byte), Integer))
-        Me.AddToCartGradientButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.AddToCartGradientButton.ForeColor = System.Drawing.Color.White
-        Me.AddToCartGradientButton.Image = CType(resources.GetObject("AddToCartGradientButton.Image"), System.Drawing.Image)
-        Me.AddToCartGradientButton.IndicateFocus = True
-        Me.AddToCartGradientButton.Location = New System.Drawing.Point(526, 417)
-        Me.AddToCartGradientButton.Name = "AddToCartGradientButton"
-        Me.AddToCartGradientButton.Size = New System.Drawing.Size(124, 37)
-        Me.AddToCartGradientButton.TabIndex = 107
-        Me.AddToCartGradientButton.Text = "Add to Cart"
-        Me.AddToCartGradientButton.UseTransparentBackground = True
-        '
         'StawberryStockHtmlLabel
         '
         Me.StawberryStockHtmlLabel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -160,7 +128,7 @@ Partial Class Home
         Me.StawberryStockHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.StawberryStockHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StawberryStockHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.StawberryStockHtmlLabel.Location = New System.Drawing.Point(559, 387)
+        Me.StawberryStockHtmlLabel.Location = New System.Drawing.Point(567, 387)
         Me.StawberryStockHtmlLabel.Name = "StawberryStockHtmlLabel"
         Me.StawberryStockHtmlLabel.Size = New System.Drawing.Size(24, 19)
         Me.StawberryStockHtmlLabel.TabIndex = 146
@@ -174,7 +142,7 @@ Partial Class Home
         Me.PineappleStockHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.PineappleStockHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PineappleStockHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.PineappleStockHtmlLabel.Location = New System.Drawing.Point(303, 387)
+        Me.PineappleStockHtmlLabel.Location = New System.Drawing.Point(357, 385)
         Me.PineappleStockHtmlLabel.Name = "PineappleStockHtmlLabel"
         Me.PineappleStockHtmlLabel.Size = New System.Drawing.Size(24, 19)
         Me.PineappleStockHtmlLabel.TabIndex = 145
@@ -188,7 +156,7 @@ Partial Class Home
         Me.PearStockHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.PearStockHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PearStockHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.PearStockHtmlLabel.Location = New System.Drawing.Point(46, 387)
+        Me.PearStockHtmlLabel.Location = New System.Drawing.Point(159, 387)
         Me.PearStockHtmlLabel.Name = "PearStockHtmlLabel"
         Me.PearStockHtmlLabel.Size = New System.Drawing.Size(24, 19)
         Me.PearStockHtmlLabel.TabIndex = 144
@@ -202,7 +170,7 @@ Partial Class Home
         Me.LemonStockHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.LemonStockHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LemonStockHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.LemonStockHtmlLabel.Location = New System.Drawing.Point(559, 215)
+        Me.LemonStockHtmlLabel.Location = New System.Drawing.Point(567, 215)
         Me.LemonStockHtmlLabel.Name = "LemonStockHtmlLabel"
         Me.LemonStockHtmlLabel.Size = New System.Drawing.Size(24, 19)
         Me.LemonStockHtmlLabel.TabIndex = 143
@@ -216,7 +184,7 @@ Partial Class Home
         Me.GrapesStockHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.GrapesStockHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrapesStockHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.GrapesStockHtmlLabel.Location = New System.Drawing.Point(303, 215)
+        Me.GrapesStockHtmlLabel.Location = New System.Drawing.Point(357, 213)
         Me.GrapesStockHtmlLabel.Name = "GrapesStockHtmlLabel"
         Me.GrapesStockHtmlLabel.Size = New System.Drawing.Size(24, 19)
         Me.GrapesStockHtmlLabel.TabIndex = 142
@@ -230,7 +198,7 @@ Partial Class Home
         Me.AppleStockHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.AppleStockHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AppleStockHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.AppleStockHtmlLabel.Location = New System.Drawing.Point(46, 215)
+        Me.AppleStockHtmlLabel.Location = New System.Drawing.Point(159, 215)
         Me.AppleStockHtmlLabel.Name = "AppleStockHtmlLabel"
         Me.AppleStockHtmlLabel.Size = New System.Drawing.Size(24, 19)
         Me.AppleStockHtmlLabel.TabIndex = 141
@@ -244,7 +212,7 @@ Partial Class Home
         Me.StrawberryPriceHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.StrawberryPriceHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StrawberryPriceHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.StrawberryPriceHtmlLabel.Location = New System.Drawing.Point(580, 369)
+        Me.StrawberryPriceHtmlLabel.Location = New System.Drawing.Point(588, 369)
         Me.StrawberryPriceHtmlLabel.Name = "StrawberryPriceHtmlLabel"
         Me.StrawberryPriceHtmlLabel.Size = New System.Drawing.Size(38, 19)
         Me.StrawberryPriceHtmlLabel.TabIndex = 140
@@ -258,7 +226,7 @@ Partial Class Home
         Me.PineapplePriceHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.PineapplePriceHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PineapplePriceHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.PineapplePriceHtmlLabel.Location = New System.Drawing.Point(323, 369)
+        Me.PineapplePriceHtmlLabel.Location = New System.Drawing.Point(377, 367)
         Me.PineapplePriceHtmlLabel.Name = "PineapplePriceHtmlLabel"
         Me.PineapplePriceHtmlLabel.Size = New System.Drawing.Size(38, 19)
         Me.PineapplePriceHtmlLabel.TabIndex = 139
@@ -272,7 +240,7 @@ Partial Class Home
         Me.PearPriceHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.PearPriceHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PearPriceHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.PearPriceHtmlLabel.Location = New System.Drawing.Point(66, 369)
+        Me.PearPriceHtmlLabel.Location = New System.Drawing.Point(179, 369)
         Me.PearPriceHtmlLabel.Name = "PearPriceHtmlLabel"
         Me.PearPriceHtmlLabel.Size = New System.Drawing.Size(38, 19)
         Me.PearPriceHtmlLabel.TabIndex = 138
@@ -286,7 +254,7 @@ Partial Class Home
         Me.LemonPriceHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.LemonPriceHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LemonPriceHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.LemonPriceHtmlLabel.Location = New System.Drawing.Point(580, 195)
+        Me.LemonPriceHtmlLabel.Location = New System.Drawing.Point(588, 195)
         Me.LemonPriceHtmlLabel.Name = "LemonPriceHtmlLabel"
         Me.LemonPriceHtmlLabel.Size = New System.Drawing.Size(38, 19)
         Me.LemonPriceHtmlLabel.TabIndex = 137
@@ -300,7 +268,7 @@ Partial Class Home
         Me.GrapesPriceHtmlLabel9.BackColor = System.Drawing.Color.Transparent
         Me.GrapesPriceHtmlLabel9.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrapesPriceHtmlLabel9.ForeColor = System.Drawing.Color.DimGray
-        Me.GrapesPriceHtmlLabel9.Location = New System.Drawing.Point(323, 195)
+        Me.GrapesPriceHtmlLabel9.Location = New System.Drawing.Point(377, 193)
         Me.GrapesPriceHtmlLabel9.Name = "GrapesPriceHtmlLabel9"
         Me.GrapesPriceHtmlLabel9.Size = New System.Drawing.Size(38, 19)
         Me.GrapesPriceHtmlLabel9.TabIndex = 136
@@ -314,7 +282,7 @@ Partial Class Home
         Me.ApplePriceHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.ApplePriceHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ApplePriceHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.ApplePriceHtmlLabel.Location = New System.Drawing.Point(66, 195)
+        Me.ApplePriceHtmlLabel.Location = New System.Drawing.Point(179, 195)
         Me.ApplePriceHtmlLabel.Name = "ApplePriceHtmlLabel"
         Me.ApplePriceHtmlLabel.Size = New System.Drawing.Size(38, 19)
         Me.ApplePriceHtmlLabel.TabIndex = 135
@@ -328,7 +296,7 @@ Partial Class Home
         Me.StawberryPriceNameHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.StawberryPriceNameHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StawberryPriceNameHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.StawberryPriceNameHtmlLabel.Location = New System.Drawing.Point(526, 369)
+        Me.StawberryPriceNameHtmlLabel.Location = New System.Drawing.Point(534, 369)
         Me.StawberryPriceNameHtmlLabel.Name = "StawberryPriceNameHtmlLabel"
         Me.StawberryPriceNameHtmlLabel.Size = New System.Drawing.Size(54, 19)
         Me.StawberryPriceNameHtmlLabel.TabIndex = 134
@@ -342,7 +310,7 @@ Partial Class Home
         Me.PineapplePriceNameHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.PineapplePriceNameHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PineapplePriceNameHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.PineapplePriceNameHtmlLabel.Location = New System.Drawing.Point(269, 369)
+        Me.PineapplePriceNameHtmlLabel.Location = New System.Drawing.Point(323, 367)
         Me.PineapplePriceNameHtmlLabel.Name = "PineapplePriceNameHtmlLabel"
         Me.PineapplePriceNameHtmlLabel.Size = New System.Drawing.Size(54, 19)
         Me.PineapplePriceNameHtmlLabel.TabIndex = 133
@@ -356,7 +324,7 @@ Partial Class Home
         Me.PearPriceNameHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.PearPriceNameHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PearPriceNameHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.PearPriceNameHtmlLabel.Location = New System.Drawing.Point(12, 369)
+        Me.PearPriceNameHtmlLabel.Location = New System.Drawing.Point(125, 369)
         Me.PearPriceNameHtmlLabel.Name = "PearPriceNameHtmlLabel"
         Me.PearPriceNameHtmlLabel.Size = New System.Drawing.Size(54, 19)
         Me.PearPriceNameHtmlLabel.TabIndex = 132
@@ -370,7 +338,7 @@ Partial Class Home
         Me.LemonPriceNameHtmlLabel8.BackColor = System.Drawing.Color.Transparent
         Me.LemonPriceNameHtmlLabel8.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LemonPriceNameHtmlLabel8.ForeColor = System.Drawing.Color.DimGray
-        Me.LemonPriceNameHtmlLabel8.Location = New System.Drawing.Point(526, 195)
+        Me.LemonPriceNameHtmlLabel8.Location = New System.Drawing.Point(534, 195)
         Me.LemonPriceNameHtmlLabel8.Name = "LemonPriceNameHtmlLabel8"
         Me.LemonPriceNameHtmlLabel8.Size = New System.Drawing.Size(54, 19)
         Me.LemonPriceNameHtmlLabel8.TabIndex = 131
@@ -384,7 +352,7 @@ Partial Class Home
         Me.GrapesPriceNameHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.GrapesPriceNameHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrapesPriceNameHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.GrapesPriceNameHtmlLabel.Location = New System.Drawing.Point(269, 195)
+        Me.GrapesPriceNameHtmlLabel.Location = New System.Drawing.Point(323, 193)
         Me.GrapesPriceNameHtmlLabel.Name = "GrapesPriceNameHtmlLabel"
         Me.GrapesPriceNameHtmlLabel.Size = New System.Drawing.Size(54, 19)
         Me.GrapesPriceNameHtmlLabel.TabIndex = 130
@@ -398,155 +366,11 @@ Partial Class Home
         Me.ApplePriceNameHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.ApplePriceNameHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ApplePriceNameHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.ApplePriceNameHtmlLabel.Location = New System.Drawing.Point(12, 195)
+        Me.ApplePriceNameHtmlLabel.Location = New System.Drawing.Point(125, 195)
         Me.ApplePriceNameHtmlLabel.Name = "ApplePriceNameHtmlLabel"
         Me.ApplePriceNameHtmlLabel.Size = New System.Drawing.Size(54, 19)
         Me.ApplePriceNameHtmlLabel.TabIndex = 129
         Me.ApplePriceNameHtmlLabel.Text = "Price Rp. "
-        '
-        'StrawberryTextBox
-        '
-        Me.StrawberryTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.StrawberryTextBox.Animated = True
-        Me.StrawberryTextBox.BorderRadius = 10
-        Me.StrawberryTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.StrawberryTextBox.DefaultText = ""
-        Me.StrawberryTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.StrawberryTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.StrawberryTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.StrawberryTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.StrawberryTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.StrawberryTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.StrawberryTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.StrawberryTextBox.Location = New System.Drawing.Point(640, 270)
-        Me.StrawberryTextBox.Name = "StrawberryTextBox"
-        Me.StrawberryTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.StrawberryTextBox.PlaceholderText = "How Much ?"
-        Me.StrawberryTextBox.SelectedText = ""
-        Me.StrawberryTextBox.Size = New System.Drawing.Size(124, 36)
-        Me.StrawberryTextBox.TabIndex = 128
-        '
-        'LemonTextBox
-        '
-        Me.LemonTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LemonTextBox.Animated = True
-        Me.LemonTextBox.BorderRadius = 10
-        Me.LemonTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.LemonTextBox.DefaultText = ""
-        Me.LemonTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.LemonTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.LemonTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.LemonTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.LemonTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LemonTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.LemonTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.LemonTextBox.Location = New System.Drawing.Point(640, 100)
-        Me.LemonTextBox.Name = "LemonTextBox"
-        Me.LemonTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.LemonTextBox.PlaceholderText = "How Much ?"
-        Me.LemonTextBox.SelectedText = ""
-        Me.LemonTextBox.Size = New System.Drawing.Size(124, 36)
-        Me.LemonTextBox.TabIndex = 127
-        '
-        'PineappleTextBox
-        '
-        Me.PineappleTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PineappleTextBox.Animated = True
-        Me.PineappleTextBox.BorderRadius = 10
-        Me.PineappleTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.PineappleTextBox.DefaultText = ""
-        Me.PineappleTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.PineappleTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.PineappleTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.PineappleTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.PineappleTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.PineappleTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.PineappleTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.PineappleTextBox.Location = New System.Drawing.Point(384, 270)
-        Me.PineappleTextBox.Name = "PineappleTextBox"
-        Me.PineappleTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.PineappleTextBox.PlaceholderText = "How Much ?"
-        Me.PineappleTextBox.SelectedText = ""
-        Me.PineappleTextBox.Size = New System.Drawing.Size(124, 36)
-        Me.PineappleTextBox.TabIndex = 126
-        '
-        'GrapesTextBox
-        '
-        Me.GrapesTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GrapesTextBox.Animated = True
-        Me.GrapesTextBox.BorderRadius = 10
-        Me.GrapesTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.GrapesTextBox.DefaultText = ""
-        Me.GrapesTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.GrapesTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.GrapesTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.GrapesTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.GrapesTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GrapesTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.GrapesTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.GrapesTextBox.Location = New System.Drawing.Point(384, 100)
-        Me.GrapesTextBox.Name = "GrapesTextBox"
-        Me.GrapesTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.GrapesTextBox.PlaceholderText = "How Much ?"
-        Me.GrapesTextBox.SelectedText = ""
-        Me.GrapesTextBox.Size = New System.Drawing.Size(124, 36)
-        Me.GrapesTextBox.TabIndex = 125
-        '
-        'PearTextBox
-        '
-        Me.PearTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PearTextBox.Animated = True
-        Me.PearTextBox.BorderRadius = 10
-        Me.PearTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.PearTextBox.DefaultText = ""
-        Me.PearTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.PearTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.PearTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.PearTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.PearTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.PearTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.PearTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.PearTextBox.Location = New System.Drawing.Point(122, 270)
-        Me.PearTextBox.Name = "PearTextBox"
-        Me.PearTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.PearTextBox.PlaceholderText = "How Much ?"
-        Me.PearTextBox.SelectedText = ""
-        Me.PearTextBox.Size = New System.Drawing.Size(124, 36)
-        Me.PearTextBox.TabIndex = 124
-        '
-        'AppleTextBox
-        '
-        Me.AppleTextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.AppleTextBox.Animated = True
-        Me.AppleTextBox.BorderRadius = 10
-        Me.AppleTextBox.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.AppleTextBox.DefaultText = ""
-        Me.AppleTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer), CType(CType(208, Byte), Integer))
-        Me.AppleTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer), CType(CType(226, Byte), Integer))
-        Me.AppleTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.AppleTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer), CType(CType(138, Byte), Integer))
-        Me.AppleTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.AppleTextBox.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.AppleTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(CType(CType(94, Byte), Integer), CType(CType(148, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.AppleTextBox.Location = New System.Drawing.Point(122, 100)
-        Me.AppleTextBox.Name = "AppleTextBox"
-        Me.AppleTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(0)
-        Me.AppleTextBox.PlaceholderText = "How Much ?"
-        Me.AppleTextBox.SelectedText = ""
-        Me.AppleTextBox.Size = New System.Drawing.Size(124, 36)
-        Me.AppleTextBox.TabIndex = 123
         '
         'StrawberryNameStockHtmlLabel
         '
@@ -556,7 +380,7 @@ Partial Class Home
         Me.StrawberryNameStockHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.StrawberryNameStockHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StrawberryNameStockHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.StrawberryNameStockHtmlLabel.Location = New System.Drawing.Point(526, 387)
+        Me.StrawberryNameStockHtmlLabel.Location = New System.Drawing.Point(534, 387)
         Me.StrawberryNameStockHtmlLabel.Name = "StrawberryNameStockHtmlLabel"
         Me.StrawberryNameStockHtmlLabel.Size = New System.Drawing.Size(34, 19)
         Me.StrawberryNameStockHtmlLabel.TabIndex = 122
@@ -570,7 +394,7 @@ Partial Class Home
         Me.StrawberryHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.StrawberryHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StrawberryHtmlLabel.ForeColor = System.Drawing.Color.Black
-        Me.StrawberryHtmlLabel.Location = New System.Drawing.Point(526, 346)
+        Me.StrawberryHtmlLabel.Location = New System.Drawing.Point(534, 346)
         Me.StrawberryHtmlLabel.Name = "StrawberryHtmlLabel"
         Me.StrawberryHtmlLabel.Size = New System.Drawing.Size(86, 23)
         Me.StrawberryHtmlLabel.TabIndex = 121
@@ -584,7 +408,7 @@ Partial Class Home
         Me.PineappleNameStockHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.PineappleNameStockHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PineappleNameStockHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.PineappleNameStockHtmlLabel.Location = New System.Drawing.Point(269, 387)
+        Me.PineappleNameStockHtmlLabel.Location = New System.Drawing.Point(323, 385)
         Me.PineappleNameStockHtmlLabel.Name = "PineappleNameStockHtmlLabel"
         Me.PineappleNameStockHtmlLabel.Size = New System.Drawing.Size(34, 19)
         Me.PineappleNameStockHtmlLabel.TabIndex = 120
@@ -598,7 +422,7 @@ Partial Class Home
         Me.PineappleHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.PineappleHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PineappleHtmlLabel.ForeColor = System.Drawing.Color.Black
-        Me.PineappleHtmlLabel.Location = New System.Drawing.Point(269, 348)
+        Me.PineappleHtmlLabel.Location = New System.Drawing.Point(323, 346)
         Me.PineappleHtmlLabel.Name = "PineappleHtmlLabel"
         Me.PineappleHtmlLabel.Size = New System.Drawing.Size(80, 23)
         Me.PineappleHtmlLabel.TabIndex = 119
@@ -612,7 +436,7 @@ Partial Class Home
         Me.PearNameStockHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.PearNameStockHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PearNameStockHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.PearNameStockHtmlLabel.Location = New System.Drawing.Point(12, 387)
+        Me.PearNameStockHtmlLabel.Location = New System.Drawing.Point(125, 387)
         Me.PearNameStockHtmlLabel.Name = "PearNameStockHtmlLabel"
         Me.PearNameStockHtmlLabel.Size = New System.Drawing.Size(34, 19)
         Me.PearNameStockHtmlLabel.TabIndex = 118
@@ -626,7 +450,7 @@ Partial Class Home
         Me.PearHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.PearHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PearHtmlLabel.ForeColor = System.Drawing.Color.Black
-        Me.PearHtmlLabel.Location = New System.Drawing.Point(12, 346)
+        Me.PearHtmlLabel.Location = New System.Drawing.Point(125, 346)
         Me.PearHtmlLabel.Name = "PearHtmlLabel"
         Me.PearHtmlLabel.Size = New System.Drawing.Size(37, 23)
         Me.PearHtmlLabel.TabIndex = 117
@@ -640,7 +464,7 @@ Partial Class Home
         Me.LemonNameStockHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.LemonNameStockHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LemonNameStockHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.LemonNameStockHtmlLabel.Location = New System.Drawing.Point(526, 215)
+        Me.LemonNameStockHtmlLabel.Location = New System.Drawing.Point(534, 215)
         Me.LemonNameStockHtmlLabel.Name = "LemonNameStockHtmlLabel"
         Me.LemonNameStockHtmlLabel.Size = New System.Drawing.Size(34, 19)
         Me.LemonNameStockHtmlLabel.TabIndex = 116
@@ -654,7 +478,7 @@ Partial Class Home
         Me.LemonHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.LemonHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LemonHtmlLabel.ForeColor = System.Drawing.Color.Black
-        Me.LemonHtmlLabel.Location = New System.Drawing.Point(526, 172)
+        Me.LemonHtmlLabel.Location = New System.Drawing.Point(534, 172)
         Me.LemonHtmlLabel.Name = "LemonHtmlLabel"
         Me.LemonHtmlLabel.Size = New System.Drawing.Size(55, 23)
         Me.LemonHtmlLabel.TabIndex = 115
@@ -668,7 +492,7 @@ Partial Class Home
         Me.GrapesNameStockHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.GrapesNameStockHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrapesNameStockHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.GrapesNameStockHtmlLabel.Location = New System.Drawing.Point(269, 215)
+        Me.GrapesNameStockHtmlLabel.Location = New System.Drawing.Point(323, 213)
         Me.GrapesNameStockHtmlLabel.Name = "GrapesNameStockHtmlLabel"
         Me.GrapesNameStockHtmlLabel.Size = New System.Drawing.Size(34, 19)
         Me.GrapesNameStockHtmlLabel.TabIndex = 114
@@ -682,7 +506,7 @@ Partial Class Home
         Me.GrapesHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.GrapesHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GrapesHtmlLabel.ForeColor = System.Drawing.Color.Black
-        Me.GrapesHtmlLabel.Location = New System.Drawing.Point(269, 174)
+        Me.GrapesHtmlLabel.Location = New System.Drawing.Point(323, 172)
         Me.GrapesHtmlLabel.Name = "GrapesHtmlLabel"
         Me.GrapesHtmlLabel.Size = New System.Drawing.Size(55, 23)
         Me.GrapesHtmlLabel.TabIndex = 113
@@ -696,7 +520,7 @@ Partial Class Home
         Me.AppleNameStockHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.AppleNameStockHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AppleNameStockHtmlLabel.ForeColor = System.Drawing.Color.DimGray
-        Me.AppleNameStockHtmlLabel.Location = New System.Drawing.Point(12, 215)
+        Me.AppleNameStockHtmlLabel.Location = New System.Drawing.Point(125, 215)
         Me.AppleNameStockHtmlLabel.Name = "AppleNameStockHtmlLabel"
         Me.AppleNameStockHtmlLabel.Size = New System.Drawing.Size(34, 19)
         Me.AppleNameStockHtmlLabel.TabIndex = 112
@@ -710,7 +534,7 @@ Partial Class Home
         Me.AppleHtmlLabel.BackColor = System.Drawing.Color.Transparent
         Me.AppleHtmlLabel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AppleHtmlLabel.ForeColor = System.Drawing.Color.Black
-        Me.AppleHtmlLabel.Location = New System.Drawing.Point(12, 172)
+        Me.AppleHtmlLabel.Location = New System.Drawing.Point(125, 172)
         Me.AppleHtmlLabel.Name = "AppleHtmlLabel"
         Me.AppleHtmlLabel.Size = New System.Drawing.Size(48, 23)
         Me.AppleHtmlLabel.TabIndex = 111
@@ -725,7 +549,7 @@ Partial Class Home
         Me.Guna2PictureBox7.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox7.Image = CType(resources.GetObject("Guna2PictureBox7.Image"), System.Drawing.Image)
         Me.Guna2PictureBox7.ImageRotate = 0!
-        Me.Guna2PictureBox7.Location = New System.Drawing.Point(526, 240)
+        Me.Guna2PictureBox7.Location = New System.Drawing.Point(534, 240)
         Me.Guna2PictureBox7.Name = "Guna2PictureBox7"
         Me.Guna2PictureBox7.Size = New System.Drawing.Size(100, 100)
         Me.Guna2PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -741,7 +565,7 @@ Partial Class Home
         Me.Guna2PictureBox8.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox8.Image = CType(resources.GetObject("Guna2PictureBox8.Image"), System.Drawing.Image)
         Me.Guna2PictureBox8.ImageRotate = 0!
-        Me.Guna2PictureBox8.Location = New System.Drawing.Point(269, 242)
+        Me.Guna2PictureBox8.Location = New System.Drawing.Point(323, 240)
         Me.Guna2PictureBox8.Name = "Guna2PictureBox8"
         Me.Guna2PictureBox8.Size = New System.Drawing.Size(100, 100)
         Me.Guna2PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -757,7 +581,7 @@ Partial Class Home
         Me.Guna2PictureBox9.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox9.Image = CType(resources.GetObject("Guna2PictureBox9.Image"), System.Drawing.Image)
         Me.Guna2PictureBox9.ImageRotate = 0!
-        Me.Guna2PictureBox9.Location = New System.Drawing.Point(12, 240)
+        Me.Guna2PictureBox9.Location = New System.Drawing.Point(125, 240)
         Me.Guna2PictureBox9.Name = "Guna2PictureBox9"
         Me.Guna2PictureBox9.Size = New System.Drawing.Size(100, 100)
         Me.Guna2PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -773,7 +597,7 @@ Partial Class Home
         Me.Guna2PictureBox6.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox6.Image = CType(resources.GetObject("Guna2PictureBox6.Image"), System.Drawing.Image)
         Me.Guna2PictureBox6.ImageRotate = 0!
-        Me.Guna2PictureBox6.Location = New System.Drawing.Point(526, 66)
+        Me.Guna2PictureBox6.Location = New System.Drawing.Point(534, 66)
         Me.Guna2PictureBox6.Name = "Guna2PictureBox6"
         Me.Guna2PictureBox6.Size = New System.Drawing.Size(100, 100)
         Me.Guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -789,7 +613,7 @@ Partial Class Home
         Me.Guna2PictureBox5.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox5.Image = CType(resources.GetObject("Guna2PictureBox5.Image"), System.Drawing.Image)
         Me.Guna2PictureBox5.ImageRotate = 0!
-        Me.Guna2PictureBox5.Location = New System.Drawing.Point(269, 68)
+        Me.Guna2PictureBox5.Location = New System.Drawing.Point(323, 66)
         Me.Guna2PictureBox5.Name = "Guna2PictureBox5"
         Me.Guna2PictureBox5.Size = New System.Drawing.Size(100, 100)
         Me.Guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -805,36 +629,12 @@ Partial Class Home
         Me.Guna2PictureBox4.FillColor = System.Drawing.Color.Transparent
         Me.Guna2PictureBox4.Image = CType(resources.GetObject("Guna2PictureBox4.Image"), System.Drawing.Image)
         Me.Guna2PictureBox4.ImageRotate = 0!
-        Me.Guna2PictureBox4.Location = New System.Drawing.Point(12, 66)
+        Me.Guna2PictureBox4.Location = New System.Drawing.Point(125, 66)
         Me.Guna2PictureBox4.Name = "Guna2PictureBox4"
         Me.Guna2PictureBox4.Size = New System.Drawing.Size(100, 100)
         Me.Guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.Guna2PictureBox4.TabIndex = 104
         Me.Guna2PictureBox4.TabStop = False
-        '
-        'ClearGradientButton
-        '
-        Me.ClearGradientButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ClearGradientButton.Animated = True
-        Me.ClearGradientButton.BackColor = System.Drawing.Color.Transparent
-        Me.ClearGradientButton.BorderRadius = 10
-        Me.ClearGradientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
-        Me.ClearGradientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
-        Me.ClearGradientButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.ClearGradientButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.ClearGradientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
-        Me.ClearGradientButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(232, Byte), Integer), CType(CType(51, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.ClearGradientButton.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(5, Byte), Integer), CType(CType(65, Byte), Integer))
-        Me.ClearGradientButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.ClearGradientButton.ForeColor = System.Drawing.Color.White
-        Me.ClearGradientButton.Image = CType(resources.GetObject("ClearGradientButton.Image"), System.Drawing.Image)
-        Me.ClearGradientButton.IndicateFocus = True
-        Me.ClearGradientButton.Location = New System.Drawing.Point(679, 417)
-        Me.ClearGradientButton.Name = "ClearGradientButton"
-        Me.ClearGradientButton.Size = New System.Drawing.Size(85, 37)
-        Me.ClearGradientButton.TabIndex = 147
-        Me.ClearGradientButton.Text = "Clear"
-        Me.ClearGradientButton.UseTransparentBackground = True
         '
         'Guna2HtmlLabel1
         '
@@ -856,8 +656,6 @@ Partial Class Home
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(779, 466)
         Me.Controls.Add(Me.Guna2HtmlLabel1)
-        Me.Controls.Add(Me.ClearGradientButton)
-        Me.Controls.Add(Me.AddToCartGradientButton)
         Me.Controls.Add(Me.StawberryStockHtmlLabel)
         Me.Controls.Add(Me.PineappleStockHtmlLabel)
         Me.Controls.Add(Me.PearStockHtmlLabel)
@@ -876,12 +674,6 @@ Partial Class Home
         Me.Controls.Add(Me.LemonPriceNameHtmlLabel8)
         Me.Controls.Add(Me.GrapesPriceNameHtmlLabel)
         Me.Controls.Add(Me.ApplePriceNameHtmlLabel)
-        Me.Controls.Add(Me.StrawberryTextBox)
-        Me.Controls.Add(Me.LemonTextBox)
-        Me.Controls.Add(Me.PineappleTextBox)
-        Me.Controls.Add(Me.GrapesTextBox)
-        Me.Controls.Add(Me.PearTextBox)
-        Me.Controls.Add(Me.AppleTextBox)
         Me.Controls.Add(Me.StrawberryNameStockHtmlLabel)
         Me.Controls.Add(Me.StrawberryHtmlLabel)
         Me.Controls.Add(Me.PineappleNameStockHtmlLabel)
@@ -921,7 +713,6 @@ Partial Class Home
     Friend WithEvents ConfirmMessageDialog As Guna.UI2.WinForms.Guna2MessageDialog
     Friend WithEvents Guna2ShadowForm1 As Guna.UI2.WinForms.Guna2ShadowForm
     Friend WithEvents Guna2AnimateWindow1 As Guna.UI2.WinForms.Guna2AnimateWindow
-    Friend WithEvents AddToCartGradientButton As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents StawberryStockHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents PineappleStockHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents PearStockHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -940,12 +731,6 @@ Partial Class Home
     Friend WithEvents LemonPriceNameHtmlLabel8 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents GrapesPriceNameHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents ApplePriceNameHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
-    Friend WithEvents StrawberryTextBox As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents LemonTextBox As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents PineappleTextBox As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents GrapesTextBox As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents PearTextBox As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents AppleTextBox As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents StrawberryNameStockHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents StrawberryHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents PineappleNameStockHtmlLabel As Guna.UI2.WinForms.Guna2HtmlLabel
@@ -964,6 +749,5 @@ Partial Class Home
     Friend WithEvents Guna2PictureBox6 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox5 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Guna2PictureBox4 As Guna.UI2.WinForms.Guna2PictureBox
-    Friend WithEvents ClearGradientButton As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

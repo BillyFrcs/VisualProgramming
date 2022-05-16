@@ -1441,4 +1441,7 @@
   <metadata name="ErrorMessageDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>370, 45</value>
   </metadata>
+  <metadata name="Guna2NotificationPaint1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>531, 45</value>
+  </metadata>
 </root>

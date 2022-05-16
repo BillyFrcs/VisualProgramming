@@ -33,9 +33,9 @@ Public Class Account
     End Sub
 
     Private Sub AccountTextBoxMouseHover() Handles NameTextBox.MouseHover, EmailTextBox.MouseHover, PasswordTextBox.MouseHover
-        NameToolTip.SetToolTip(NameTextBox, "Your name")
-        EmailToolTip.SetToolTip(EmailTextBox, "Your email address")
-        PasswordToolTip.SetToolTip(PasswordTextBox, "Your password")
+        NameToolTip.SetToolTip(NameTextBox, "Your Name")
+        EmailToolTip.SetToolTip(EmailTextBox, "Your Email Address")
+        PasswordToolTip.SetToolTip(PasswordTextBox, "Your Password")
     End Sub
 
     Private Sub UpdateGradientButtonClick(sender As Object, e As EventArgs) Handles UpdateGradientButton.Click
@@ -76,7 +76,6 @@ Public Class Account
     End Sub
 
     Private Sub ShowPasswordToggleSwitchCheckedChanged(sender As Object, e As EventArgs) Handles ShowPasswordToggleSwitch.CheckedChanged
-        ' Login password checked  
         If ShowPasswordToggleSwitch.Checked Then
             PasswordTextBox.UseSystemPasswordChar = False
         Else
@@ -129,7 +128,7 @@ Public Class Account
                     ErrorMessageDialog.Show("Invalid email address!", "Error")
                 End If
             Else
-                ErrorMessageDialog.Show("Please fill the email address!", "Error")
+                ErrorMessageDialog.Show("Please fill your email address!", "Error")
             End If
         Catch ex As SqlException
             ErrorMessageDialog.Show(ex.Message(), "Error")
