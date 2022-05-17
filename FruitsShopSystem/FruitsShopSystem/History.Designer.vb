@@ -45,6 +45,7 @@ Partial Class History
         Me.PrintHistoryTransactionDocument = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialogUserTransaction = New System.Windows.Forms.PrintPreviewDialog()
         Me.DeleteGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
+        Me.RefreshGradientButton = New Guna.UI2.WinForms.Guna2GradientButton()
         CType(Me.HistoryTransactionDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HistoryBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -285,12 +286,41 @@ Partial Class History
         Me.DeleteGradientButton.Text = "Delete"
         Me.DeleteGradientButton.UseTransparentBackground = True
         '
+        'RefreshGradientButton
+        '
+        Me.RefreshGradientButton.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RefreshGradientButton.Animated = True
+        Me.RefreshGradientButton.AutoRoundedCorners = True
+        Me.RefreshGradientButton.BackColor = System.Drawing.Color.Transparent
+        Me.RefreshGradientButton.BorderRadius = 20
+        Me.RefreshGradientButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray
+        Me.RefreshGradientButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray
+        Me.RefreshGradientButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.RefreshGradientButton.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.RefreshGradientButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer), CType(CType(141, Byte), Integer))
+        Me.RefreshGradientButton.FillColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(178, Byte), Integer), CType(CType(17, Byte), Integer))
+        Me.RefreshGradientButton.FillColor2 = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(225, Byte), Integer), CType(CType(41, Byte), Integer))
+        Me.RefreshGradientButton.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.RefreshGradientButton.ForeColor = System.Drawing.Color.White
+        Me.RefreshGradientButton.Image = CType(resources.GetObject("RefreshGradientButton.Image"), System.Drawing.Image)
+        Me.RefreshGradientButton.IndicateFocus = True
+        Me.RefreshGradientButton.Location = New System.Drawing.Point(228, 30)
+        Me.RefreshGradientButton.Name = "RefreshGradientButton"
+        Me.RefreshGradientButton.ShadowDecoration.Shadow = New System.Windows.Forms.Padding(10)
+        Me.RefreshGradientButton.Size = New System.Drawing.Size(100, 42)
+        Me.RefreshGradientButton.TabIndex = 161
+        Me.RefreshGradientButton.Text = "Refresh"
+        Me.RefreshGradientButton.UseTransparentBackground = True
+        '
         'History
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(242, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(779, 466)
+        Me.Controls.Add(Me.RefreshGradientButton)
         Me.Controls.Add(Me.DeleteGradientButton)
         Me.Controls.Add(Me.PrintHistoryTransactionGradientButton)
         Me.Controls.Add(Me.SearchHistoryTransactionCircleButton)
@@ -325,4 +355,5 @@ Partial Class History
     Friend WithEvents PrintHistoryTransactionDocument As Printing.PrintDocument
     Friend WithEvents PrintPreviewDialogUserTransaction As PrintPreviewDialog
     Friend WithEvents DeleteGradientButton As Guna.UI2.WinForms.Guna2GradientButton
+    Friend WithEvents RefreshGradientButton As Guna.UI2.WinForms.Guna2GradientButton
 End Class

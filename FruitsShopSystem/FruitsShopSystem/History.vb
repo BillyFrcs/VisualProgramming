@@ -13,8 +13,8 @@ Public Class History
 
     Private ReadOnly _SQLConnection As New SqlConnection($"Data Source={_serverName};Initial Catalog={_databaseName};Integrated Security=True")
 
-    Private Sub HistoryLoad(sender As Object, e As EventArgs) Handles MyBase.Load
-        DisplayUserTransaction()
+    Private Sub HistoryShown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        UpdateDataTransaction()
     End Sub
 
     Private Sub SearchHistoryCircleButtonClick(sender As Object, e As EventArgs) Handles SearchHistoryTransactionCircleButton.Click
@@ -39,6 +39,8 @@ Public Class History
                         dataTable.Load(SQLDataReader)
 
                         HistoryTransactionDataGridView.DataSource = dataTable
+
+                        SQLDataReader.Close()
                     End With
                 End Using
 
@@ -70,7 +72,7 @@ Public Class History
     ''' <summary>
     ''' Display all the user transaction
     ''' </summary>
-    Private Sub DisplayUserTransaction()
+    Private Sub DisplayDataTransaction()
         Try
             _SQLConnection.Open()
 
@@ -94,8 +96,8 @@ Public Class History
                     HistoryTransactionDataGridView.Columns(1).HeaderText = "Fruit Name"
                     HistoryTransactionDataGridView.Columns(2).HeaderText = "Total Fruits"
                     HistoryTransactionDataGridView.Columns(3).HeaderText = "Total Price"
-                    HistoryTransactionDataGridView.Columns(4).HeaderText = "Transaction Time"
-                    HistoryTransactionDataGridView.Columns(5).HeaderText = "Transaction Date"
+                    HistoryTransactionDataGridView.Columns(4).HeaderText = "Time"
+                    HistoryTransactionDataGridView.Columns(5).HeaderText = "Date"
                 End With
             End Using
 
@@ -184,6 +186,15 @@ Public Class History
                     dataTable.Load(SQLDataReader)
 
                     HistoryTransactionDataGridView.DataSource = dataTable
+
+                    HistoryTransactionDataGridView.Columns(0).HeaderText = "Transaction ID"
+                    HistoryTransactionDataGridView.Columns(1).HeaderText = "Fruit Name"
+                    HistoryTransactionDataGridView.Columns(2).HeaderText = "Total Fruits"
+                    HistoryTransactionDataGridView.Columns(3).HeaderText = "Total Price"
+                    HistoryTransactionDataGridView.Columns(4).HeaderText = "Time"
+                    HistoryTransactionDataGridView.Columns(5).HeaderText = "Date"
+
+                    SQLDataReader.Close()
                 End With
             End Using
 
@@ -191,5 +202,12 @@ Public Class History
         Catch ex As SqlException
             ErrorMessageDialog.Show(ex.Message(), "Error")
         End Try
+    End Sub
+
+    Private Sub RefreshGradientButtonClick(sender As Object, e As EventArgs) Handles RefreshGradientButton.Click
+        Me.Controls.Clear()
+        InitializeComponent()
+        DisplayDataTransaction()
+        Me.Refresh()
     End Sub
 End Class

@@ -57,6 +57,11 @@ Public Class Transaction
         TotalTransactionFruitsTextBox.Clear()
     End Sub
 
+    Private Sub ClearUpdateData()
+        FruitsComboBox.SelectedIndex = -1
+        TotalFruitsTextBox.Text = _empty
+    End Sub
+
     Private Sub ShowToggleSwitchCheckedChanged(sender As Object, e As EventArgs) Handles ShowUpdateTransactionToggleSwitch.CheckedChanged
         If ShowUpdateTransactionToggleSwitch.Checked = True Then
             FruitsComboBox.Enabled = True
@@ -69,6 +74,7 @@ Public Class Transaction
 
     Private Sub ClearGradientButtonClick(sender As Object, e As EventArgs) Handles ClearGradientButton.Click
         Call ClearData()
+        Call ClearUpdateData()
     End Sub
 
     Private Sub AddToCartGradientButtonClick(sender As Object, e As EventArgs) Handles AddToCartGradientButton.Click
@@ -98,6 +104,8 @@ Public Class Transaction
             TotalFruitsTextBox.Text = Val(TotalFruitsTextBox.Text)
 
             CalculateFruits()
+
+            ClearUpdateData()
 
             SuccessMessageDialog.Show("Update Successfully", "Success")
         End If
@@ -206,6 +214,11 @@ Public Class Transaction
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Get the unique ID
+    ''' </summary>
+    ''' <param name="maxSize">Max siz (Integer)</param>
+    ''' <returns></returns>
     Private Function GetUniqueID(ByVal maxSize As Integer) As String
         Dim chars As Char() = New Char(61) {}
 
