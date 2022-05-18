@@ -14,6 +14,8 @@ Public Class UserDashboard
     Private Sub UserDashboardLoad(sender As Object, e As EventArgs) Handles MyBase.Load
         UserStatus()
 
+        UserBalanceHtmlLabel.Text = 10000
+
         HomeGradientButton.Checked = True
 
         If HomeGradientButton.Checked = True Then
@@ -59,7 +61,7 @@ Public Class UserDashboard
 
     ''' <summary>
     ''' Switch between panels
-    ''' <param name="panel">Panel to be switched</param>
+    ''' <param name="panel">Panel to be switched (Form)</param>
     ''' </summary>
     Private Sub SwitchPanel(ByVal panel As Form)
         HomePanel.Controls.Clear()
@@ -107,8 +109,6 @@ Public Class UserDashboard
     Public Sub GetBalance(newBalance As Decimal)
         Dim currentBalance As Decimal = Val(UserBalanceHtmlLabel.Text)
 
-        currentBalance -= newBalance
-
-        UserBalanceHtmlLabel.Text = currentBalance
+        UserBalanceHtmlLabel.Text = String.Concat(currentBalance - newBalance)
     End Sub
 End Class

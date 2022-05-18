@@ -394,9 +394,9 @@ Partial Class UserDashboard
         Me.UserBalanceHtmlLabel.ForeColor = System.Drawing.Color.White
         Me.UserBalanceHtmlLabel.Location = New System.Drawing.Point(47, 48)
         Me.UserBalanceHtmlLabel.Name = "UserBalanceHtmlLabel"
-        Me.UserBalanceHtmlLabel.Size = New System.Drawing.Size(48, 23)
+        Me.UserBalanceHtmlLabel.Size = New System.Drawing.Size(12, 23)
         Me.UserBalanceHtmlLabel.TabIndex = 1
-        Me.UserBalanceHtmlLabel.Text = "10000"
+        Me.UserBalanceHtmlLabel.Text = "0"
         '
         'Guna2HtmlLabel4
         '

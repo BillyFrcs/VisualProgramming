@@ -170,14 +170,17 @@ Public Class Transaction
 
             historyTransaction.UpdateDataTransaction()
 
-            UserDashboard.Dashboard.GetBalance(_resultPayment)
+            UserDashboard.Dashboard.GetBalance(_resultPayment)    
 
             SuccessMessageDialog.Show("Thanks for Paying :D", "Success")
         End If
     End Sub
 
+    ''' <summary>
+    ''' Auto generate the transaction from the server
+    ''' </summary>
     Private Sub InitializeToServer()
-        _transactionID = GetUniqueID(5)
+        _transactionID = GetUniqueID(10)
         _timeTransaction = TimeOfDay.ToString("h:mm:ss tt")
         _dateTransaction = String.Format("{0:dd/MM/yyyy}", Date.Now)
     End Sub
