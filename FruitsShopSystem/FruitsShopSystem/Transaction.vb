@@ -1,7 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Security.Cryptography
 Imports System.Text
-Imports System.Text.RegularExpressions
 Imports FruitsShopSystem.Shop
 
 Public Class Transaction
