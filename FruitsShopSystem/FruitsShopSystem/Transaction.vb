@@ -18,9 +18,6 @@ Public Class Transaction
     Private _timeTransaction As String
     Private _dateTransaction As String
 
-    ' Email validation
-    Private ReadOnly _regex As New Regex("^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$")
-
     ' SQL Connection to the database
     Private Const _serverName = "BILLY"
     Private Const _databaseName = "FruitsShop"
