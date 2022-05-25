@@ -18,7 +18,7 @@ Public Class Transaction
     Private _dateTransaction As String
 
     ' SQL Connection to the database
-    Private Const _serverName = "BILLY"
+    Private Const _serverName = "BILLY\BILLY"
     Private Const _databaseName = "FruitsShop"
 
     Private ReadOnly _SQLConnection As New SqlConnection($"Data Source={_serverName};Initial Catalog={_databaseName};Integrated Security=True")
