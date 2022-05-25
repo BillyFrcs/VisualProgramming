@@ -1,3 +1,5 @@
+CREATE DATABASE UserDatabase;
+
 CREATE TABLE Information (
 ID INT NOT NULL IDENTITY(1, 1), 
 FirstName VARCHAR(100) NULL,
