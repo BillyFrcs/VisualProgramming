@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Dashboard
-    Private ReadOnly _connect As New SqlConnection("Data Source=BILLY\BILLY;Initial Catalog=UserDatabase;Integrated Security=True")
+    Private ReadOnly _connect As New SqlConnection("Data Source=BILLY;Initial Catalog=UserDatabase;Integrated Security=True")
 
     Private ReadOnly _empty = String.Empty
 
