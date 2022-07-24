@@ -173,7 +173,7 @@ Public Class Transaction
     End Sub
 
     ''' <summary>
-    ''' Auto generate the transaction from the server
+    ''' Auto generate the transaction data from the server
     ''' </summary>
     Private Sub InitializeToServer()
         _transactionID = GetUniqueID(10)
